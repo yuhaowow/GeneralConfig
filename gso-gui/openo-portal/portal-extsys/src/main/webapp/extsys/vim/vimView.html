@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--
+
+    Copyright 2016 ZTE Corporation.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../common/thirdparty/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="../../common/thirdparty/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../common/thirdparty/uniform/css/uniform.default.css" rel="stylesheet"/>
+    <link href="../../common/css/ngict-component.css" rel="stylesheet" type="text/css">
+    <link href="../../common/css/ZteIctIcons/style.css" rel="stylesheet" type="text/css">
+    <link href="css/vim.css" rel="stylesheet" type="text/css"/>
+    <link href="css/skill.css" rel="stylesheet" type="text/css"/>
+    <link href="../../common/thirdparty/animate/animate.min.css" rel="stylesheet" type="text/css"/>
+
+
+    <style>
+        .ms-controller {
+            visibility: hidden
+        }
+    </style>
+
+</head>
+<body>
+<div class="ms-controller container-fluid" ms-controller="vimController">
+
+    <div id="addVimDlg" class="modal  fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content Changepasswd">
+                <div class="content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 id="myModalLabel" ms-text="addVim.titleName"></h4>
+                    </div>
+                    <!-- modal body begin-->
+                    <div class="modal-body">
+                        <div class="alert alert-info" ms-visible="executeWait.visible">{{executeWait.text}}</div>
+                        <div class="alert alert-danger " ms-visible="executeError.visible">{{executeError.text}}</div>
+
+                        <form class="form-horizontal" id="vim_form" role="form">
+                            <input type="hidden" ms-duplex="addVim.vimId" name="vimId" class="form-control"/>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id_i18n="com_zte_ums_eco_roc_vim_name"
+                                          name_i18n="com_zte_conductor_ui_i18n"></span>
+                                    <span class="required" aria-required="true">*</span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVim.vimName" name="vimName" class="form-control" ms-readonly="addVim.vimNameReadonly"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id_i18n="com_zte_ums_eco_roc_vim_type"
+                                          name_i18n="com_zte_conductor_ui_i18n"></span>
+                                    <span class="required" aria-required="true">*</span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <select id="vimTypeSelect" ms-each="$vimType.selectItems"
+                                            ms-duplex="addVim.vimType" data-duplex-changed="vimTypeRendered">
+                                        <option ms-attr-value='el.cond_value'>{{el.name}}</option>
+                                    </select>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id_i18n="com_zte_ums_eco_roc_vim_auth_url"
+                                          name_i18n="com_zte_conductor_ui_i18n"></span>
+                                    <span class="required" aria-required="true">*</span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVim.url" placeholder="http://xx.xx.xx.xx:5000/v2.0"
+                                           name="url" class="form-control"/>
+                                    <span class="help-block"></span>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id_i18n="com_zte_ums_eco_roc_vim_username"
+                                          name_i18n="com_zte_conductor_ui_i18n"></span>
+                                    <span class="required" aria-required="true">*</span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVim.userName" name="userName"
+                                           class="form-control"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id_i18n="com_zte_ums_eco_roc_vim_password"
+                                          name_i18n="com_zte_conductor_ui_i18n"></span>
+                                    <span class="required" aria-required="true">*</span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="password" ms-duplex="addVim.password" name="password"
+                                           class="form-control"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id_i18n="com_zte_ums_eco_roc_vim_tenant"
+                                          name_i18n="com_zte_conductor_ui_i18n"></span>
+                                    <span class="required" aria-required="true">*</span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVim.tenant" name="tenant" class="form-control"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id_i18n="com_zte_ums_eco_roc_vim_version"
+                                          name_i18n="com_zte_conductor_ui_i18n"></span>
+                                    <span class="required" aria-required="true">*</span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVim.version" name="version" class="form-control"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id_i18n="com_zte_ums_eco_roc_vim_vendor"
+                                          name_i18n="com_zte_conductor_ui_i18n"></span>
+                                    <span class="required" aria-required="true">*</span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVim.vendor" name="vendor" class="form-control"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group" ms-visible="addVim.domainVisable">
+                                <label class="control-label col-sm-3">
+                                    <span id_i18n="com_zte_ums_eco_roc_vim_domain"
+                                          name_i18n="com_zte_conductor_ui_i18n"></span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVim.domain" name="domain" class="form-control"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>                           
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id_i18n="com_zte_ums_eco_roc_vim_description"
+                                          name_i18n="com_zte_conductor_ui_i18n"></span>                                   
+                                </label>
+                                <div class="col-sm-7">
+                                    <textarea class="form-control" rows="3" ms-duplex="addVim.description"
+                                              name="description"></textarea>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- modal body end-->
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true"><span
+                                id_i18n="com_zte_ums_eco_roc_vim_cancel" name_i18n="com_zte_conductor_ui_i18n"></span>
+                        </button>
+                        <button class="btn btn-primary" type="submit" ms-disabled="isSave" ms-click="$saveVimTable()">
+                            <span id_i18n="com_zte_ums_eco_roc_vim_save" name_i18n="com_zte_conductor_ui_i18n"></span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid col-sm-12" data-name="cond_zone">
+        <div class="col-sm-4">
+            <button class="btn white radius_l" id="app-new-btn" ms-click="$showVimTable('', 'add')">
+                <i class="ict-new"></i> <span id_i18n="com_zte_ums_eco_roc_vim_register"
+                                              name_i18n="com_zte_conductor_ui_i18n"></span>
+            </button>
+        </div>
+        <!-- <div class="fa fa-refresh text-muted refresh-status-text"><small><span id_i18n="com_zte_ums_eco_roc_vim_status_update_time" name_i18n="com_zte_conductor_ui_i18n"></span></small><small ms-text="vimStatusTime"></small></div>-->
+    </div>
+
+    <div class="row-fluid col-sm-12 " ms-each-el="vimInfo">
+        <div class="col-sm-4 animated-panel zoomIn" style="-webkit-animation-delay: 0.1s;">
+            <div class="hpanel stats">
+
+                <div class="panel-body h-200" ms-hover="hpanel_show">
+                    <div class="pull-left">
+                        <span class="label label-success" ms-text="$Status.displayActive"></span>
+                    </div>
+                    <div class="stats-icon pull-right">
+                        <i class="fa fa-cloud  fa-5x color_cloud"></i>
+                    </div>
+                    <div class="m-t-xl">
+                        <h3 ms-text="el.name"></h3>
+                        <div class="font">
+                            <span id_i18n="com_zte_ums_eco_roc_vim_display_type"
+                                  name_i18n="com_zte_conductor_ui_i18n"></span>
+                            <span ms-text="el.type"></span>
+                        </div>
+                        <div ms-text="el.url"></div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="pull-right">
+                        <a class="btn btn-default btn-sm" ms-click="$showVimTable(el, 'update')"><i
+                                class="fa fa-pencil-square-o fa-lg"></i></a>
+                        <a class="btn btn-default btn-sm" ms-click="delVim(el)"><i class="fa fa-trash-o fa-lg"> </i></a>
+                        <!--<a class="btn btn-default btn-sm" ms-click="gotoChartPage(el.oid,el.name,el.user)"><i class="fa fa-pie-chart fa-lg"> </i></a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row-fluid">
+        <div class="col-md-12">
+            <div class="pull-left text-muted">
+                <small><span id_i18n="com_zte_ums_eco_roc_vim_total" name_i18n="com_zte_conductor_ui_i18n"></span>
+                    <span class="blue-font" ms-text="vimInfo.size()"></span>
+                    <span id_i18n="com_zte_ums_eco_roc_vim_metric" name_i18n="com_zte_conductor_ui_i18n"></span></small>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="../../common/thirdparty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../../common/js/tools.js"></script>
+<script type="text/javascript" src="../../common/thirdparty/jquery.i18n/jquery.i18n.properties-1.0.9.js"></script>
+<script type="text/javascript" src="../../common/js/json2.js"></script>
+<script type="text/javascript" src="../../common/thirdparty/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../common/thirdparty/jquery-validation/js/jquery.validate.js"></script>
+<script type="text/javascript" src="../../common/thirdparty/jquery-validation/js/additional-methods.min.js"></script>
+<script type="text/javascript" src="../../common/thirdparty/bootbox/bootbox.min.js"></script>
+<!--<script type="text/javascript" src="../component/thirdparty/cometd/cometd.js"></script>-->
+<!--<script type="text/javascript" src="../component/thirdparty/cometd/jquery/jquery.cometd.js"></script>-->
+<script type="text/javascript" src="i18n/loadi18nApp.js"></script>
+<script type="text/javascript" src="js/vim-validate.js"></script>
+<!--<script type="text/javascript" src="./js/client-cometd.js"></script>-->
+<script src="../../common/thirdparty/avalon/avalon.js"></script>
+<script type="text/javascript" src="js/vimUtil.js"></script>
+<script type="text/javascript" src="js/vimController.js"></script>
+<script src="../../common/thirdparty/bootstrap-growl/bootstrap-growl.min.js"></script>
+<script type="text/javascript" src="../../common/js/core/hk.min.js"></script>
+</body>
+</html>

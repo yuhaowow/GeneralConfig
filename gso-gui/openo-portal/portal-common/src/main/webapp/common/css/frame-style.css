@@ -1,0 +1,255 @@
+/**
+ * Copyright 2016, CMCC Technologies Co., Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+#recommend_notice{
+    height:30px;
+	width:100%;
+	left:0px;
+	right:0px;
+	line-height:30px; 
+	text-align:center; 
+	position:absolute;
+	float:bottom;
+	bottom:35px;
+	z-index:2;
+	cursor:default;
+}
+
+#recommend_notice:hover {
+    color: #F75000;
+}
+.menuDivider{
+  height:1px;
+  margin:9px 0;
+  text-align: center;
+  overflow:hidden;
+  background-color:#a6a6a6 !important;
+}
+ 
+.page-content .page-breadcrumb.breadcrumb {
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+  box-shadow: none;
+  padding-right: 30px;
+  padding-left: 8px;
+  margin-top: 0px !important;
+  margin-bottom: 10px !important;
+  border:0px !important;  
+  background-color: #fff;
+}   
+.page-mainIframe{
+border: 0px; 
+margin: 0px; 
+padding: 0px;
+}
+
+.zte-navbar-brand {
+  /*display: inline-block;*/
+  padding:0px;
+  margin-top: -1px;
+  margin-right: 0px;
+  width: 225px;
+  height: 42px;
+}
+
+.zte-navbar-brand img {
+  margin-left: 10px;
+  margin-top: 4px;
+}
+
+.zte-navbar-brand.text-logo {
+  padding-left: 20px;
+  padding-top: 12px;
+}
+.zte-brand-text{
+  font-size:14px;
+  font-family:Arial;
+  color:#ffffff !important;
+  font-family:"microsoft yahei";
+} 
+.zte-theme-panel {
+  width: 45px;
+  margin-top: -2px;
+  margin-right: -5px;
+  z-index: 999;
+  float: right;
+  position:relative;
+}
+
+.zte-theme-panel > .toggler {
+  top:12px;
+  right:14px;
+  padding:11px;
+  cursor:pointer;
+  position:absolute;
+  display: block;
+  background:url(../image/icon-color.png) center no-repeat;
+}
+
+.zte-theme-panel > .toggler:hover {
+  background-color: #3d3d3d;
+}
+
+.zte-theme-panel > .toggler-close {
+  display: none;
+  top:4px;
+  right:0;
+  padding:20px;
+  cursor:pointer;
+  position:absolute;
+  background: #3d3d3d url(../image/icon-color-close.png) center no-repeat !important;
+}
+
+.zte-theme-panel > .toggler-close:hover {
+  background-color:#222 !important;
+}
+
+.zte-theme-panel > .theme-options {
+  min-width:228px;
+  top: 44px;
+  right: 0px;
+  display:none;
+  position:absolute;
+  background:#3d3d3d;
+}
+
+.zte-theme-panel > .theme-options > .theme-option {
+  color:#cfcfcf;
+  padding: 15px;
+  border-top:1px solid #585858;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.zte-theme-panel > .theme-options > .theme-option.theme-colors {
+  border-top: 0;
+}
+
+.zte-theme-panel > .theme-options > .theme-option > span {  
+  display: inline-block;
+  width: 80px;
+  font-size: 14px;
+}
+
+.zte-theme-panel > .theme-options > .theme-option.theme-colors > span {
+  display: block;
+  width: auto;
+}
+
+.zte-theme-panel > .theme-options > .theme-option > select.form-control {
+  display: inline;
+  width: 110px !important;
+}
+
+.zte-theme-panel > .theme-options > .theme-option.theme-colors > ul {
+  list-style:none;
+  padding: 0;
+  display: block;
+  margin-bottom: 1px !important;
+  margin-top: 10px;
+}
+
+.zte-theme-panel > .theme-options > .theme-option.theme-colors > ul > li {
+  width:24px;
+  height:24px;
+  margin:4 4px;
+  cursor:pointer;
+  list-style:none;
+  float: left;
+  border:solid 1px #707070;
+}
+
+.zte-theme-panel > .theme-options > .theme-option.theme-colors > ul > li:first-child {
+  margin-left: 4;
+}
+
+.zte-theme-panel > .theme-options > .theme-option.theme-colors > ul > li:hover,
+.zte-theme-panel > .theme-options > .theme-option.theme-colors > ul > li.current {
+  border:solid 2px #ebebeb;
+}
+
+.zte-theme-panel > .theme-options > .theme-option.theme-colors > ul > li.color-black {
+  background:#333438;
+}
+.zte-theme-panel> .theme-options > .theme-option.theme-colors > ul > li.color-ztebluelight {
+  background:#3366cc;
+}
+.zte-theme-panel> .theme-options > .theme-option.theme-colors > ul > li.color-ztebluelight2 {
+  background:#1178ee;
+}
+.zte-theme-panel> .theme-options > .theme-option.theme-colors > ul > li.color-ztebluelight3 {
+  background:#067ead;
+}
+.zte-theme-panel> .theme-options > .theme-option.theme-colors > ul > li.color-ztebluelight4 {
+  background:#333333;
+}
+.zte-theme-panel > .theme-options > .theme-option.theme-colors > ul > li.color-zteblue {
+  background:#1b8fd3;
+}
+.zte-theme-panel > .theme-options > .theme-option.theme-colors > ul > li.color-grey {
+  background:#6d6d6d;
+}
+
+.zte-theme-panel > .theme-options > .theme-option.theme-colors > ul > li.color-blue {
+  background:#124f94;
+}
+
+.zte-theme-panel > .theme-options > .theme-option.theme-colors > ul > li.color-brown {
+  background:#623f18;
+}
+
+.zte-theme-panel > .theme-options > .theme-option.theme-colors > ul > li.color-purple {
+  background:#701584;
+}
+
+.zte-theme-panel > .theme-options > .theme-option.theme-colors > ul > li.color-white {
+  background:#fff;
+}
+.header.navbar .navbar-nav {
+  min-width: 210px;
+}
+.header.navbar .navbar-toggle {
+  margin: 8px 0px 4px 6px;
+  padding: 5px 0px 6px 6px;
+}
+
+.nav-tabs li a span.remove{
+	color: #f00;
+	margin-left: 10px;	
+	cursor:hand;
+}
+.nav-tabs li a span.tabdropremove{
+	color: #f00;
+	margin-right: 10px;
+	float:right;
+	cursor:hand;
+}
+@media (min-width: 768px){
+	.navbar-collapse.collapse.hideSideMenuForMainPage {
+	  display: none !important;
+	}
+}
+#f_hormenu li.mega-menu-dropdown{
+	margin-left:30px;
+}
+.page-sidebar .sidebar-toggler{
+margin-left:190px;
+margin-bottom:5px;
+}
+.header.navbar .hor-menu ul.nav li.current .selected,
+.header.navbar .hor-menu ul.nav li.active .selected{
+margin-bottom:-5px;
+}

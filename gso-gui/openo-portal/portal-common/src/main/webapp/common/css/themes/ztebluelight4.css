@@ -1,0 +1,620 @@
+/**
+ * Copyright 2016, CMCC Technologies Co., Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/***
+light theme
+***/
+
+/***
+Reset and overrides  
+***/
+body {
+    background-color: #f1f3fa !important;
+}
+
+.page-content .page-breadcrumb.breadcrumb .dashboard-date-range {
+    background-color: #ededed !important;
+}
+
+.page-content {
+    background-color: #f1f3fa !important;
+}
+
+.vSplitbar {
+    background-color: transparent !important;
+}
+
+.btn-group .btn.blue.dropdown-toggle {
+    background-color: #333 !important;
+}
+
+.btn-group .btn.blue.dropdown-toggle:hover {
+    background-color: #000 !important;
+}
+
+/***
+Page header
+***/
+.header {
+    filter: none !important;
+    background-color: #333333 !important;
+}
+
+.header .btn-navbar {
+    background-color: #434343 !important;
+}
+
+.header .navbar-nav .dropdown-toggle:hover,
+.header .navbar-nav .dropdown.open .dropdown-toggle {
+    background-color: #40484c !important;
+}
+
+.header .navbar-nav li.dropdown .dropdown-toggle i {
+    color: #ffffff !important;
+}
+
+.zte-theme-panel > .toggler:hover {
+    background-color: #40484c !important;
+}
+
+/***
+Header Search
+***/
+.header .search-form {
+    background-color: #3a3a3a;
+}
+
+.header .search-form .form-control {
+    color: #ccc;
+    border: 0;
+    background-color: #3a3a3a;
+}
+
+.header .search-form .submit {
+    background: url(../../image/search-icon.png);
+}
+
+/***
+Hor menu
+***/
+.header .hor-menu ul.nav li a {
+    color: #fff;
+}
+
+.header .hor-menu ul.nav li.open > a,
+.header .hor-menu ul.nav li > a:hover,
+.header .hor-menu ul.nav li > a:focus {
+    color: #ccc;
+    background: #333333;
+}
+
+.header .hor-menu .dropdown-menu li:hover > a,
+.header .hor-menu ul.nav li.active > a,
+.header .hor-menu ul.nav li.active > a:hover {
+    color: #fff;
+    background: #333 !important;
+}
+
+.header.navbar .hor-menu ul.nav li.current .selected,
+.header.navbar .hor-menu ul.nav li.active .selected {
+    border-top: 6px solid #101010;
+}
+
+.header .hor-menu ul.nav li.current > a,
+.header .hor-menu ul.nav li.current > a:hover {
+    color: #fff;
+    background: #e02222 !important;
+}
+
+.header .hor-menu .dropdown-menu {
+    background: #4f4f4f;
+}
+
+.header .hor-menu .dropdown-menu li > a {
+    color: #ccc;
+}
+
+.header .hor-menu .hor-menu-search-form-toggler.off {
+    background: #4f4f4f url(../../image/hor-menu-search-close-white.png) no-repeat center;
+}
+
+.header .hor-menu .search-form {
+    background: #4f4f4f;
+}
+
+.header .hor-menu .search-form form input {
+    color: #ccc;
+}
+
+.header .hor-menu .search-form .btn {
+    color: #ccc;
+    background: url(../../image/search-icon-white.png) no-repeat center;
+}
+
+.header .hor-menu .search-form form input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #ccc;
+}
+
+.header .hor-menu .search-form form input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #ccc;
+}
+
+.header .hor-menu .search-form form input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #ccc;
+}
+
+.header .hor-menu .search-form form input:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #ccc;
+}
+
+/***
+Mega Menu
+***/
+.mega-menu .mega-menu-submenu {
+    border-right: 1px solid #656565;
+}
+
+.mega-menu .mega-menu-submenu li h3 {
+    color: #fff;
+}
+
+/***
+Page sidebar
+***/
+/*.page-content {
+  border-left: 1px solid #e2e2e2 !important;
+  border-bottom: 1px solid #e2e2e2 !important;
+}*/
+.page-sidebar-menu > li.active > a .selected {
+    background-image: none !important;
+	border-right:#5C9ACF 3px solid;
+	height:40px !important;
+	top:0 !important;
+}
+
+.page-sidebar-reversed .page-content {
+    border-left: 0;
+    border-right: 1px solid #e2e2e2 !important;
+}
+
+.page-sidebar {
+    background-color: #f1f3fa;
+}
+
+.page-sidebar-fixed .page-content {
+    border: 0 !important;
+}
+
+.page-sidebar-fixed .page-sidebar {
+    border-right: 1px solid #e2e2e2 !important;
+}
+
+ul.page-sidebar-menu > li > a {
+    border: 1px solid #dddddd !important;
+    color: #000 !important;
+    font-weight: 400;
+    background-color: #fff !important;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    -webkit-border-radius: 3px !important;
+    -moz-border-radius: 3px !important;
+    -ms-border-radius: 3px !important;
+    -o-border-radius: 3px !important;
+    border-radius: 3px !important;
+}
+
+.page-sidebar-menu > li.start > a {
+    border-top: 1px solid #dddddd !important;
+}
+
+ul.page-sidebar-menu > li:first-child > a {
+    border-top: 1px solid #dddddd !important;
+}
+
+ul.page-sidebar-menu > li:last-child > a {
+    border-bottom: 1px solid #dddddd !important;
+}
+
+/*ul.page-sidebar-menu > li a i {
+  color: #000 !important;
+}*/
+
+/*ul.page-sidebar-menu > li.open > a:hover {
+    background: #ededed !important;
+    color: #000 !important;
+}*/
+ul.page-sidebar-menu > li.open > a {
+    background: #fff !important;
+    color: #000 !important;
+}
+ul.page-sidebar-menu > li.active > a:hover {
+    background: #fff !important;
+   color: #5C9ACF !important ;
+	//border-left: #5C9ACF 3px solid;
+}
+
+
+/*ul.page-sidebar-menu > li.active > a .selected {
+  right:-7px;
+  top:0px;
+  width: 7px;
+  height: 39px;
+  background-image: url("../../image/sidebar-menu-arrow-green.png");*/
+    }
+
+.page-sidebar-reversed ul.page-sidebar-menu > li.active > a .selected {
+    right: auto;
+    left: -7px;
+    background-image: url("../../image/sidebar-menu-arrow-green-reverse.png");
+}
+
+/*ul.page-sidebar-menu > li.active i {
+  color: #fff !important;
+}*/
+.page-sidebar-fixed ul.page-sidebar-menu > li.active > a .selected {
+    display: none;
+}
+
+ul.page-sidebar-menu > li.active > a {
+    background: #fff !important;
+  border-right-color: transparent !important;
+    color: #1177CF !important;
+}
+
+ul.page-sidebar-menu > li.active > a i {
+    color: #5C9ACF;
+}
+
+ul.page-sidebar-menu > li > a > .arrow:before,
+ul.page-sidebar-menu > li > a > .arrow.open:before {
+    color: #ccc !important;
+}
+
+ul.page-sidebar-menu > li.active > a .arrow:before,
+ul.page-sidebar-menu > li.active > a .arrow.open:before {
+    color: #5C9ACF !important;
+}
+
+ul.page-sidebar-menu > li > ul.sub-menu > li:first-child > a {
+    border-top: 0px !important;
+}
+
+ul.page-sidebar-menu ul.sub-menu > li > a {
+    font-weight: 400 !important;
+    color: #2a6496 !important;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+    margin-bottom: 5px !important;
+}
+
+ul.page-sidebar-menu ul.sub-menu > li.active > a,
+ul.page-sidebar-menu ul.sub-menu > li > a:hover {
+    color: #818181 !important;
+    background: #ededed !important;
+}
+
+ul.page-sidebar-menu > li > ul.sub-menu a .arrow:before,
+ul.page-sidebar-menu > li > ul.sub-menu a .arrow.open:before {
+    color: #ccc !important;
+}
+
+/* sub menu links effects */
+ul.page-sidebar-menu ul.sub-menu > li.active > a,
+ul.page-sidebar-menu ul.sub-menu > li.active > a:hover {
+    color: #1177CF !important;
+    background: #dbe6ea !important;
+}
+
+ul.page-sidebar-menu ul.sub-menu > li > a:hover,
+ul.page-sidebar-menu ul.sub-menu > li.open > a {
+    color: #428bca !important;
+    background: #eaf1f4 !important;
+}
+
+ul.page-sidebar-menu > li > a:hover,
+ul.page-sidebar-menu > li.active > a:hover {
+  background-color: #ecf1f5 !important;
+  color: #585858;
+}
+/* sidebar search */
+.page-sidebar .sidebar-search input {
+    background-color: #f5f5f5 !important;
+    color: #727272 !important;
+}
+
+.page-sidebar .sidebar-search input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+
+.page-sidebar .sidebar-search input:-moz-placeholder {
+    color: #aaa !important;
+}
+
+.page-sidebar .sidebar-search input:-ms-input-placeholder {
+    color: #aaa !important;
+}
+
+.page-sidebar .sidebar-search .input-box {
+    border-bottom: 1px solid #e2e2e2 !important;
+}
+
+.page-sidebar .sidebar-search .submit {
+    background-image: url(../../image/search-icon-white.png);
+}
+
+/***
+Sidebar toggler
+***/
+.sidebar-toggler {
+    background-image: url(../../image/sidebar-toggler-light.jpg);
+    background-color: #333;
+}
+
+/* search box bg color on expanded */
+.page-sidebar-closed .page-sidebar .sidebar-search.open .form-container {
+    background-color: #fbfbfb !important;
+}
+
+.page-sidebar-closed .page-sidebar .sidebar-search.open .form-container .remove {
+    background-image: url("../../image/sidebar-search-close-light.png");
+}
+
+/* sub menu bg color on hover menu item */
+.page-sidebar-closed ul.page-sidebar-menu > li:hover .sub-menu {
+    background-color: #f5f5f5;
+}
+
+/***
+Footer 
+***/
+.footer .footer-inner {
+    color: #333333;
+}
+
+.footer .footer-tools .go-top {
+    background-color: #666666;
+}
+
+.footer .footer-tools .go-top:hover {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+.footer .footer-tools .go-top i {
+    color: #999999;
+}
+
+/***
+Footer Layouts (new in v1.3)
+***/
+/* begin:fixed footer */
+.page-footer-fixed .footer {
+    background-color: #434343;
+}
+
+.page-footer-fixed .footer .footer-inner {
+    color: #aaaaaa;
+}
+
+.page-footer-fixed .footer .footer-tools .go-top {
+    background-color: #666666;
+}
+
+.page-footer-fixed .footer .footer-tools .go-top i {
+    color: #aaaaaa;
+}
+
+/* end:fixed footer */
+/***
+Gritter Notifications 
+***/
+.gritter-top {
+    background: url(../../thirdparty/gritter/images/gritter.png) no-repeat left -30px !important;
+}
+
+.gritter-bottom {
+    background: url(../../thirdparty/gritter/images/gritter.png) no-repeat left bottom !important;
+}
+
+.gritter-item {
+    display: block;
+    background: url(../../thirdparty/gritter/images/gritter.png) no-repeat left -40px !important;
+}
+
+.gritter-close {
+    background: url(../../thirdparty/gritter/images/gritter.png) no-repeat left top !important;
+}
+
+.gritter-title {
+    text-shadow: none !important;
+    /* Not supported by IE :( */
+
+}
+
+/* for the light (white) version of the gritter notice */
+.gritter-light .gritter-item,
+.gritter-light .gritter-bottom,
+.gritter-light .gritter-top,
+.gritter-light .gritter-close {
+    background-image: url(../../thirdparty/gritter/images/gritter-light.png) !important;
+}
+
+.gritter-item-wrapper a {
+    color: #18a5ed;
+}
+
+.gritter-item-wrapper a:hover {
+    color: #0b6694;
+}
+
+/* begin: boxed page */
+@media (min-width: 992px) {
+    .page-boxed {
+        background-color: #E8E8E8 !important;
+    }
+
+    .page-boxed .page-container {
+        background-color: #f5f5f5;
+        border-left: 1px solid #e2e2e2;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    .page-sidebar-reversed.page-boxed .page-container {
+        border-left: 0;
+        border-right: 1px solid #e2e2e2;
+    }
+
+    .page-boxed.page-sidebar-fixed .page-container {
+        border-left: 0;
+        border-bottom: 0;
+    }
+
+    .page-boxed.page-sidebar-fixed .page-sidebar {
+        border-left: 1px solid #e2e2e2;
+    }
+
+    .page-boxed.page-sidebar-reversed.page-sidebar-fixed .page-sidebar {
+        border-right: 1px solid #e2e2e2;
+        border-left: 0;
+    }
+
+    .page-boxed.page-sidebar-fixed.page-footer-fixed .footer {
+        background-color: #E8E8E8 !important;
+    }
+
+    .page-sidebar-closed .page-sidebar-menu > li > a {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* end: boxed page */
+/***
+Landscape phone to portrait tablet
+***/
+@media (max-width: 991px) {
+    /***
+    page sidebar
+    ***/
+    .page-sidebar-closed .page-sidebar-menu > li > a {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .page-sidebar {
+        background-color: #f1f1f1 !important;
+        border-right: none !important;
+    }
+
+    .page-sidebar-fixed .page-sidebar {
+        border-right: none !important;
+    }
+
+    .page-content {
+        border-left: none !important;
+    }
+
+    ul.page-sidebar-menu > li > a {
+        border-top: 1px solid #ececec !important;
+        border-bottom: 1px solid #cccccc !important;
+    }
+
+    /* ul.page-sidebar-menu > li:last-child > a {
+       border-bottom: 0 !important;
+     }*/
+    ul.page-sidebar-menu > li.open > a, {
+        color: #666666 !important;
+        background-color: #e0e0e0 !important;
+    }
+
+    /*ul.page-sidebar-menu > li > a:hover {
+      color: #666666 !important;
+      background-color: #e7e7e7 !important;
+    }*/
+    ul.page-sidebar-menu > li.open > a {
+        border-bottom-color: transparent !important;
+    }
+
+    /* ul.page-sidebar-menu > li.active > a {
+       color: #ffffff !important;
+       background-color: #28b779 !important;
+     }*/
+    /*ul.page-sidebar-menu ul.sub-menu > li > a {
+      color: #111 !important;
+    }*/
+    /*ul.page-sidebar-menu ul.sub-menu > li.active > a{
+        color: #000 !important;
+        background: #dbe6ea !important; */
+}
+
+/* ul.page-sidebar-menu ul.sub-menu > li.open > a,
+   ul.page-sidebar-menu ul.sub-menu > li > a:hover {
+   color: #000 !important;
+   background: #e7e7e7 !important;
+ }*/
+
+.page-sidebar .sidebar-search input {
+    background-color: #f1f1f1 !important;
+    color: #ccc !important;
+}
+
+.page-sidebar .sidebar-search .input-box {
+    border-bottom-color: #ccc !important;
+}
+
+.page-sidebar .sidebar-search input::-webkit-input-placeholder {
+    color: #ccc !important;
+}
+
+.page-sidebar .sidebar-search input:-moz-placeholder {
+    color: #ccc !important;
+}
+
+.page-sidebar .sidebar-search input:-ms-input-placeholder {
+    color: #ccc !important;
+}
+
+/***
+page footer
+***/
+
+.footer {
+    background-color: #434343;
+}
+
+.footer .footer-inner {
+    color: #cccccc;
+}
+
+.footer .footer-tools .go-top {
+    background-color: #666666;
+}
+
+.footer .footer-tools .go-top i {
+    color: #999999;
+}
+
+    }
+
+@media (max-width: 767px) {
+    body {
+        background-color: #333333 !important;
+    }
+}

@@ -1,0 +1,121 @@
+<!--
+    Copyright 2016, CMCC Technologies Co., Ltd.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title id="com_zte_ums_ict_portal_login_title" name_i18n="com_zte_ums_ict_framework_ui_i18n_login"></title>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+		<meta content="" name="description"/>
+		<meta content="" name="author"/>
+		<link href="./common/thirdparty/fakeLoader/fakeLoader.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/thirdparty/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/thirdparty/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/thirdparty/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/css/style-custom.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/css/plugins.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/css/login.css" rel="stylesheet" type="text/css"/>
+		<script src="./common/thirdparty/jquery/jquery-1.10.2.min.js" type="text/javascript"></script>
+		<script src="./common/thirdparty/fakeLoader/fakeLoader.min.js" type="text/javascript"></script>
+		<script src="./common/thirdparty/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="./common/thirdparty/jquery-blockui/jquery.blockui.min.js" type="text/javascript"></script>
+		<script src="./common/thirdparty/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+		<script src="./common/thirdparty/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+		<script src="./common/thirdparty/backstretch/jquery.backstretch.min.js" type="text/javascript"></script>
+		<script src="./common/thirdparty/jquery.i18n/jquery.i18n.properties-1.0.9.js" type="text/javascript"></script>
+		<script src="./common/js/core/const.js" type="text/javascript"></script>
+		<script src="./common/js/security/security.js" type="text/javascript"></script>
+		<script src="./common/js/core/hk.min.js" type="text/javascript"></script>
+		<script src="./common/js/tools.js" type="text/javascript"></script>
+		<script src="./common/js/security/aes.js" type="text/javascript"></script>
+		<script src="./common/js/security/framework-util.js" type="text/javascript"></script>
+		<script src="./common/js/login.js" type="text/javascript"></script>
+		<script src="./common/js/international/loadi18n-login.js" type="text/javascript"></script>
+		<script>
+			if(top != window){
+				top.location.href = location.href;
+			}
+		</script>
+		<script type="text/javascript">
+			function hidetip(tipid) {
+				var tip = $("#" + tipid);
+				tip.hide();
+				tip.attr("tipstatus", "close");
+			}
+		</script>
+	</head>
+	<body class="login">
+		<div id="pageLoading" class="fakeloader"></div>
+		<script type="text/javascript">
+			$("#pageLoading").fakeLoader({text:"",bgColor:"#1178ee",opacity:'1',spinner:"spinner2",zIndex:99999999});
+		</script>
+		<div class="logo">
+			<img id="com_zte_ums_ict_framework_img_login_logo_white" src="./common/image/integration/openo_logo_white.png" name_img="com_zte_ums_ict_framework_img" style="display:none" alt=""/>
+		</div>
+		<div class="content">
+			<form class="login-form" method="post" id="fm1" action="./login">
+				<h3 class="form-title"><span id="com_zte_ums_ict_portal_login_welcome" name_i18n="com_zte_ums_ict_framework_ui_i18n_login"></span></h3>
+				<div class="alert display-hide" id="nameOrpwdError" tipstatus="normal">
+					<button class="close" data-close="alert" onclick="hidetip('nameOrpwdError');"></button>
+					<div id="com_zte_ums_ict_portal_login_userPassword" name_i18n="com_zte_ums_ict_framework_ui_i18n_login" style="display:inline"></div>
+				</div>
+				<div class="alert display-hide" id="loginConnError" tipstatus="normal">
+					<button class="close" data-close="alert" onclick="hidetip('loginConnError');"></button>
+					<div id="com_zte_ums_ict_portal_login_serv_error" name_i18n="com_zte_ums_ict_framework_ui_i18n_login" style="display:inline"></div>
+				</div>
+				<div class="form-group">
+					<label id="com_zte_ums_aos_portal_login_username" name_i18n="com_zte_ums_ict_framework_ui_i18n_login" class="control-label visible-ie8 visible-ie9" i18n-html="com_zte_ums_aos_portal_login_username"></label>
+					<div class="input-icon">
+						<i class="fa fa-user"></i>
+						<input class="form-control placeholder-no-fix" id="inputUserName" type="text" autocomplete="off" name_i18n="com_zte_ums_ict_framework_ui_i18n_login" placeholder="" name="username"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label id="com_zte_ums_aos_portal_login_password" name_i18n="com_zte_ums_ict_framework_ui_i18n_login" class="control-label visible-ie8 visible-ie9" i18n-html="com_zte_ums_aos_portal_login_password"></label>
+					<div class="input-icon">
+						<i class="fa fa-lock"></i>
+						<input class="form-control placeholder-no-fix" id="inputPassword" type="password" autocomplete="off" name_i18n="com_zte_ums_ict_framework_ui_i18n_login" placeholder="" name="password"/>
+					</div>
+				</div>
+				<div class="form-actions">
+					<label class="checkbox">
+						<input type="checkbox" name="remember" value="1">
+						<span id="com_zte_ums_ict_portal_login_rememberMe" name_i18n="com_zte_ums_ict_framework_ui_i18n_login"></span>
+					</label>
+					<button type="submit" i18n-value="com_zte_ums_aos_portal_login_login" id="submitBtn" class="btn blue pull-right">
+						<span id="com_zte_ums_aos_portal_login_login" name_i18n="com_zte_ums_ict_framework_ui_i18n_login"></span>
+						<i class="m-icon-swapright m-icon-white"></i>
+					</button>
+				</div>
+			</form>
+		</div>
+		<script>
+			jQuery(document).ready(function() {
+				var lang = getLanguage();
+				loadi18n_login(lang);
+				$("#com_zte_ums_ict_framework_img_login_logo_white").css('display','inline');
+				Login.init();
+				if(store("inputUserName")){
+					$("#inputUserName").val(store("inputUserName"));
+				}
+				$("#pageLoading").setToHide();
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,128 @@
+<!--
+
+    Copyright 2016 ZTE Corporation.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<link href="../common/thirdparty/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="../common/thirdparty/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../common/thirdparty/uniform/css/uniform.default.min.css" rel="stylesheet" />
+	<link href="../common/css/style.css" rel="stylesheet"/>
+	<link href="../common/css/ngict-component.css" rel="stylesheet"/>
+	<link href="../common/css/plugins.css" rel="stylesheet"/>
+	<link href="css/platform/animate.min.css" rel="stylesheet"/>
+	<link href="css/datatable-sort.css" rel="stylesheet"/>
+	<link href="css/templateDetail.css" rel="stylesheet" />
+	<link href="css/topology.css" rel="stylesheet" />
+	<style type="text/css">
+	.ms-controller {
+		visibility: hidden;
+	}
+	.ms-nodedetail {
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<div ms-controller="tmDetailController" class="container-fluid ms-controller">
+	    <div data-name="tab_zone">
+            <div class="col-xs-12">
+                <ul class="nav nav-tabs" ms-each-tab="templateData" id="tab">
+                    <li ms-class-active="tab.value">
+                    	<a ms-attr-href="tab.href" ms-text="tab.name" data-toggle="tab"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+		<div class="tab-content">
+			<div class="tab-pane active" id="topology">
+				<div class="row" style=" margin-top: 50px;"> 
+				    <div class="col-xs-12 col-md-12 col-sm-12 col-lg-12 titlefont">
+				     	<button ms-visible="topologyTab.returnBtnVisible" class="btn white iconBtn"
+						ms-click="topologyTab.$returnNS" ms-attr-title="topologyTab.btnTip">
+							<i class="fa fa-arrow-left"></i>
+						</button>
+				    </div>
+			   	</div>
+				<div ms-include-src="topologyTab.topology"></div>
+			</div>
+			<div class="tab-pane" id="nodes">
+				<div class="row-fluid" data-name="table_zone">
+					<div class="col-xs-12" id='ict_nodes_template_table_div'></div>
+				</div>
+			</div>			
+		</div>
+		
+		<div id="right-menu" class="ms-nodedetail" ms-css-display="nodesDetail.isShow">
+			<div>
+				<div class="title"><h4>{{nodesDetail.detailTitle}}</h4>
+					<div class="rigth right-button-pointer" ms-click="nodesDetail.$showDetails('none')">
+					<button type="button" class="btn btn-default">
+						<span id="nfv-templateDetail-nodesTab-iui-btn-close" name_i18n="com_zte_nfv_nsoc_i18n"></span>
+					</button>
+					</div>
+				</div>
+				<div>
+					<div class="btn-group" >
+						<button type="button" class="btn btn-default" ms-repeat="nodesDetail.detailData" ms-click="nodesDetail.detailCondChange($index)" ms-attr-id="el.id"
+						ms-class="active: el.isActive">{{el.name}}
+						</button>
+					</div>
+					<div ms-if="nodesDetail.detailIndex === 0">
+						<div class="row-fluid" data-name="table_zone">
+							<div id='ict_table_general_div' class="nodesDetail"></div>
+						</div>
+					</div>
+					<div ms-if="nodesDetail.detailIndex === 1">
+						<div class="row-fluid" data-name="table_zone">
+							<div id='ict_table_properties_div' class="nodesDetail"></div>
+						</div>
+					</div>
+					<div ms-if="nodesDetail.detailIndex === 2">
+						<div class="row-fluid" data-name="table_zone">
+							<div id='ict_table_relationShips_div' class="nodesDetail"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../common/thirdparty/jquery/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../common/thirdparty/bootstrap/js/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="../common/thirdparty/data-tables/jquery.dataTables.js"></script>-->
+	<script type="text/javascript" src="../common/thirdparty/data-tables/jquery.dataTables-1.9.4.min.js"></script>
+	<script type="text/javascript" src="../common/thirdparty/jquery.i18n/jquery.i18n.properties-1.0.9.js"></script>
+
+	<script type="text/javascript" src="../common/thirdparty/bootstrap-growl/bootstrap-growl.min.js"></script>
+	<script type="text/javascript" src="../common/thirdparty/avalon/avalon.modern.js"></script>
+
+	<script type="text/javascript" src="../common/js/tools.js"></script>
+	
+	<script type="text/javascript" src="js/component/commonUtil.js"></script>
+	<script type="text/javascript" src="js/component/serverPageTable.js"></script>
+	<script type="text/javascript" src="js/component/loadi18n_nsoc.js"></script>
+
+	<script type="text/javascript" src="js/template/tmDetailUtil.js"></script>
+	<script type="text/javascript" src="js/template/tmUtil.js"></script>
+	<script type="text/javascript" src="js/template/tmDetailController.js"></script>
+	<script type="text/javascript" src="js/template/topoUtil.js"></script>
+
+</body>
+</html>

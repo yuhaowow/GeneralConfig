@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.openo.common-services.common-utilities:commonlib-restclient:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/openo/common-services/common-utilities/commonlib-restclient/1.0.0-SNAPSHOT/commonlib-restclient-1.0.0-20160923.063528-6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/openo/common-services/common-utilities/commonlib-restclient/1.0.0-SNAPSHOT/commonlib-restclient-1.0.0-20160923.063528-6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/openo/common-services/common-utilities/commonlib-restclient/1.0.0-SNAPSHOT/commonlib-restclient-1.0.0-20160923.063528-6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

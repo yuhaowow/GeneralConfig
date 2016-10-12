@@ -1,0 +1,179 @@
+
+<!-- /* Copyright 2016, Huawei Technologies Co., Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/VMMain.css" rel="stylesheet" />
+        <link href="css/bootstrap-table.min.css" rel="stylesheet" />
+        <link rel="import" href="accorTables.html">
+        <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/rest.js"></script>
+        <script type="text/javascript" src="js/bootstrap-table.min.js"></script>
+        <!-- <script type="text/javascript" src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js">
+        </script>
+        <link href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css" rel="stylesheet" /> -->
+        <script type="text/javascript">
+        $(document).ready(function() {
+                    $("#detailCont").show();
+                    var jsondata = [];
+                    //jsondata = loadNeData();
+                    $('#sai').bootstrapTable({
+                        //Assigning data to table
+                        data: jsondata
+                    });
+                    $('.table tbody tr').click(function() {
+                        $(this).addClass('openoTable_row_selected').siblings().removeClass('openoTable_row_selected');
+                    })
+                    $('.detail-top ul li').click(function() {
+                        $(this).addClass('current').siblings().removeClass('current');
+                    });
+                    $("#topoCont").hide();
+                    $("#inpCont").hide();
+
+                    function operateFormatter(value, row, index) {
+                        return [
+                            '<img class="siteDeleteImg" src="images/delete.png" href="javascript:void(0)" style="cursor: pointer" name="title" title="Delete" />'
+                        ].join('');
+                    }
+                    window.operateEvents = {
+                        'click .siteDeleteImg': function(e, value, row, index) {
+                            // TO DO ajex call for delete
+                            var result = deleteNe(row.id, row);
+                        }
+                    };
+
+                    function hideBasic() {
+                        $("#basicInfoTab").hide();
+                    }
+
+                    function showBasic() {
+                        $("#basicInfoTab").show();
+                    }
+
+                    function showTopoCont() {
+                        $("#topoCont").show();
+                        $("#detailCont").hide();
+                        $("#inpCont").hide();
+                    }
+
+                    function showDetCont() {
+                        $("#topoCont").hide();
+                        $("#detailCont").show();
+                        $("#inpCont").hide();
+                    }
+
+                    function showInpCont() {
+                        $("#topoCont").hide();
+                        $("#detailCont").hide();
+                        $("#inpCont").show();
+                    }
+
+                    function showTopoContMod() {
+                        $("#topoContMod").show();
+                        $("#detailContMod").hide();
+                        $("#inpContMod").hide();
+                    }
+
+                    function showDetContMod() {
+                        $("#topoContMod").hide();
+                        $("#detailContMod").show();
+                        $("#inpContMod").hide();
+                    }
+
+                    function showInpContMod() {
+                        $("#topoContMod").hide();
+                        $("#detailContMod").hide();
+                        $("#inpContMod").show();
+                    }
+        </script>
+
+        <style>
+        .nav-tabs {
+            border-bottom-style: none;
+        }
+        .mT15 {
+            margin-top: 15px;
+        }
+        .fixed-table-container tbody td .th-inner,
+        .fixed-table-container thead th .th-inner {
+            line-height: 4px;
+        }
+        .fixed-table-pagination .pagination-info {
+            display: none !important;
+        }
+        .table tbody tr:hover td,
+        .table tbody tr.odd:hover td {
+            background-color: #e6fbe0 !important;
+        }
+        /*.fixed-table-pagination .page-list{display:inline-block  !important}*/
+        
+        .detail-top ul {
+            background: #F8F6F6 !important;
+        }
+        .btn {
+            padding: 4px;
+        }
+        </style>
+    </head>
+
+    <body id="open_base_site_cotentBody" class="cotentBody ng-scope">
+        <div class="container-fluid ms-controller">
+            <h3> Life Cycle Manager > Service Info</h3>
+            <div class="separator-line"></div>
+
+            <div class="detail" style="border-radius:5px;">
+                <div class="detail-top" style="margin-top:2px;border-radius:5px;">
+                    <ul>
+                        <li style="border-radius:5px;" id="detHov" class="current" onClick="showDetCont();">Detail Info</li>
+                        <li style="border-radius:5px;" nClick="showTopoCont();">topo</li>
+                        <li style="border-radius:5px;" onClick="showInpCont();">InputData</li>
+                    </ul>
+                </div>
+
+                <div style="border-radius:5px;">
+                    <div id="detailCont" style="display:none;">
+                        
+                        <object data="accorTables.html" width="100%" height="300" type="text/html">
+
+                        </object>
+                    </div>
+                    <div id="topoCont" style="display:none;">downnn</div>
+                    <div id="inpCont" style="display:none;">
+                        <iframe src="inputData.html" name="" allowTransparency="true" scrolling="no" frameborder="0">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="detail-bottom"></div>
+            </div>
+
+        </div>
+        </br>
+
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="22"
+   height="22"
+   id="svg15992">
+  <defs
+     id="defs15994" />
+  <metadata
+     id="metadata15997">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g14827">
+    <path
+       d="m 2.891918,1.4915216 17.095696,0 L 22,3.9486926 22,18.424603 17.466586,22 2.92118,22 0.660128,18.7386 0.577598,4.0073366 z"
+       id="rect3155"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <g
+       transform="translate(0,-1030.3622)"
+       id="layer1">
+      <path
+         d="M 3.65625,0 C 1.62178,0 0,1.7027 0,3.8125 l 0,6.5625 0,1.34375 0,6.9375 c 0.01722469,0.09155 0.00776157,0.09953 0.09375,0.375 C 0.45652837,20.736363 1.8994077,22 3.65625,22 l 14.6875,0 c 1.756851,0 3.199724,-1.263637 3.5625,-2.96875 0.08599,-0.27547 0.07653,-0.283445 0.09375,-0.375 l 0,-6.9375 0,-1.34375 0,-6.5625 C 22,1.7027 20.37823,0 18.34375,0 L 3.65625,0 z m 1.25,2.875 1.375,0 0,2.75 2.75,0 0,-2.75 1.375,0 0,6.9375 -1.375,0 0,-3.03125 -2.75,0 0,3.03125 -1.375,0 0,-6.9375 z m 6.90625,0 2.25,0 c 0.845943,6.9e-6 1.399327,0.056078 1.65625,0.125 0.394769,0.1034 0.733678,0.3412947 1,0.6875 0.266311,0.3462176 0.374994,0.7954561 0.375,1.34375 -6e-6,0.4229779 -0.06523,0.7742553 -0.21875,1.0625 C 16.72147,6.3820021 16.517797,6.5855134 16.28125,6.75 16.044692,6.9144926 15.83813,7.0404894 15.59375,7.09375 15.261632,7.1595493 14.754757,7.1875028 14.125,7.1875 l -0.875,0 0,2.625 -1.4375,0 0,-6.9375 z M 13.25,4.09375 13.25,6 14,6 c 0.548296,3.8e-6 0.908891,0.00957 1.09375,-0.0625 C 15.278601,5.8654417 15.395035,5.7472778 15.5,5.59375 15.604954,5.4402306 15.687496,5.2349084 15.6875,5.03125 15.687496,4.7806039 15.616006,4.6004284 15.46875,4.4375 15.321489,4.2745819 15.131832,4.1657364 14.90625,4.125 14.74019,4.0936747 14.376299,4.0937555 13.875,4.09375 l -0.625,0 z m -11.75,7.625 19,0 0,7.3125 -19,0 0,-7.3125 z m 15.3125,1.125 c -0.858561,5e-6 -1.535658,0.21907 -2.0625,0.6875 -0.526844,0.468439 -0.8125,1.122101 -0.8125,1.96875 0,0.800389 0.288444,1.444756 0.8125,1.90625 0.524054,0.461495 1.15479,0.6875 1.96875,0.6875 0.657854,0 1.19711,-0.13675 1.625,-0.40625 0.427881,-0.269493 0.722268,-0.663568 0.90625,-1.21875 l -1.15625,-0.3125 c -0.103139,0.372437 -0.294314,0.639007 -0.53125,0.8125 -0.236943,0.173502 -0.514827,0.25 -0.84375,0.25 -0.446007,0 -0.814999,-0.133285 -1.09375,-0.40625 -0.278752,-0.272964 -0.406251,-0.700662 -0.40625,-1.34375 -10e-7,-0.60607 0.123314,-1.073095 0.40625,-1.34375 0.282932,-0.270647 0.67063,-0.406245 1.125,-0.40625 0.328925,5e-6 0.582526,0.09733 0.8125,0.25 0.229967,0.15268 0.42752,0.330041 0.5,0.59375 L 19.25,14.34375 C 19.110619,13.936622 18.872497,13.6237 18.59375,13.40625 18.12544,13.038446 17.56234,12.843755 16.8125,12.84375 z M 2.75,12.9375 2.75,18 4.8125,18 c 0.7888669,-0.0047 1.2937189,0.01851 1.5,0 0.3289239,-0.03007 0.5880993,-0.119306 0.8125,-0.25 0.2243909,-0.130694 0.4016239,-0.312646 0.53125,-0.53125 0.1296144,-0.218602 0.2187442,-0.456173 0.21875,-0.6875 -5.8e-6,-0.293781 -0.1118036,-0.532551 -0.3125,-0.75 C 7.3617928,15.563808 7.0610238,15.433973 6.6875,15.34375 6.9523104,15.244282 7.1890371,15.073943 7.34375,14.875 7.4984528,14.676064 7.5624945,14.45702 7.5625,14.21875 7.5624945,13.998993 7.500433,13.801969 7.375,13.625 7.2495561,13.448041 7.0944031,13.293919 6.90625,13.1875 6.718087,13.081098 6.5195793,13.002294 6.28125,12.96875 6.0429124,12.935206 5.6725263,12.937505 5.1875,12.9375 l -2.4375,0 z m 6.1875,0.03125 0,5.03125 4.34375,0 0,-0.84375 -3.09375,0 0,-4.1875 -1.25,0 z m -5,0.8125 0.75,0 c 0.5825902,0 0.9085957,-0.01155 1.03125,0 0.2062732,0.02083 0.3642145,0.08919 0.46875,0.1875 0.1045289,0.09831 0.1874956,0.217703 0.1875,0.375 -4.4e-6,0.164244 -0.066247,0.30563 -0.1875,0.40625 -0.1212612,0.100623 -0.2881517,0.166682 -0.5,0.1875 -0.1170799,0.01155 -0.4240107,4e-6 -0.90625,0 l -0.84375,0 0,-1.15625 z m 0,2.03125 1.0625,0 c 0.5630773,0 0.8938509,0.04517 1.0625,0.09375 0.1686414,0.04858 0.2857952,0.112339 0.375,0.21875 0.089196,0.106411 0.1249959,0.222326 0.125,0.375 -4.5e-6,0.180436 -0.040573,0.329941 -0.15625,0.4375 -0.115687,0.107566 -0.2535272,0.190993 -0.4375,0.21875 -0.119867,0.02083 -0.3977489,1e-6 -0.84375,0 l -1.1875,0 0,-1.34375 z"
+         transform="translate(0,1030.3622)"
+         id="rect3001-7-4"
+         style="fill:#649be6;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <g
+         transform="translate(3,1033.8577)"
+         id="layer1-8">
+        <g
+           id="text5399"
+           style="font-size:7px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+        <g
+           transform="translate(0,-1036.4247)"
+           id="layer1-3">
+          <g
+             transform="scale(0.89723629,1.1145336)"
+             id="text5639"
+             style="font-size:7.97739649px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+          <g
+             transform="scale(1.0195853,0.98079088)"
+             id="text6068"
+             style="font-size:6.62408876px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+          <g
+             id="text6125"
+             style="font-size:6px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+        </g>
+        <g
+           transform="translate(0,-1036.3622)"
+           id="layer1-84">
+          <g
+             transform="scale(0.93557544,1.0688609)"
+             id="text7308"
+             style="font-size:8.03458023px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+        </g>
+        <g
+           transform="scale(0.9686171,1.0323997)"
+           id="text5724"
+           style="font-size:9.88508701px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+        <g
+           id="text5751"
+           style="font-size:7px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+        <g
+           id="layer1-37">
+          <g
+             id="text5141"
+             style="font-size:7px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+        </g>
+        <g
+           transform="scale(1.0995518,0.90946149)"
+           id="text5804"
+           style="font-size:6.36623049px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+        <g
+           transform="scale(0.94725198,1.0556853)"
+           id="text5938"
+           style="font-size:7px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+      </g>
+      <g
+         transform="matrix(1.3669903,0,0,1.375,30.30548,-396.96631)"
+         id="layer1-849">
+        <g
+           id="text7004"
+           style="font-size:6px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+      </g>
+      <g
+         transform="matrix(1.375,0,0,1.375,0,-394.63583)"
+         id="layer1-2">
+        <g
+           transform="scale(0.93557544,1.0688609)"
+           id="text7308-2"
+           style="font-size:6.13837099px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+      </g>
+      <g
+         transform="matrix(1.375,0,0,1.375,26.097206,-407.46806)"
+         id="layer1-29" />
+      <g
+         transform="matrix(1.375,0,0,1.375,0,-394.63583)"
+         id="layer1-3-2">
+        <g
+           transform="scale(0.93557544,1.0688609)"
+           id="text7308-5"
+           style="font-size:6.13837099px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+      </g>
+      <g
+         transform="matrix(1.375,0,0,1.375,0,-394.63583)"
+         id="layer1-3-1">
+        <g
+           transform="scale(0.93557544,1.0688609)"
+           id="text7308-7"
+           style="font-size:6.13837099px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+      </g>
+      <g
+         transform="matrix(1.5,0,0,1.5,-29.444014,-522.91085)"
+         id="layer1-6">
+        <g
+           transform="scale(0.93557544,1.0688609)"
+           id="text7308-3"
+           style="font-size:6.13837099px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+      </g>
+      <g
+         transform="matrix(1.375,0,0,1.375,0,-394.63583)"
+         id="layer1-2-2">
+        <g
+           transform="scale(0.93557544,1.0688609)"
+           id="text7308-2-5"
+           style="font-size:8.38767338px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+      </g>
+      <g
+         transform="matrix(1.375,0,0,1.375,0,1030.3622)"
+         id="g18839">
+        <g
+           transform="translate(0,-1036.3622)"
+           id="layer1-9">
+          <g
+             transform="scale(0.93557544,1.0688609)"
+             id="text7308-9"
+             style="font-size:7.13911057px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+          <g
+             id="text7599"
+             style="font-size:6px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+        </g>
+        <g
+           id="text7710"
+           style="font-size:6px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+        <g
+           transform="scale(0.79259781,1.2616739)"
+           id="text7727"
+           style="font-size:4.7555871px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+        <g
+           id="text3227"
+           style="font-size:7px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+        <g
+           transform="scale(1.0977352,0.91096649)"
+           id="text3238"
+           style="font-size:5.67335844px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+      </g>
+    </g>
+  </g>
+</svg>

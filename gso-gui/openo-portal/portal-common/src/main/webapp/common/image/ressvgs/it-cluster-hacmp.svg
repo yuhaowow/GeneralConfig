@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="22"
+   height="22"
+   id="svg4880">
+  <defs
+     id="defs4882">
+    <font
+       horiz-origin-x="0"
+       horiz-origin-y="0"
+       horiz-adv-x="1024"
+       vert-origin-x="45"
+       vert-origin-y="90"
+       vert-adv-y="90"
+       id="font4968" />
+  </defs>
+  <metadata
+     id="metadata4885">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="matrix(1.375,0,0,1.3748969,0,-1424.9754)"
+     id="layer1"
+     style="fill:#649be6;fill-opacity:1">
+    <g
+       transform="scale(0.89723629,1.1145336)"
+       id="text5639"
+       style="font-size:7.97739649px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#649be6;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+    <path
+       d="m 1.34375,1036.4235 0,1.2607 4.1967567,0 0,5.0428 2.1936712,0 0,1.4547 -3.2654279,0 0,-5.3984 -4.46875,0 0,13.6414 4.46875,0 0,-6.0772 3.2654279,0 0,0.5495 4.4687501,0 0,-8.1137 -4.4687501,0 0,2.683 -1.2561712,0 0,-5.0428 z m 7.7341779,0 0,1.2607 4.1080221,0 0,9.2128 0.9375,0 0,-10.4735 z m -2.4216779,11.0953 -1.90625,4.5503 1.0625,0 0.375,-1.0991 1.9375,0 0.4375,1.0991 1.0625,0 -1.9375,-4.5503 z m 3.4375,0 0,4.5503 1,0 0,-4.5503 z m 1.5625,0 1.5,2.0289 -1.625,2.5214 1.15625,0 1.0625,-1.6809 1.09375,1.6809 1.15625,0 -1.65625,-2.489 1.53125,-2.0613 -1.15625,0 -0.9375,1.2854 -0.96875,-1.2854 z m -4.5,0.8652 0.65625,1.7779 -1.3125,0 z"
+       id="rect6001"
+       style="fill:#649be6;fill-opacity:1;stroke:none" />
+    <g
+       transform="scale(1.0195853,0.98079088)"
+       id="text6068"
+       style="font-size:6.62408876px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#649be6;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+  </g>
+</svg>

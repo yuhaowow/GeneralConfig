@@ -1,0 +1,298 @@
+<!-- /* Copyright 2016, Huawei Technologies Co., Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/VMMain.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/rest.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#overDiv").show();
+            $("#underDiv").hide();
+
+            var serviceId = getQueryStringValue("serviceId");
+            console.log("serviceId : " + serviceId);
+
+            var jsonData = loadServiceDetails(serviceId);
+            console.log("jsonData length: " + jsonData.length);
+            for (i = 0; i < jsonData.length; i++) {
+                console.log("jsonData Name: " + jsonData[i].name);
+                if (jsonData[i].name == "sdno") {
+                    //$("#sdnoLink").text(jsonData[i].name.toUpperCase());
+                    console.log("Adding Accordian to SDNO");
+                    $("#accordion").append(addAccordionData("sdno", jsonData[i].name.toUpperCase()));
+                }
+                else if (jsonData[i].name == "gso") {
+                    console.log("Adding Accordian to GSO");
+                    $("#accordion").append(addAccordionData("gso", jsonData[i].name.toUpperCase()));
+                }
+                else if (jsonData[i].name == "nfvo") {
+                    console.log("Adding Accordian to NFVO");
+                    $("#accordion").append(addAccordionData("nfvo", jsonData[i].name.toUpperCase()));
+                }
+                else {
+
+                }
+            }
+        });
+
+        function fnOver() {
+            $("#dashboard").show();
+            $("#overDiv").show();
+            $("#underDiv").hide();
+        }
+
+        function fnUnder() {
+            $("#dashboard").show();
+            $("#overDiv").hide();
+            $("#underDiv").show();
+        }
+
+        function clZte() {
+            $("#dashboard").hide();
+        }
+
+        function fnLoadTblData(el, panelType) {
+            console.log("panelType of "+el.id+" is "+panelType);
+            var current = document.querySelector('.selected');
+            if (current) {
+                current.classList.remove('selected');
+            }
+            el.classList.add('selected');
+            switch (panelType) {
+                case "sdno":
+                    if(el.id == "overLink") {
+                        $("#dashboard").show();
+                        $("#overDiv").show();
+                        $("#underDiv").hide();
+                    } else if(el.id == "underLink"){
+                        $("#dashboard").show();
+                        $("#overDiv").hide();
+                        $("#underDiv").show();
+                    } else {
+                        $("#dashboard").hide();
+                        $("#overDiv").hide();
+                        $("#underDiv").hide();
+                    }
+                    break;
+                case "gso":
+                    $("#dashboard").hide();
+                    $("#overDiv").hide();
+                    $("#underDiv").hide();
+                    break;
+                case "nfvo":
+                    $("#dashboard").hide();
+                    $("#overDiv").hide();
+                    $("#underDiv").hide();
+                    break;
+            }
+
+        }
+
+        function getQueryStringValue(key) {
+            var params = new URLSearchParams(window.location.search.slice(1));
+            return params.get(key);
+        }
+
+        function addAccordionData(type, text) {
+            var content = '';
+            content += '<div class="panel panel-default"><div class="panel-heading">';
+            content += '<h4 class="panel-title">';
+            content += '<a style="text-decoration:none;" data-toggle="collapse" data-parent="#accordion" href="#collapseOne_'+type+'" onClick="fnLoadTblData(this, \''+type+'\');">';
+            content += '<span id="sdnoLink">'+text+'</span></a>';
+            content += '</h4></div>';
+            if(type == "sdno") {
+                content += '<div id="collapseOne_' + type + '" class="panel-collapse collapse in">';
+            } else {
+                content += '<div id="collapseOne_' + type + '" class="panel-collapse collapse">';
+            }
+            content += '<ul class="list-group">';
+
+            if(type == "sdno") {
+                content += '<li onClick="fnLoadTblData(this, \''+type+'\');" id="overLink" class="list-group-item selected"><span class="glyphicon glyphicon-pencil text-primary"></span><span>Overlay VPN</span>';
+                content += '</li>';
+                content += '<li id="underLink" onClick="fnLoadTblData(this, \''+type+'\');" class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><span>Underlay VPN</span>';
+                content += '</li>';
+            }
+            else if(type == "gso"){
+                content += '<li onClick="fnLoadTblData(this, \''+type+'\');" id="linkgso" class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><span>OPEN-O</span></li>';
+            }
+            else if(type == "nfvo"){
+                content += '<li onClick="fnLoadTblData(this, \''+type+'\');" id="linknfvo" class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><span>ZTE</span></li>';
+            }
+            content += '</ul></div></div>';
+            return content;
+        }
+    </script>
+
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .panel-heading:hover {
+            border: 1px solid #4ac9ff;
+            color: #4ac9ff;
+        }
+
+        li:hover {
+            cursor: pointer;
+            color: #4ac9ff;
+        }
+
+        body {
+            margin: 15px;
+        }
+
+        #accordion .glyphicon {
+            margin-right: 10px;
+        }
+
+        .panel-collapse > .list-group .list-group-item:first-child {
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+
+        .panel-collapse > .list-group .list-group-item {
+            border-width: 1px 0;
+        }
+
+        .panel-collapse > .list-group {
+            margin-bottom: 0;
+        }
+
+        .panel-collapse .list-group-item {
+            border-radius: 0;
+        }
+
+        .panel-collapse .list-group .list-group {
+            margin: 0;
+            margin-top: 10px;
+        }
+
+        .panel-collapse .list-group-item li.list-group-item {
+            margin: 0 -15px;
+            border-top: 1px solid #ddd !important;
+            border-bottom: 0;
+            padding-left: 30px;
+        }
+
+        .panel-collapse .list-group-item li.list-group-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .panel-collapse div.list-group div.list-group {
+            margin: 0;
+        }
+
+        .panel-collapse div.list-group .list-group a.list-group-item {
+            border-top: 1px solid #ddd !important;
+            border-bottom: 0;
+            padding-left: 30px;
+        }
+
+        .panel-collapse .list-group-item li.list-group-item {
+            border-top: 1px solid #DDD !important;
+        }
+
+        .selected {
+            /*background-color: #ddd;*/
+            color: #4ac9ff;
+        }
+        .panel-title>a {
+            display: inline-block;
+            width: 100%;
+        }
+    </style>
+</head>
+</body>
+<div class="">
+    <div class="row">
+        <div class="col-sm-3" style="width:18%; padding-right: 0;">
+            <div class="panel-group" id="accordion">
+                <!--<div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a style="text-decoration:none;" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                <span id="sdnoLink">SDNO1223</span></a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <ul class="list-group">
+                            <li onClick="fnOver();" id="overLink" class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><span>Overlay VPN</span>
+
+                            </li>
+                            <li id="underLink" onClick="fnUnder();" class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><span>Underlay VPN</span>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a style="text-decoration:none;" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                </span>NFVO</a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                        <div class="list-group">
+                            <li onClick="clZte();" id="underLink" class="list-group-item"><span class="glyphicon glyphicon-pencil text-primary"></span><span>ZTE</span>
+
+                            </li>
+
+                        </div>
+                    </div>
+                </div>-->
+
+            </div>
+        </div>
+        <div class="col-sm-3" id="dashboard" style="width:82%; padding: 0;">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">SDNO-VPN Manager</h3>
+                </div>
+                <div class="panel-body" style="height: 250px; overflow: auto; padding: 0; background-color: #fafafa">
+
+                    <div id="overDiv">
+                        <iframe src="overlayvpn.html" style="width:100%;height:450px;" name="targetframe"
+                                allowTransparency="true" scrolling="no" frameborder="0">
+                        </iframe>
+                    </div>
+                    <div id="underDiv">
+                        <iframe src="underlayvpn.html" style="width:100%;height:500px;" name="targetframe"
+                                allowTransparency="true" scrolling="no" frameborder="0">
+                        </iframe>
+                    </div>
+                </div>
+                </br>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</br>
+</body>
+
+</html>

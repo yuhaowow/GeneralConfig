@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="portal-resmgr:war">
+    <output-path>$PROJECT_DIR$/openo-portal/portal-resmgr/target</output-path>
+    <root id="archive" name="portal-resmgr-1.0.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="portal-resmgr:war exploded" />
+    </root>
+  </artifact>
+</component>

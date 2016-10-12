@@ -1,0 +1,14 @@
+{
+    "serviceName" : "servicegateway",
+    "version" : "v1",
+    "url" : "/openoapi/servicegateway/v1",
+    "protocol" : "REST",
+    "visualRange" : "1",
+    "nodes" : [
+        {
+            "ip" : "getInputIP",
+            "port" : "8305",
+            "ttl" : 0
+        }
+    ]
+}

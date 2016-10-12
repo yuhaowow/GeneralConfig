@@ -1,0 +1,758 @@
+/* Copyright 2016, Huawei Technologies Co., Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+    font-family: '微软雅黑';
+    font-size: 12px;
+    color: #333;
+    background: #fafafa;
+}
+
+button {
+    outline: none;
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.titleFont {
+    font-size: 16px;
+}
+
+.separator-line {
+    height: 1px;
+    width: 100%;
+    border: 1px solid #ddd;
+    margin: 6px 0 15px 0;
+}
+
+.uploadBtn {
+    overflow: hidden;
+}
+
+.creat-btn {
+    padding: 0 14px;
+    height: 24px;
+    float: left;
+    cursor: pointer;
+    text-decoration: none;
+    outline: 0;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    background: #fafafa;
+    background: -moz-linear-gradient(top, #fff, #fafafa);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(100%, #fafafa));
+    background: -webkit-linear-gradient(top, #fff, #fafafa);
+    background: linear-gradient(to bottom, #fff, #fafafa);
+    border-radius: 6px;
+    background: #fff url(../images/add.png) no-repeat 5px center;
+    padding-left: 20px;
+}
+
+.creat-btn:hover {
+    color: #009ae7;
+    border: 1px solid #4AC9FF
+}
+
+.creat-btn:active {
+    color: #000;
+    border: 1px solid #4AC9FF
+}
+
+/*.creat-btn{
+    background: #fff url(../image/add.png) no-repeat 5px center;
+    border: 1px solid #ddd;
+    float: left;
+}
+.creat-btn:hover{
+    background: #428bca;
+    color: #fff;
+    border:1px solid #428bca;
+}*/
+.search {
+    width: 310px;
+    height: 30px;
+    float: right;
+}
+
+.search-text {
+    width: 250px;
+    float: left;
+    margin-right: 6px;
+}
+
+.search-btn {
+    height: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+    float: left;
+}
+
+#ict_virtualApplication_table_div {
+    margin-top: 15px;
+}
+
+.table > thead > tr.active > th {
+    border: 1px solid #ddd !important;
+    border-bottom: 0;
+    background: #f0f0f0;
+}
+
+/*.table tbody tr:hover{
+    background: #e6fbe0!important;
+}*/
+.table tbody tr:last-child {
+    border-bottom: 1px solid #ddd;
+}
+
+.table-btn {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.delete-btn {
+    background: url(../image/delete.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    border: none;
+}
+
+.detail-btn {
+    background: url(../image/openo.png) no-repeat -343px -283px;
+    width: 16px;
+    height: 16px;
+    border: none;
+}
+
+.detail-btn.current {
+    background-position: -7px -314px;
+}
+
+.detail {
+    height: 200px;
+    border: 1px solid #ddd;
+    margin-top: 60px;
+}
+
+.detail-top ul {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ddd;
+    padding-left: 0px;
+    background: #fafafa;
+}
+
+.detail-top ul li {
+    float: left;
+    width: 120px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.detail-top ul li.current {
+    background: #fff;
+}
+
+.vmapp-margin {
+    margin-bottom: 10px;
+}
+
+.control-label .required {
+    color: #e02222;
+    font-size: 12px;
+    padding-left: 2px;
+}
+
+.form-group .control-label {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+legend {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.pageGro {
+    width: 250px;
+    float: right;
+}
+
+.pageUp, .pageDown, .pageList, .pageList li {
+    float: left;
+    cursor: pointer;
+}
+
+.pageUp, .pageDown {
+    width: 60px;
+    height: 30px;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 30px;
+}
+
+.pageList li {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    text-align: center;
+    line-height: 30px;
+    border-left: none;
+}
+
+.pageList li.active {
+    background: #428bca;
+    color: #fff;
+    border-color: #428bca;
+}
+
+.pageDown {
+    border-left: none;
+}
+
+.headerLinkP {
+    padding-top: 17px;
+}
+
+.headerLinkP span {
+    font-size: 12px;
+    color: #666;
+    font-weight: normal !important;
+}
+
+label {
+    font-weight: normal !important;
+}
+
+table.userform tbody tr td {
+    display: table-cell;
+    padding-right: 10px;
+    padding-top: 10px;
+    font-size: 12px;
+    color: #333;
+}
+
+.table th, .table td {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+
+.openoBrowseButton_element {
+    display: table;
+}
+
+.openo {
+    font-family: "Microsoft Yahei", SimSun, Arial, Tahoma;
+    font-size: 12px;
+    color: #000;
+}
+
+.openoBrowseButton_input {
+    width: 198px;
+    position: relative;
+    border: 1px solid #c3c3c3 !important;
+    height: 26px;
+    background-color: #f3f3f3;
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+    padding: 0;
+}
+
+.buttonClassDefault, .buttonClassDefault:active {
+    cursor: pointer;
+    background-image: url(../images/openo.png);
+    background-position: -154px -7px !important;
+}
+
+.openoBrowseButton_button {
+    width: 27px;
+    border: 0;
+    float: right;
+    position: relative;
+    height: 26px;
+    right: 0;
+    top: 0;
+    border-radius: 0 4px 4px 0;
+    border-right: 1px solid #c3c3c3;
+    border-left: none;
+}
+
+.openo .openo-input, .openo.openo-input {
+    outline: 0;
+    border: 1px solid #c3c3c3;
+    box-shadow: 1px 1px #f6f6f6 inset;
+    background-color: #fff;
+    height: 26px;
+}
+
+.openoInput_openoDefaultText {
+    padding: 0 0 0 6px;
+    border-radius: 4px;
+    color: #000;
+    display: inline-block;
+    outline: 0;
+    box-shadow: 1px 1px #f6f6f6 inset;
+    font-size: 12px;
+    background: #fff;
+}
+
+div.openo-select {
+    border: 1px solid #c3c3c3;
+    border-radius: 4px;
+    background: url(../images/arrow-down-enable.png) right no-repeat #fff;
+    line-height: 24px;
+    padding-left: 3px;
+    display: block;
+}
+
+div.openo-select > input.openo-select-input {
+    border: none;
+    outline: 0;
+    line-height: 21px;
+    height: 21px;
+    padding-left: 3px;
+    border-right: solid 1px #c3c3c3;
+}
+
+.openo .openo-ellipsis, .openo.openo-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+a.openoButton_buttonClass, a.openoButton_buttonDisableClass, div.openoButton_buttonClass, div.openoButton_buttonDisableClass {
+    height: 26px;
+    float: left;
+    cursor: pointer;
+    text-decoration: none;
+    outline: 0;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    background: #fafafa;
+    background: -moz-linear-gradient(top, #fff, #fafafa);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(100%, #fafafa));
+    background: -webkit-linear-gradient(top, #fff, #fafafa);
+    background: linear-gradient(to bottom, #fff, #fafafa);
+    border-radius: 6px;
+}
+
+.openoButton_buttonInnerClass {
+    padding: 0 19px;
+    border-radius: 6px;
+}
+
+.openoButton_buttonCenterText {
+    color: #000;
+    line-height: 24px;
+    white-space: nowrap;
+    width: auto !important;
+}
+
+.userHeader {
+    clear: left;
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding: 10px 10px 0px 0px;
+}
+
+.openoButton_buttonGroupClass {
+    display: inline;
+}
+
+.openoButton_buttonGroupClass div.openoButton_buttonClass_parent:first-child {
+    margin-left: 0;
+}
+
+.openoButton_buttonLeftImg {
+    margin-right: 5px;
+}
+
+.openoButton_buttonLeftImg, .openoButton_buttonRightImg {
+    display: inline-block;
+    vertical-align: top;
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+}
+
+.openo-table-pagination-wrapper {
+    height: 37px;
+}
+
+.openo-pagination {
+    display: block;
+    float: left;
+    overflow: hidden;
+    padding: 5px 0 0;
+    margin-top: 8px;
+}
+
+.openoPagination_openoPaginationLengthOptions:not(msie8) {
+    line-height: 24px;
+}
+
+.openoPagination_openoPaginationLengthOptions {
+    white-space: normal;
+    height: 24px;
+    float: left;
+    outline: 0;
+    line-height: 20px;
+    margin: 0 5px;
+}
+
+.openo-pagination-select {
+    height: 26px;
+    line-height: 22px;
+    text-align: center;
+    margin-right: -2px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px 0 0 5px;
+    padding: 1px;
+}
+
+.openoPagination_openoPaginationLengthOptions span {
+    background-color: #fff !important;
+}
+
+.openo-pagination-theme a, .openo-pagination-theme span {
+    float: left;
+    color: #666;
+    font: 12px Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    text-decoration: none !important;
+    padding: 0 7px;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.openo-pagination-selectspan {
+    background: url(../images/ideo_default_select.png) left no-repeat !important;
+    float: right !important;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.openo-pagination-theme label {
+    padding-top: 6px;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-top: -1px;
+    float: left;
+    display: inline-block;
+    height: 20px;
+    font: 12px Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+}
+
+.openo-pagination li, .openo-pagination ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+dd, dl, dt, li {
+    color: #000;
+}
+
+.openo-pagination-theme a, .openo-pagination-theme span.current {
+    margin: 0 5px 0 0;
+}
+
+.openo .openo-disabled, .openo.openo-disabled {
+    border-color: #c3c3c3 !important;
+    color: #666 !important;
+    opacity: .3;
+    filter: alpha(opacity=30);
+}
+
+.openo-pagination-theme .prev {
+    background: 0 0;
+    float: left;
+}
+
+.openo-pagination-theme .current {
+    text-decoration: none !important;
+    float: left;
+    padding-left: 6px;
+    height: 24px;
+    color: #fff;
+    display: inline;
+    border-color: #00adf5;
+    background: #4ad2ff;
+}
+
+.openo-pagination-theme a, .openo-pagination-theme span {
+    float: left;
+    color: #666;
+    font: 12px Lucida Grande, Verdana, Arial, Helvetica, sans-serif;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    text-decoration: none !important;
+    padding: 0 7px;
+    border-radius: 3px;
+    background: #fff;
+}
+
+.openo-pagination-theme .prev.openo-disabled:before {
+    background: url(../images/page_left_disabled.png) 50% 45% no-repeat;
+}
+
+.openo-pagination-theme .prev.openo-disabled:before {
+    background: url(../images/page_left_disabled.png) 50% 45% no-repeat;
+}
+
+.openo-pagination-theme .prev:before {
+    background: url(../images/page_l.png) 50% 45% no-repeat;
+}
+
+.openo-pagination-theme .next:after, .openo-pagination-theme .prev:before {
+    display: inline-block;
+    content: "";
+    vertical-align: middle;
+    width: 10px;
+    height: 24px;
+}
+
+.openo-pagination-theme .prev:before {
+    background: url(../images/page_l.png) 50% 45% no-repeat;
+}
+
+.openo-pagination-theme .next:after, .openo-pagination-theme .prev:before {
+    display: inline-block;
+    content: "";
+    vertical-align: middle;
+    width: 10px;
+    height: 24px;
+}
+
+pagination ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.openo-pagination li, .openo-pagination ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: left;
+}
+
+.openoPagination_gototext {
+    background: #FFF;
+    outline: 0;
+    width: 29px;
+    float: left;
+    height: 26px;
+    line-height: 24px;
+    border-radius: 4px;
+    border: 1px solid #c3c3c3;
+    padding: 0 0 0 5px;
+    margin: 0;
+    color: #666;
+    min-width: 50px;
+}
+
+.openoPagination_gotoimage {
+    width: 29px;
+    height: 26px;
+    line-height: 26px;
+    background-color: #FFF;
+    background-image: url(/portal/themes/default/components/openo/images/openo.png);
+    padding-left: 21px;
+    float: left;
+    margin-left: 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background-position: -184px -181px !important;
+}
+
+.openo-pagination-theme .ellipse {
+    float: left;
+    margin-left: -8px;
+    margin-right: -4px;
+    background: 0 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: 700;
+    cursor: default;
+}
+
+.openo.openo-disabled {
+    border-color: #c3c3c3 !important;
+    color: #666 !important;
+    opacity: .3;
+    filter: alpha(opacity=30);
+}
+
+.openo-pagination-theme .prev {
+    background: 0 0;
+    float: left;
+}
+
+.openo-pagination-theme .current {
+    text-decoration: none !important;
+    float: left;
+    padding-left: 6px;
+    height: 26px;
+    color: #fff;
+    display: inline;
+    /*border-color: #00adf5;
+    background: #4ad2ff;*/
+    border: 1px solid #e0e0e0;
+}
+
+.openo-pagination-theme .next:after {
+    background: url(../images/page_r.png) 50% 45% no-repeat;
+}
+
+.openoButton_buttonGroupClass div.openoButton_buttonClass_parent, .openoButton_buttonRightImg {
+    margin-left: 5px;
+}
+
+html, body {
+    height: 99%;
+    width: 98%;
+}
+
+.cotentBody {
+    padding: 0px 20px 0px 20px;
+}
+
+div.openoButton_buttonClass:hover {
+    border: 1px solid #4ac9ff;
+}
+
+div.openoButton_button_default:hover .openoButton_buttonCenterText {
+    color: #009ae7;
+}
+
+.header_lineimg {
+    height: 1px;
+    width: 100%;
+    margin-top: 17px;
+}
+
+.openo.openo-hide {
+    display: none;
+}
+
+div.openo-select-popup-container {
+    position: absolute;
+    border: 1px solid #4ac9ff;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    max-height: 202px;
+    overflow-y: auto;
+    background-color: #fff;
+    z-index: 880;
+}
+
+div.openo-select-popup-container > div.openo-select-item {
+    display: block;
+}
+
+.openo .openo-ellipsis, .openo.openo-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+div.openo-select-popup-container > div.openo-select-item > label {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    line-height: 20px;
+}
+
+.openo .openo-ellipsis, .openo.openo-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.openo-select-item label {
+    margin-left: 4px;
+    margin-right: 4px;
+    white-space: nowrap;
+}
+
+div.openo-select-popup-container > div.openo-select-item.openo-item-selected, div.openo-select-popup-container > div.openo-select-item:hover {
+    background-color: #f1f1f1;
+    color: #008fd6;
+}
+
+div.openo-select.openo-focus {
+    border: 1px solid #4ac9ff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-color: #ddd;
+}
+
+.openo-pagination-theme a:hover {
+    border-color: #4ac9ff;
+    cursor: pointer;
+}
+
+.SDBtn {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.SDBtn:hover {
+    color: #009ae7;
+    border: 1px solid #4AC9FF
+}
+
+table tbody tr.even:hover td, table tbody tr.odd:hover td {
+    background-color: #e6fbe0;
+}
+
+table tr.openoTable_row_selected td {
+    background: #e8f8fe !important;
+    border-bottom: 1px solid #e8e8e8 !important;
+}
+
+.modal-body {
+    padding: 0 !important;
+}
+
+.form-control {
+    height: 26px !important;
+}
+
+.form-group .control-label {
+    margin-left: 20px;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+}

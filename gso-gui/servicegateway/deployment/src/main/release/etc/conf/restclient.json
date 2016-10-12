@@ -1,0 +1,11 @@
+{
+    "defaultServer":
+	{
+	    "host":"msb.openo.org",
+		"port":"80"
+	},
+	"ConnectTimeout":"1000",
+	"thread":"10",
+	"idletimeout":"500000",
+	"timeout":"10000"
+}

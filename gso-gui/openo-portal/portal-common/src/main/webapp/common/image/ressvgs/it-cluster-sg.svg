@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="22"
+   height="22"
+   id="svg9974">
+  <defs
+     id="defs9976">
+    <font
+       horiz-origin-x="0"
+       horiz-origin-y="0"
+       horiz-adv-x="1024"
+       vert-origin-x="45"
+       vert-origin-y="90"
+       vert-adv-y="90"
+       id="font4968" />
+  </defs>
+  <metadata
+     id="metadata9979">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="scale(1.3845193,1.375)"
+     id="layer1"
+     style="fill:#649be6;fill-opacity:1">
+    <g
+       id="text5399"
+       style="font-size:7px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#649be6;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+    <g
+       transform="translate(0,-1036.4247)"
+       id="layer1-3"
+       style="fill:#649be6;fill-opacity:1">
+      <g
+         transform="scale(0.89723629,1.1145336)"
+         id="text5639"
+         style="font-size:7.97739649px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#649be6;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+      <g
+         transform="scale(1.0195853,0.98079088)"
+         id="text6068"
+         style="font-size:6.62408876px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#649be6;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+      <g
+         id="text6125"
+         style="font-size:6px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#649be6;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold" />
+      <path
+         d="m 1.34375,1036.4247 0,1.25 4.1875,0 0,5.0625 2.1875,0 0,1.4375 -3.25,0 0,-5.4062 -4.46875,0 0,13.6562 4.46875,0 0,-6.0625 3.25,0 0,0.5313 4.46875,0 0,-8.125 -4.46875,0 0,2.6875 -1.25,0 0,-5.0313 z m 7.71875,0 0,1.25 4.125,0 0,9.2188 0.9375,0 0,-10.4688 z m -1.5064653,11.4725 0,4.3125 0.875,0 0,-1.875 1.6875003,0 0,1.875 0.875,0 0,-4.3125 -0.875,0 0,1.6875 -1.6875003,0 0,-1.6875 z m 5.0527073,0 0,4.3125 0.875,0 0,-1.625 0.5625,0 c 0.392575,0 0.699216,-0.022 0.90625,-0.062 0.15234,-0.033 0.290036,-0.1162 0.4375,-0.2187 0.147457,-0.1026 0.27929,-0.2266 0.375,-0.4063 0.0957,-0.1796 0.124997,-0.3925 0.125,-0.6562 -3e-6,-0.3418 -0.08399,-0.628 -0.25,-0.8438 -0.166019,-0.2158 -0.347659,-0.3735 -0.59375,-0.4375 -0.160159,-0.042 -0.503909,-0.062 -1.03125,-0.062 z m 0.875,0.75 0.40625,0 c 0.312498,0 0.521482,0.011 0.625,0.031 0.140622,0.025 0.25195,0.086 0.34375,0.1875 0.0918,0.1016 0.156247,0.2188 0.15625,0.375 0,0.127 -0.02832,0.2477 -0.09375,0.3437 -0.06543,0.096 -0.166018,0.1425 -0.28125,0.1875 -0.115237,0.045 -0.345705,0.094 -0.6875,0.094 l -0.46875,0 z"
+         id="rect6001-0"
+         style="fill:#649be6;fill-opacity:1;stroke:none" />
+    </g>
+  </g>
+</svg>

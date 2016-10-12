@@ -1,0 +1,95 @@
+/*
+ * Copyright 2016 Huawei Technologies Co., Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+* {
+    font-family: Microsoft Yahei!important;
+    font-size: 12px;
+    color: #333;
+}
+
+.hw_body {
+    background-color: #fafafa!important;
+    padding-left: 15px;
+}
+
+.delete, .changePsd, .edit {
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.mt20 {
+    margin: 20px;
+}
+
+#progress {
+    position: relative;;
+    display: inline-block;
+}
+
+#serverError {
+    margin-left: 18px;
+}
+
+.mandatory {
+    color: #F00;
+    width: 7px;
+    padding-right: 10px 5px 10px 0;
+}
+
+.row_interval {
+    padding: 10px 10px 10px 0;
+}
+
+.progress_bar {
+    height: 4px;
+    border-radius: 2px;
+    width: 420px;
+    background: -webkit-linear-gradient(left, #6fd330, #29b6eb);
+    background: -o-linear-gradient(right, #6fd330, #29b6eb);
+    background: -moz-linear-gradient(right, #6fd330, #29b6eb);
+    background: linear-gradient(to right, #6fd330, #29b6eb);
+}
+
+.progress_charater {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #1fbe5c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.errorTip {
+    color: red;
+}
+
+.suggestion_tip {
+    height: auto;
+    background-color: #FFF5EA;
+    border: 1px solid #F9DFC5;
+    padding: 8px 10px;
+    margin: 3px 0;
+    color: #333;
+    line-height: 20px;
+    overflow: auto;
+}
+
+.rule_label {
+    font-weight: 600;
+}
+#role_content table {
+    margin-left: 20px;
+}

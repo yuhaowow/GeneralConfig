@@ -1,0 +1,90 @@
+{
+	"language":{
+		"sProcessing":   "<img src='/web/newict/framework/thirdparty/data-tables/images/loading-spinner-grey.gif'/><span>&nbsp;&nbsp;处理中...</span>",
+		"sLengthMenu":   "<span class='seperator'>|</span>每页 _MENU_ 条结果",
+		"sZeroRecords":  "没有匹配结果",
+		"sInfo":         "<span class='seperator'>|</span>总共找到 _TOTAL_ 条结果",
+		"sInfoEmpty":    "共 0 项",
+		"sGroupActions": "_TOTAL_ 条结果被选择:  ",
+		"sAjaxRequestGeneralError": "不能完成请求，请检查您的网络连接情况。",
+		"sEmptyTable":     "表中数据为空",
+		"oPaginate": {
+			"sPrevious": "前页",
+			"sNext": "下页",
+			"sPage": "第",
+			"sPageOf": "页，总页数："
+		}
+	},
+	"columnsAll":[
+				{"columnId":"alarmId", "columnTitle":"告警编号"},
+				{"columnId":"resDisplayName", "columnTitle":"网元"},
+				{"columnId":"moc", "columnTitle":"网元类型"},
+				{"columnId":"alarmRaisedTime", "columnTitle":"发生时间"},
+				{"columnId":"perceivedSeverity", "columnTitle":"级别"},
+				{"columnId":"probableCauseDesc", "columnTitle":"告警码"},
+				{"columnId":"additionalText", "columnTitle":"附加文本"},
+				{"columnId":"neip", "columnTitle":"网元IP"},
+				{"columnId":"componentname", "columnTitle":"网元内定位"},
+				{"columnId":"alarmType", "columnTitle":"告警类型"},
+				{"columnId":"specificproblem", "columnTitle":"告警原因"},
+				{"columnId":"ackState", "columnTitle":"确认状态"},
+				{"columnId":"ackTime", "columnTitle":"确认时间"},
+				{"columnId":"ackUserId", "columnTitle":"确认用户"},
+				{"columnId":"ackSystemId", "columnTitle":"确认系统"},
+				{"columnId":"alarmChangedTime", "columnTitle":"修改时间"},
+				{"columnId":"position1", "columnTitle":"资源ID"}
+	],
+	"columns":[
+				{"columnId":"alarmId", "columnTitle":"告警编号"},
+				{"columnId":"resDisplayName", "columnTitle":"网元"},
+				{"columnId":"moc", "columnTitle":"网元类型"},
+				{"columnId":"alarmRaisedTime", "columnTitle":"发生时间"},
+				{"columnId":"perceivedSeverity", "columnTitle":"级别"},
+				{"columnId":"probableCauseDesc", "columnTitle":"告警码"},
+				{"columnId":"additionalText", "columnTitle":"附加文本"},
+				{"columnId":"neip", "columnTitle":"网元IP"},
+				{"columnId":"componentname", "columnTitle":"网元内定位"},
+				{"columnId":"alarmType", "columnTitle":"告警类型"},
+				{"columnId":"specificproblem", "columnTitle":"告警原因"},
+				{"columnId":"ackState", "columnTitle":"确认状态"},
+				{"columnId":"ackTime", "columnTitle":"确认时间"},
+				{"columnId":"ackUserId", "columnTitle":"确认用户"},
+				{"columnId":"ackSystemId", "columnTitle":"确认系统"},
+				{"columnId":"alarmChangedTime", "columnTitle":"修改时间"},
+				{"columnId":"position1", "columnTitle":"资源ID"}
+	],
+	"xsHiddenColumns":[
+		{"columnId":"additionalText", "columnTitle":"附加文本"},
+		{"columnId":"neip", "columnTitle":"网元IP"},
+		{"columnId":"componentname", "columnTitle":"网元内定位"},
+		{"columnId":"position1", "columnTitle":"资源ID"}
+	],
+	"smHiddenColumns":[
+		{"columnId":"position1", "columnTitle":"资源ID"}
+	],
+	"columnsTooLong":["additionalText", "moc", "componentname", "specificproblem", "position1"],	
+	
+	"rowCheckable": "true",
+	"openRowFlag" : "true",
+	"rowOverFlag" : "true",	
+	
+	"tableHeight":"520px",
+	"tableWidth":"100%",
+	
+	"requestURL": "/web/rest/web/fm/curalarms",
+	"requestAllData": {"rule":{"ruleId":-1,"name":"当前告警","creator":"admin","createTime":1397439767310,"modifier":"","modifyTime":0,"description":"","state":true,"ruleType":1,"ruleSort":1,"owner":"","attrs":"<Attrs/>","ruleData":"<CompoundCond><FilterState value='1' /></CompoundCond>"}},
+	"requestParameters":[
+		{"paraId":"pageSize", "paraValue":"20"},
+		{"paraId":"pageNo", "paraValue":"1"},
+		{"paraId":"_operationType", "paraValue":"fetch"},
+		{"paraId":"_startRow", "paraValue":"0"},
+		{"paraId":"_endRow", "paraValue":"75"},
+		{"paraId":"_textMatchStyle", "paraValue":"exact"},
+		{"paraId":"_componentId", "paraValue":"isc_com_zte_ums_aos_fm_view_eventview_table_AlarmTable_0"},
+		{"paraId":"_dataSource", "paraValue":"isc_PageRestDataSource_0"},
+		{"paraId":"isc_metaDataPrefix", "paraValue":"_"},
+		{"paraId":"isc_dataFormat", "paraValue":"json"}
+	],
+	"sTotalRecordsSource":"response.extData"
+}
+

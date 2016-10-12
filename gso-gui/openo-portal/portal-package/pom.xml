@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2016, CMCC Technologies Co., Ltd.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <groupId>org.openo.gso.gui</groupId>
+    <artifactId>openo-portal</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>portal-package</artifactId>
+  <packaging>war</packaging>
+
+  <properties>
+    <packagename>openo-portal</packagename>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.openo.gso.gui</groupId>
+      <artifactId>portal-common</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>org.openo.gso.gui</groupId>
+      <artifactId>portal-resmgr</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>org.openo.gso.gui</groupId>
+      <artifactId>portal-extsys</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>org.openo.gso.gui</groupId>
+      <artifactId>portal-catalog</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>org.openo.gso.gui</groupId>
+      <artifactId>portal-auth</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>org.openo.gso.gui</groupId>
+      <artifactId>portal-lifecyclemgr</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <type>war</type>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>openo-portal</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <packagingExcludes>WEB-INF/web.xml</packagingExcludes>
+          <overlays>
+            <overlay>
+              <groupId>org.openo.gso.gui</groupId>
+              <artifactId>portal-common</artifactId>
+            </overlay>
+            <overlay>
+              <groupId>org.openo.gso.gui</groupId>
+              <artifactId>portal-resmgr</artifactId>
+            </overlay>
+            <overlay>
+              <groupId>org.openo.gso.gui</groupId>
+              <artifactId>portal-extsys</artifactId>
+            </overlay>
+            <overlay>
+              <groupId>org.openo.gso.gui</groupId>
+              <artifactId>portal-catalog</artifactId>
+            </overlay>
+            <overlay>
+              <groupId>org.openo.gso.gui</groupId>
+              <artifactId>portal-auth</artifactId>
+            </overlay>
+            <overlay>
+              <groupId>org.openo.gso.gui</groupId>
+              <artifactId>portal-lifecyclemgr</artifactId>
+            </overlay>
+          </overlays>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>zip</id>
+            <phase>package</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <tasks name="${project.artifactId}">
+                <zip destfile="target/${packagename}-${project.version}.zip" update="true">
+                  <zipfileset dir="target" includes="*.war"/>
+                </zip>
+              </tasks>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>attach-artifacts</id>
+            <phase>package</phase>
+            <goals>
+              <goal>attach-artifact</goal>
+            </goals>
+            <configuration>
+              <artifacts>
+                <artifact>
+                  <file>target/${packagename}-${project.version}.zip</file>
+                  <type>zip</type>
+                </artifact>
+              </artifacts>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

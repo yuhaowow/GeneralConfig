@@ -1,0 +1,240 @@
+<!--
+
+    Copyright 2016 ZTE Corporation.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../common/thirdparty/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="../../common/thirdparty/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../../common/thirdparty/uniform/css/uniform.default.min.css" rel="stylesheet"/>
+    <link href="../../common/css/ZteIctIcons/style.css" rel="stylesheet"/>
+    <link href="../../common/css/ngict-component.css" rel="stylesheet"/>
+    <link href="css/animate.min.css" rel="stylesheet"/>
+    <link href="css/vnfm.css" rel="stylesheet"/>
+    <style>
+        .ms-controller {
+            visibility: hidden
+        }
+    </style>
+
+</head>
+<body>
+<div ms-controller="vnfmController" class="container-fluid ms-controller">
+    <div id="addVnfmDlg" class="modal  fade" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content Changepasswd">
+                <div class="content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"
+                                aria-hidden="true">×
+                        </button>
+                        <h4 id="myModalLabel">{{addVnfm.title}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal" id="vnfm_form" role="form">
+                            <input type="hidden" ms-duplex="addVnfm.vnfmId" name="vnfmId" class="form-control"/>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id="nfv-vnfm-iui-text-name" name_i18n="com_zte_nfv_nsoc_i18n"></span>
+                                    <span class="required" aria-required="true">*</span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVnfm.name" name="name" class="form-control" ms-readonly="addVnfm.nameReadonly"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id="nfv-vnfm-iui-text-type" name_i18n="com_zte_nfv_nsoc_i18n"></span>
+                                    <span class="required" aria-required="true">*</span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVnfm.type" name="type" class="form-control"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id="nfv-vnfm-iui-text-vendor" name_i18n="com_zte_nfv_nsoc_i18n"></span>
+                                    <span class="required" aria-required="true">*</span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVnfm.vendor" name="vendor" class="form-control"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id="nfv-vnfm-iui-text-version" name_i18n="com_zte_nfv_nsoc_i18n"></span>
+                                    <span class="required" aria-required="true">*</span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVnfm.version" name="version" class="form-control"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span>URL</span>
+                                    <span class="required" aria-required="true">*</span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVnfm.url" name="url" class="form-control"
+                                           ms-attr-placeholder="addVnfm.urlTip"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">VIM
+                                    <span></span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <select class="form-control" id="vimId" name="vimId">
+                                        <option ms-repeat-vim="vimSelectItems" ms-attr-value="vim.vimId"
+                                                data-repeat-rendered="vimRendered">{{vim.name}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id="nfv-vnfm-iui-text-certificateUrl"
+                                          name_i18n="com_zte_nfv_nsoc_i18n"></span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVnfm.certificateUrl" name="certificateUrl"
+                                           class="form-control"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id="nfv-vnfm-iui-text-userName" name_i18n="com_zte_nfv_nsoc_i18n"></span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="text" ms-duplex="addVnfm.userName" name="userName"
+                                           class="form-control"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id="nfv-vnfm-iui-text-password" name_i18n="com_zte_nfv_nsoc_i18n"></span>
+                                </label>
+                                <div class="col-sm-7">
+                                    <input type="password" ms-duplex="addVnfm.password" name="password"
+                                           class="form-control"/>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">
+                                    <span id="nfv-vnfm-iui-text_description" name_i18n="com_zte_nfv_nsoc_i18n"></span>                                    
+                                </label>
+                                <div class="col-sm-7">
+                                    <textarea class="form-control" rows="3" ms-duplex="addVnfm.description"
+                                              name="description"></textarea>
+                                    <span class="help-block"></span>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true" id="nfv-vnfm-iui-text-cancelBtn"
+                                name_i18n="com_zte_nfv_nsoc_i18n"></button>
+                        <button class="btn btn-primary" type="submit" ms-click="$saveVnfm"
+                                id="nfv-vnfm-iui-text-saveBtn" name_i18n="com_zte_nfv_nsoc_i18n"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid" data-name="cond_zone">
+        <div class="col-md-12">
+            <button class="btn white radius_l" id="app-new-btn" ms-click="$showVnfmTable">
+                <i class="ict-new"></i> <span id="nfv-vnfm-iui-text-registerBtn"
+                                              name_i18n="com_zte_nfv_nsoc_i18n"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="col-sm-12 vnfm-padding" ms-each-el="vnfmInfo">
+        <div class="col-sm-4 animated-panel zoomIn" style="-webkit-animation-delay: 0.1s;">
+            <div class="hpanel stats">
+                <div class="panel-body h-200" ms-hover="hpanel_show">
+                    <div class="pull-left">
+                        <span class="label label-success" ms-if="el.status === $Status.success"
+                              id="nfv-vnfm-iui-text-status-normal" name_i18n="com_zte_nfv_nsoc_i18n"></span>
+                        <span class="label label-danger" ms-attr-title="el.errorInfo" data-toggle="tooltip"
+                              ms-if="el.status === $Status.failed" id="nfv-vnfm-iui-text-status-fail"
+                              name_i18n="com_zte_nfv_nsoc_i18n"></span>
+                    </div>
+                    <div class="stats-icon pull-right">
+                        <i class="fa fa-server  fa-5x color_cloud"></i>
+                    </div>
+                    <div class="m-t-xl">
+                        <h3 ms-text="el.name"></h3>
+                        <div><span id="nfv-vnfm-iui-text-type" name_i18n="com_zte_nfv_nsoc_i18n"></span>：<span
+                                ms-text="el.type"></span></div>
+                        <div>URL：<span ms-text="el.url"></span></div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="pull-right">
+                        <a class="btn btn-default btn-sm" ms-click="vnfmUtil.updateVnfm(el.$model)"><i
+                                class="fa fa-pencil-square-o fa-lg"></i></a>
+                        <a class="btn btn-default btn-sm" ms-click="vnfmUtil.delVnfm(el.vnfmId)"><i
+                                class="fa fa-trash-o fa-lg"> </i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="pull-left text-muted">
+            <small><span id="nfv-vnfm-iui-text-total" name_i18n="com_zte_nfv_nsoc_i18n"></span> <span class="blue-font"
+                                                                                                      ms-text="vnfmInfo.size()"></span>
+                <span id="nfv-vnfm-iui-text-total-vnfm" name_i18n="com_zte_nfv_nsoc_i18n"></span></small>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../../common/thirdparty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../../common/thirdparty/jquery.i18n/jquery.i18n.properties-1.0.9.js"></script>
+<script type="text/javascript" src="../../common/thirdparty/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../common/thirdparty/bootbox/bootbox.min.js"></script>
+<script type="text/javascript" src="../../common/thirdparty/jquery-validation/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../../common/thirdparty/jquery-validation/js/additional-methods.min.js"></script>
+
+<script type="text/javascript" src="../../common/thirdparty/bootstrap-growl/bootstrap-growl.min.js"></script>
+<!--<script type="text/javascript" src="../../common/thirdparty/cometd/cometd.js"></script>-->
+<!--<script type="text/javascript" src="../../common/thirdparty/cometd/jquery.cometd.js"></script>-->
+<script type="text/javascript" src="../../common/thirdparty/avalon/avalon.js"></script>
+
+<script type="text/javascript" src="../../common/js/tools.js"></script>
+
+<script type="text/javascript" src="js/commonUtil.js"></script>
+<script type="text/javascript" src="js/loadi18n_nsoc.js"></script>
+
+<script type="text/javascript" src="js/vnfm-validate.js"></script>
+<script type="text/javascript" src="js/vnfmUtil.js"></script>
+<script type="text/javascript" src="js/vnfmController.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+
+    Copyright 2016 ZTE Corporation.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../../common/thirdparty/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../common/thirdparty/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../../common/css/ngict-component.css" rel="stylesheet" type="text/css">
+    <link href="../../common/css/ZteIctIcons/style.css" rel="stylesheet" type="text/css">
+    <link href="../../common/thirdparty/animate/animate.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/vimChart.css" rel="stylesheet" type="text/css"/>
+    <style>
+        .ms-controller {
+            visibility: hidden
+        }
+    </style>
+    <script>
+        var id, name, tenant;
+        if (window.location.search && window.location.search.length > 1) {
+            var arr = window.location.search.split("&");
+            id = arr[0].replace("?", "");
+            name = arr[1];
+            tenant = arr[2];
+        }
+    </script>
+</head>
+<body>
+<div class="ms-controller" ms-controller="vimChartController">
+    <div class="container-fluid">
+
+        <div class="row" style=" margin-top: 15px;">
+            <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6 titlefont">
+                {{vimInfo.name}}<span id_i18n="com_zte_ums_eco_roc_vim_resource_use"
+                                      name_i18n="com_zte_conductor_ui_i18n"></span>
+            </div>
+            <div class="pull-right">
+                <a href="#" ms-click="gotoVimPage()" id_i18n="com_zte_ums_eco_roc_vim_resource_chart_return"
+                   name_i18n="com_zte_conductor_ui_i18n"></a>
+
+            </div>
+        </div>
+        <div class="separator-line"></div>
+
+        <div class="row row-fluid">
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " ms-if="vimInfo.isAdmin==true">
+
+                <div class="form-body">
+                    <div class="form-title">
+                        <span id_i18n="com_zte_ums_eco_roc_vim_resource_vim_use"
+                              name_i18n="com_zte_conductor_ui_i18n"></span>
+                    </div>
+                    <div id="vimPieChartDiv" style="width:100%;height:200px" class="main"></div>
+
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                <div class="form-body">
+                    <div class="form-title">
+                        {{vimInfo.tenant}}<span id_i18n="com_zte_ums_eco_roc_vim_resource_tenant_use"
+                                                name_i18n="com_zte_conductor_ui_i18n"></span>
+                        <div class="pull-right">
+                            <select class="form-control m-b" ms-if="vimInfo.isAdmin==true"
+                                    ms-each="tenantSelectList.selectItems" ms-duplex="vimInfo.tenant"
+                                    ms-change="tenantChartLoad()">
+                                <option ms-attr-value='el.name'>{{el.name}}</option>
+                            </select>
+
+
+                        </div>
+                    </div>
+
+                    <div id="tenantPieChartDiv" style="width:100%;height:400px" class="main"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+<script type="text/javascript" src="../../common/thirdparty/jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../../common/js/tools.js"></script>
+<script type="text/javascript" src="../../common/thirdparty/jquery.i18n/jquery.i18n.properties-1.0.9.js"></script>
+<script type="text/javascript" src="../../common/thirdparty/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../common/thirdparty/bootstrap-growl/bootstrap-growl.min.js"></script>
+<script type="text/javascript" src="./i18n/loadi18nApp.js"></script>
+<script src="../../common/thirdparty/echarts/echarts-all.js"></script>
+<script type="text/javascript" src="../../common/thirdparty/bootbox/bootbox.min.js"></script>
+<script src="../../common/thirdparty/avalon/avalon.js"></script>
+<script type="text/javascript" src="js/vimChart.js"></script>
+<script type="text/javascript" src="js/vimChartController.js"></script>
+<script type="text/javascript" src="../../common/js/core/hk.min.js"></script>
+</body>
+</html>

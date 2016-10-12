@@ -1,0 +1,247 @@
+/*
+ * Copyright 2016 Huawei Technologies Co., Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.button_Group {
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.fk_button {
+    padding: 0 14px;
+    height: 24px;
+    float: left;
+    cursor: pointer;
+    text-decoration: none;
+    outline: 0;
+    border: 1px solid #d3d3d3;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    background: #fafafa;
+    background: -moz-linear-gradient(top,#fff,#fafafa);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#fff),color-stop(100%,#fafafa));
+    background: -webkit-linear-gradient(top,#fff,#fafafa);
+    background: linear-gradient(to bottom,#fff,#fafafa);
+    border-radius: 6px;
+}
+.fk_button:hover {
+    color: #009ae7;    
+    border: 1px solid #4AC9FF
+}
+.fk_button:active {
+    color: #0000;    
+    border: 1px solid #4AC9FF
+}
+
+.button_Group > button {
+    margin-right: 10px;
+}
+.add_imag {
+    background-image: url(/openoui/auth/v1/user/images/add.png);
+}
+.delete_imag {
+    background-image: url(/openoui/auth/v1/user/images/delete.png);
+}
+.button_imag {
+    padding-left: 25px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+}
+
+
+/*table style*/
+table.dataTable thead th {
+    padding: 0!important;
+    height: 22px!important;
+    padding: 1px 10px 0 5px;
+    overflow: visible;
+    white-space: nowrap;
+    background: #f0f0f0!important;
+    border: 1px solid #ddd;
+    border-top: 1px solid #e3e3e3!important;
+    border-left: 1px dotted transparent!important;
+    border-bottom: 1px solid #e3e3e3!important;
+    box-sizing: content-box;
+    text-align: left;
+    font-weight: 
+}
+table.dataTable tr td {
+    padding: 0 10px 0 5px!important;
+    height: 30px!important;
+    color: #000!important;
+    border: none!important;
+    border-left: 1px solid transparent!important;
+    border-bottom: 1px solid #e3e3e3!important;
+    overflow: hidden!important;
+    white-space: nowrap!important;
+    text-align: left;
+}
+
+table.dataTable th, table.dataTable td {
+    font-size: 12px!important;
+    color: #000!important;
+    max-width: 95%!important;
+    font-weight: 400!important;
+}
+
+.paginate_button {
+    color: #666!important;
+    font-size: 12px!important;
+    font-family: Lucida Grande,Verdana,Arial,Helvetica,sans-serif!important;
+    line-height: 24px!important;
+    text-align: center!important;
+    border: 1px solid #e0e0e0!important;
+    text-decoration: none!important;
+    padding: 0 7px!important;
+    border-radius: 3px!important;
+    background: #fff!important;
+}
+.paginate_button:hover {
+    color: #666!important;
+    border: 1px solid #4ac9ff!important;
+    cursor: pointer!important;
+}
+.current {
+    text-decoration: none!important;
+    color: #fff!important;
+    border: 1px solid #00adf5!important;
+    background: #4ad2ff!important;
+}
+
+/*over write the jquery dataTable*/
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: #666!important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: #fff!important;
+}
+table.dataTable tr.odd, table.dataTable tr.odd>.sorting_1 {
+    background-color: #f9f9f9!important;
+}
+table.dataTable tr.even, table.dataTable tr.even>.sorting_1 {
+    background-color: #f7f7f7!important;
+}
+table.dataTable tbody tr:hover, tbody tr.odd>.sorting_1:hover, tbody tr.even>.sorting_1:hover {
+    background-color: #E6FBE0!important;
+}
+table.dataTable.no-footer {
+    border-bottom: none!important;
+}
+
+/*the length information step style*/
+.dataTables_length, .dataTables_info {
+    display: inline-block!important;
+    float: left!important;
+}
+.left {
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    margin: 10px 20px 10px 5px;
+}
+ .right {
+    display: inline-block;
+    float: right;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.dataTables_length, .dataTables_info {
+    display: inline-block;!important;
+    float: left!important;
+    clear: none!important;
+    padding-top: 0!important;
+}
+.dataTables_length label {
+    font-size: 0;
+}
+
+/*page select style*/
+.dataTables_length select {
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    margin-right: 5px;
+    border: 1px solid #e0e0e0;
+    color: #000;
+    padding: 1px;
+}
+.dataTables_length select:active {
+    text-align: center;
+    margin-right: 5px;
+    border: 1px solid #e0e0e0;
+    color: #000;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+/* input style overwrite*/ 
+.fwk_input {
+    border: 1px solid #c3c3c3;
+    background-color: #fff;
+    padding: 0 0 0 6px;
+    border-radius: 4px;
+    color: #000;
+    display: inline-block;
+    outline: 0;
+    box-shadow: 1px 1px #f6f6f6 inset;
+    font-size: 12px;
+    background: #fff;
+    height: 24px;
+    width: 300px;
+}
+
+.fwk_input:hover, .fwk_input:focus {
+    border-color: #4ac9ff;
+    box-shadow: 1px 1px rgba(74,201,255,.2) inset;
+}
+.fwk_input[type=password] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.fwk_input:disabled {
+    background-color: #ededed!important;
+    color: #666;
+    box-shadow: 1px 1px #ededed inset!important;
+    border: 1px solid #e0e0e0!important;
+    resize: none;
+}
+
+/* input style textarea*/ 
+.fwk_textarea {
+    border: 1px solid #c3c3c3;
+    background-color: #fff;
+    padding: 0 0 0 6px;
+    border-radius: 4px;
+    color: #000;
+    display: inline-block;
+    outline: 0;
+    box-shadow: 1px 1px #f6f6f6 inset;
+    font-size: 12px;
+    background: #fff;
+    height: 72px;
+    width: 300px;
+}
+
+.fwk_textarea:hover, .fwk_textarea:focus {
+    border-color: #4ac9ff;
+    box-shadow: 1px 1px rgba(74,201,255,.2) inset;
+}
+
+
+
+
+
+

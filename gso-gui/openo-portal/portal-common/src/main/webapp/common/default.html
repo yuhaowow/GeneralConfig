@@ -1,0 +1,331 @@
+<!--
+    Copyright 2016, CMCC Technologies Co., Ltd.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title id="com_zte_ums_ict_framework_ui_page_title" name_i18n="com_zte_ums_ict_framework_ui_i18n"></title>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="width=device-width,height=device-height,initial-scale=1.0" name="viewport"/>
+		<meta content="zte ict" name="description"/>
+		<meta content="zte" name="author"/>
+		<script type="text/javascript" src="./common/js/core/const.js"></script>
+		<script type="text/javascript" src="./common/js/core/hk.min.js"></script>
+		<script type="text/javascript" src="./common/thirdparty/jquery/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="./common/thirdparty/fakeLoader/fakeLoader.min.js"></script>
+		<link href="./common/thirdparty/fakeLoader/fakeLoader.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/thirdparty/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" id="font_awesome"/>
+		<link href="./common/thirdparty/bootstrap/css/bootstrap.min.css"	rel="stylesheet" type="text/css"/>
+		<link href="./common/thirdparty/uniform/css/uniform.default.css"	rel="stylesheet" type="text/css"/>
+		<link href="./common/thirdparty/select2/select2.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/thirdparty/select2/select2-custom.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/css/style-custom.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/css/frame-style.css" rel="stylesheet"	type="text/css"/>
+		<link href="./common/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/css/plugins.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/css/changepwd.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/css/style.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/css/ZteIctIcons/style.css" rel="stylesheet" type="text/css"/>
+		<link href="./common/css/more-operation.css"  rel="stylesheet" type="text/css" />
+		<link href="" rel="stylesheet" type="text/css" id="style_color"/>
+	</head>
+	<body class="page-header-fixed page-sidebar-fixed">
+		<div id="pageLoading" class="fakeloader"></div>
+		<script type="text/javascript">
+			$("#pageLoading").fakeLoader({text:"",bgColor:"#1178ee",opacity:'1',spinner:"spinner2",zIndex:99999999});
+		</script>
+		<div class="header navbar navbar-fixed-top mega-menu">
+			<div class="header-inner">
+				<img id="com_zte_ums_ict_framework_img_netnumenLogo" src="./common/image/integration/netnumenLogo.png" name_img="com_zte_ums_ict_framework_img" alt="logo" style="display:none"/>
+				<span id="com_zte_ums_ict_framework_ui_main_title" name_i18n="com_zte_ums_ict_framework_ui_i18n" class="zte-brand-text" style="display:none"></span>
+				<div class="hor-menu hidden-sm hidden-xs">
+					<ul class="nav navbar-nav hormenu" style="display:none" id="main_hormenu" menuSrc="main_MegaHorbar.html" ></ul>
+					<ul class="nav navbar-nav hormenu" style="display:none"  id="f_hormenu" menuSrc="main_Fmegabar.html"></ul>
+				</div>
+				<ul class="nav navbar-nav pull-right">
+					<div>
+						<a href="javascript:;" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" onclick="handleMavToggle(this);" navtoggledispattr="hidden">
+							<img src="./common/image/menu-toggler.png" alt=""/>
+						</a>
+					</div>
+					<div class="zte-theme-panel">
+						<div class="toggler"></div>
+						<div class="toggler-close"></div>
+						<div class="theme-options">
+							<div class="theme-option theme-colors clearfix">
+								<span id="com_zte_ums_ict_framework_ui_skin_select" name_i18n="com_zte_ums_ict_framework_ui_i18n"></span>
+								<ul>
+									<li class="color-ztebluelight current" data-style="ztebluelight"></li>
+									<li class="color-ztebluelight4" data-style="ztebluelight4"></li>
+									<li class="color-ztebluelight2" data-style="ztebluelight2"></li>
+								</ul>
+							</div>
+							<div class="theme-option">
+								<span id="com_zte_ums_ict_framework_ui_language" name_i18n="com_zte_ums_ict_framework_ui_i18n"></span>
+								<select class="language-option form-control input-small">
+									<option id="com_zte_ums_ict_framework_ui_language_zhcn" name_i18n="com_zte_ums_ict_framework_ui_i18n" value="en-US" selected="selected"></option>
+									<option id="com_zte_ums_ict_framework_ui_language_en" name_i18n="com_zte_ums_ict_framework_ui_i18n" value="en-US"></option>
+								</select>
+							</div>
+							<div class="theme-option">
+								<span id="com_zte_ums_ict_framework_ui_navbar_direction" name_i18n="com_zte_ums_ict_framework_ui_i18n"></span>
+								<select class="nav-pos-direction form-control input-small">
+									<option id="com_zte_ums_ict_framework_ui_navbar_direction_vertical" name_i18n="com_zte_ums_ict_framework_ui_i18n" value="vertical" selected="selected"></option>
+									<option id="com_zte_ums_ict_framework_ui_navbar_direction_horizontal" name_i18n="com_zte_ums_ict_framework_ui_i18n" value="horizontal"></option>
+									<option id="com_zte_ums_ict_framework_ui_navbar_direction_fmenu" name_i18n="com_zte_ums_ict_framework_ui_i18n" value="fmenu"></option>
+								</select>
+							</div>
+							<div class="theme-option">
+								<span id="com_zte_ums_ict_framework_ui_skin_layout" name_i18n="com_zte_ums_ict_framework_ui_i18n"></span>
+								<select class="layout-option form-control input-small">
+									<option id="com_zte_ums_ict_framework_ui_layout_fluid" name_i18n="com_zte_ums_ict_framework_ui_i18n" value="fluid" selected="selected"></option>
+									<option id="com_zte_ums_ict_framework_ui_layout_boxed" name_i18n="com_zte_ums_ict_framework_ui_i18n" value="boxed"></option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<li class="dropdown" id="header_notification_bar" style="display:none">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+							<i class="fa fa-warning" id="hd_heighestAlarmcount_li"></i>
+							<span class="badge" id="hd_heighestAlarmcount_value"></span>
+						</a>
+						<ul class="dropdown-menu extended notification">
+							<li>
+								<p>
+									<span id="hd_alarmcount_total_before_text"></span>
+									<span class="badge" id="hd_alarmcount_total_value"></span>
+									<span id="hd_alarmcount_total_after_text"></span>
+								</p>
+							</li>
+							<li>
+								<ul class="dropdown-menu-list scroller" style="height: 168px;">
+									<li>
+										<a href="#">
+											<span class="label label-icon alarm-critical">
+												<i class="fa fa-bolt " id="hd_alarmcount_critical_li"></i>
+												<span class="badge" id="hd_alarmcount_critical_value"></span>
+											</span>
+											<span id="hd_alarmcount_critical_text"></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="label label-icon alarm-major">
+												<i class="fa fa-warning" id="hd_alarmcount_major_li"></i>
+												<span class="badge" id="hd_alarmcount_major_value"></span>
+											</span>
+											<span id="hd_alarmcount_major_text"></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="label label-icon alarm-minor">
+												<i class="fa fa-bell-o" id="hd_alarmcount_minor_li"></i>
+												<span class="badge" id="hd_alarmcount_minor_value"></span>
+											</span>
+											<span id="hd_alarmcount_minor_text"></span>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="label label-icon alarm-warning">
+												<i class="fa fa-bullhorn" id="hd_alarmcount_warning_li"></i>
+												<span class="badge" id="hd_alarmcount_warning_value"></span>
+											</span>
+											<span id="hd_alarmcount_warning_text"></span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown user" id="header_dropdown_user" style="display:none">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+							<span><img alt="" width=26 height=26 src="./common/image/user.png"/></span>
+							<span class="username" id="currentUser"></span>
+							<i class="fa fa-angle-down"></i>
+						</a>
+						<ul class="dropdown-menu">
+							<div id="uep_ict_help_div">
+								<li>
+									<a href="#" target="uep_ict_help" id="uep_ict_help_url">
+										<i class="fa fa-book fa-fw"></i>
+										<span id="com_zte_ums_ict_framework_moudle_help"></span>
+									</a>
+								</li>
+								<li>
+									<a href="#" data-target="#aboutDlg" data-backdrop="false" data-toggle="modal">
+										<i class="fa fa fa-th-large"></i>
+										<span id="com_zte_ums_ict_framework_moudle_about"></span>
+									</a>
+								</li>
+								<li class="divider"></li>
+							</div>
+							<li>
+								<a href="#" id ="changePwd_labellink" data-target="#changepwdDlg" data-backdrop="false" data-toggle="modal">
+									<i class="fa fa-pencil"></i>
+									<span id="changePwd_label"></span>
+								</a>
+							</li>
+							<li class="divider" id="full_logout_divider"></li>
+							<div id="trigger_fullscreen_div">
+								<li>
+									<a href="javascript:;" id="trigger_fullscreen">
+										<i class="fa fa-arrows"></i>
+										<span id="fullscreen_label"></span>
+									</a>
+								</li>
+							</div>
+							<div id="trigger_logout_div">
+								<li>
+									<a id="trigger_logout" href="#">
+										<i class="fa fa-key"></i>
+										<span id="logout_label"></span>
+									</a>
+								</li>
+							</div>
+						</ul>
+					</li>
+					<li class="dropdown system" id="headerMenu"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="modal fade" tabindex="-1" id="aboutDlg" role="dialog" aria-hidden="true">
+			<div class="page-loading page-loading-boxed">
+				<img src="./common/image/loading-spinner-grey.gif" alt="" class="loading">
+				<span>&nbsp;&nbsp;Loading...</span>
+			</div>
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content aboutDlg" dlgsrc="./common/about.html"></div>
+			</div>
+		</div>
+		<!-- /.modal -->
+		<div class="clearfix"></div>
+		<div class="page-container">
+			<div class="page-sidebar navbar-collapse collapse" style="z-index: 9999;">
+				<ul class="page-sidebar-menu" id="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200" menuSrc="./common/main_siderbar.html"></ul>
+				<ul class="page-sidebar-menu" id="page-f-sidebar-menu" data-auto-scroll="true" data-slide-speed="200" menuSrc="./common/main_Fsiderbar.html"></ul>
+			</div>
+			<div class="page-content-wrapper">
+				<div class="page-content">
+					<div class="page-content-body">
+						<div class="row">
+							<div class="col-md-12">
+								<ul class="page-breadcrumb breadcrumb">
+									<div class="row">
+										<ul class="col-md-10 breadcrumbUl"></ul>
+									</div>
+									<ul class="col-md-2 more-botton-zone"></ul>
+								</ul>
+								<div id = "pageableDiv" style = "display: none" class="row row1">
+									<div class="col-xs-12" >
+										<div class="row">
+											<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+												<div class="carousel-inner" role="listbox"></div>
+												<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+													<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+													<span class="sr-only">Previous</span>
+												</a>
+												<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" style="margin-right: -10px;">
+													<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+													<span class="sr-only">Next</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./common/thirdparty/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="./common/thirdparty/jquery-validation/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="./common/thirdparty/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+		<script type="text/javascript" src="./common/thirdparty/jquery-blockui/jquery.blockui.min.js"></script>
+		<script type="text/javascript" src="./common/thirdparty/jquery-cokie/jquery.cokie.min.js"></script>
+		<script type="text/javascript" src="./common/thirdparty/uniform/jquery.uniform.min.js"></script>
+		<script type="text/javascript" src="./common/thirdparty/cometd/cometd.js"></script>
+		<script type="text/javascript" src="./common/thirdparty/cometd/jquery/jquery.cometd.js"></script>
+		<script type="text/javascript" src="./common/thirdparty/select2/select2.min.js"></script>
+		<script type="text/javascript" src="./common/thirdparty/bootbox/bootbox.min.js"></script>
+		<script type="text/javascript" src="./common/thirdparty/jquery.i18n/jquery.i18n.properties-1.0.9.js"></script>
+		<script type="text/javascript" src="./common/thirdparty/data-tables/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="./common/js/moreOperation.js"></script>
+		<script type="text/javascript" src="./common/js/tools.js"></script> 
+		<script type="text/javascript" src="./common/js/international/loadi18n.js"></script>
+		<script type="text/javascript" src="./common/js/Main2moreMenu.js"></script>
+		<script type="text/javascript" src="./common/js/core/pym.min.js"></script>
+		<script type="text/javascript" src="./common/js/core/openoFrameWork.min.js"></script>
+		<script type="text/javascript" src="./common/js/fm_light.js"></script>
+		<script type="text/javascript" src="./common/js/security/changepwd.js"></script>
+		<script type="text/javascript" src="./common/js/mainpage/about.js"></script>
+		<script>
+			var sence = '0';
+			var panel = $('.zte-theme-panel');
+			var body = $('body');
+			switch (sence) {
+			case "1":
+				$('title').attr('id', 'com_zte_ums_ict_framework_ui_page_title_1');
+				break;
+			case "2":
+				$('title').attr('id', 'com_zte_ums_ict_framework_ui_page_title_2');
+				if (body.hasClass("page-sidebar-fixed")) {
+					body.removeClass('page-sidebar-fixed');
+				}
+				body.addClass('page-sidebar-closed');
+				break;
+			case "3":
+				$('title').attr('id', 'com_zte_ums_ict_framework_ui_page_title_3');
+				if (body.hasClass("page-sidebar-fixed")) {
+					body.removeClass('page-sidebar-fixed');
+				}
+				body.addClass('page-sidebar-closed');
+				$('.sidebar-option', panel).val("default");
+				break;
+			case "0":
+			default:
+				break;
+			}
+		</script>
+		<script>
+			loadi18n_WebFramework();
+			iniHorMenu();
+			iniFMenu();
+		</script>
+		<script>
+			jQuery(document).ready(function() {
+				openoFrameWork.init();
+				initBaseInfo();
+				iniChangePWDDlg();
+                iniAboutDlg();
+				var language = getLanguage();
+				bootbox.setDefaults({
+					locale: language.replace("-", "_")
+				});
+				var help_url = "/help/showhelp.jsp?lang=" + language;
+				$('#uep_ict_help_url').attr('href', help_url);
+				$('#changepwdDlg').on('hide.bs.modal',function() {
+					$(this).removeData('bs.modal');
+				})
+				var pymChild = new pym.Child({ polling: 500 });
+				$("#pageLoading").setToHide();
+			});
+		</script>
+	</body>
+</html>

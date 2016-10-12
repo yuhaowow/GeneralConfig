@@ -1,0 +1,51 @@
+{
+	"language":{
+		"sProcessing":   "<img src='/web/newict/framework/thirdparty/data-tables/images/loading-spinner-grey.gif'/><span>&nbsp;&nbsp;处理中...</span>",
+		"sLengthMenu":   "<span class='seperator'>|</span>每页 _MENU_ 条结果",
+		"sZeroRecords":  "没有匹配结果",
+		"sInfo":         "<span class='seperator'>|</span>总共找到 _TOTAL_ 条结果",
+		"sInfoEmpty":    "共 0 项",
+		"sGroupActions": "_TOTAL_ 条结果被选择:  ",
+		"sAjaxRequestGeneralError": "不能完成请求，请检查您的网络连接情况。",
+		"sEmptyTable":     "表中数据为空",
+		"oPaginate": {
+			"sPrevious": "前页",
+			"sNext": "下页",
+			"sPage": "第",
+			"sPageOf": "页，总页数："
+		}
+	},
+	"columnsAll":[
+				{"columnId":"0", "columnTitle":"开始时间"},
+				{"columnId":"1", "columnTitle":"结束时间"},
+				{"columnId":"2", "columnTitle":"查询粒度"},
+				{"columnId":"3", "columnTitle":"网元位置"},
+				{"columnId":"4", "columnTitle":"CPU使用率(百分比)"}			
+	],
+	"columns":[
+				{"columnId":"0", "columnTitle":"开始时间"},
+				{"columnId":"1", "columnTitle":"结束时间"},
+				{"columnId":"2", "columnTitle":"查询粒度"},
+				{"columnId":"3", "columnTitle":"网元位置"},
+				{"columnId":"4", "columnTitle":"CPU使用率(百分比)"}	
+	],
+	"xsHiddenColumns":[
+	],
+	"smHiddenColumns":[
+	],
+	"columnsTooLong":["3"],	
+	
+	"rowCheckable": "true",
+	"openRowFlag" : "false",
+	"rowOverFlag" : "false",	
+	
+	"tableHeight":"250px",
+	"tableWidth":"100%",
+	
+	"requestType": "POST",
+	"requestURL": "/web/rest/web-pm/queryPmPageData",
+	"requestParameters":[
+	],
+	"sTotalRecordsSource":"response.extData",
+	"sTotalRecords":"108"
+}

@@ -1,0 +1,789 @@
+/**
+ * Copyright 2016, CMCC Technologies Co., Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+    color: #333;
+    font-size: 14px;
+    font-family: "Microsoft yahei", Arial !important;
+    background-color: transparent;
+}
+   
+/*fontIcon*/
+
+[class^="ict-"],
+[class*=" ict-"] {
+    padding-right: 3px;
+}
+
+/*common color*/
+
+.blue1 {
+    background-color: #5b9bd1;
+    color: #fff;
+}
+
+.blue1:hover {
+    background-color: #487ca9;
+    color: #fff;
+}
+
+.blue2 {
+    background-color: #57b5e3;
+    color: #fff;
+}
+
+.blue2:hover {
+    background-color: #43a1cf;
+    color: #fff;
+}
+
+.red {
+    background-color: #e35b5a;
+    color: #fff;
+}
+
+.red:hover {
+    background-color: #d45150;
+    color: #fff;
+}
+
+.green {
+    background-color: #44b6ae;
+    color: #fff;
+}
+
+.green:hover {
+    background-color: #329d96;
+    color: #fff;
+}
+
+.gold {
+    background-color: #c0af69;
+    color: #fff;
+}
+
+.gold:hover {
+    background-color: #ad9a4d;
+    color: #fff;
+}
+
+.grey {
+    background-color: #e5e5e5;
+    color: #333;
+}
+
+.grey:hover {
+    background-color: #d8d8d8;
+    color: #333;
+}
+
+.dark_grey {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark_grey:hover {
+    background-color: #101010;
+    color: #fff;
+}
+
+.white {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.white:hover {
+    background-color: #e5e5e5;
+    color: #333;
+}
+
+/***
+Responsive & Scrollable Tables
+***/
+
+.table-scrollable {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border: 1px solid #dddddd;
+}
+
+.table-scrollable > .table {
+    width: 100% !important;
+    margin: 0 !important;
+    margin-bottom: 0;
+    background-color: #fff;
+}
+
+.table-scrollable > .table > thead > tr > th,
+.table-scrollable > .table > tbody > tr > th,
+.table-scrollable > .table > tfoot > tr > th,
+.table-scrollable > .table > thead > tr > td,
+.table-scrollable > .table > tbody > tr > td,
+.table-scrollable > .table > tfoot > tr > td {
+    white-space: nowrap;
+}
+
+.table-scrollable > .table-bordered {
+    border: 0;
+}
+
+.table-scrollable > .table-bordered > thead > tr > th:first-child,
+.table-scrollable > .table-bordered > tbody > tr > th:first-child,
+.table-scrollable > .table-bordered > tfoot > tr > th:first-child,
+.table-scrollable > .table-bordered > thead > tr > td:first-child,
+.table-scrollable > .table-bordered > tbody > tr > td:first-child,
+.table-scrollable > .table-bordered > tfoot > tr > td:first-child {
+    border-left: 0;
+}
+
+.table-scrollable > .table-bordered > thead > tr > th:last-child,
+.table-scrollable > .table-bordered > tbody > tr > th:last-child,
+.table-scrollable > .table-bordered > tfoot > tr > th:last-child,
+.table-scrollable > .table-bordered > thead > tr > td:last-child,
+.table-scrollable > .table-bordered > tbody > tr > td:last-child,
+.table-scrollable > .table-bordered > tfoot > tr > td:last-child {
+    border-right: 0;
+}
+
+.table-scrollable > .table-bordered > thead > tr:last-child > th,
+.table-scrollable > .table-bordered > tbody > tr:last-child > th,
+.table-scrollable > .table-bordered > tfoot > tr:last-child > th,
+.table-scrollable > .table-bordered > thead > tr:last-child > td,
+.table-scrollable > .table-bordered > tbody > tr:last-child > td,
+.table-scrollable > .table-bordered > tfoot > tr:last-child > td {
+    border-bottom: 0;
+}
+
+/*form*/
+
+.form {
+    padding: 0 !important;
+}
+
+.form-group .multiRow {
+    margin-bottom: 15px;
+}
+
+.form-group,
+.form-group .btn {
+    font-size: 12px;
+}
+
+.form-body {
+    padding: 10px;
+}
+
+.form-actions {
+    padding-top: 20px 
+}
+
+.form-actions.nobg {
+    background-color: transparent;
+}
+
+.form-actions.top {
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-top: 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/*.form-actions.fluid {
+  padding: 20px 0;
+}*/
+
+.form-actions .btnGroup {
+    padding-left: 0;
+}
+
+.form-actions.fluid > [class^="col-"] {
+    padding-left: 13px;
+}
+
+.form-actions:before,
+.form-actions:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+
+.form-actions:after {
+    clear: both;
+}
+
+.form-section {
+    margin: 30px 0px 25px 0px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.form .form-section:first-child {
+    margin-top: 5px;
+}
+
+.help-inline {
+    font-size: 13px;
+    color: #737373;
+    display: inline-block;
+    padding: 5px;
+}
+
+.submBtn {
+    text-align: center;
+}
+.subm-iconMargin {
+margin-left:-40px;
+}
+.subm-margin {
+margin-left:-40px;
+}
+
+/* left, right aligned form actions */
+
+.form-actions.right {
+    padding-left: 0;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.form-actions.left {
+    padding-left: 10px;
+    padding-right: 0;
+    text-align: left;
+}
+
+/* Checkbox */
+
+.form-group .checkbox {
+    padding-left: 0;
+}
+
+.form-title {
+    padding: 8px;
+    margin-bottom: 25px;
+    border-left: 2px solid #5b9bd1;
+    color: #1A78CA;
+    font-size: 16px;
+}
+
+.checkbox-list > label {
+    display: block;
+}
+
+.checkbox-list > label.checkbox-inline {
+    display: inline-block;
+}
+
+.checkbox-list > label.checkbox-inline:first-child {
+    padding-left: 0;
+}
+
+/* Radios */
+input[type="radio"]{
+	cursor:pointer
+}
+.radio-list > label {
+    display: block;
+}
+
+.radio-list > label.radio-inline {
+    display: inline-block;
+}
+
+.radio-list > label.radio-inline:first-child {
+    padding-left: 0;
+}
+
+.form-horizontal .radio-list .radio {
+    padding-top: 1px;
+}
+
+.form-horizontal .radio-list > label {
+    margin-bottom: 0;
+}
+
+.form-horizontal .radio > span {
+    margin-top: 2px;
+}
+
+.help-block {
+    margin-top: 5px;
+    margin-bottom: 5px;
+	color: #a94442 !important;
+}
+
+.form-inline input {
+    margin-bottom: 0px !important;
+}
+.form-horizontal .control-label{
+    padding-top:4px;
+	text-align:right;
+}
+
+.form-control-static {
+    font-size: 14px;
+    padding-top: 7px;
+}
+
+.control-label .required {
+    color: #e02222;
+    font-size: 12px;
+    padding-left: 2px;
+}
+
+/*TAB*/
+
+.nav-tabs {
+    border: 0;
+    font-weight: bold;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    border: 0;
+    border-top: 3px solid #F3565D;
+}
+
+.nav-tabs > li > a {
+    border-radius: 0;
+    font-weight: bold;
+}
+
+.nav-tabs > li > a:hover {
+    background-color: #f1f3fa;
+    border: 1Px solid #f1f3fa;
+}
+
+/*button*/
+
+.btn {
+    min-width: 80px;
+    letter-spacing: 1px;
+}
+
+.btnGroup .btn {
+    margin-right: 15px;
+}
+
+.pagination-panel .btn {
+    min-width: 4px;
+}
+
+.btn.dropdown-toggle,
+.btn-group .btn.dropdown-toggle,
+.btn:hover,
+.btn:disabled,
+.btn[disabled],
+.btn:focus,
+.btn:active,
+.btn.active {
+    outline: none !important;
+    background-image: none !important;
+    filter: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+.btn-xs:hover{
+text-decoration:none ;
+}
+/*radius*/
+
+.radius_l {
+    border-radius: 20px;
+}
+
+.radius_m {
+    border-radius: 8px;
+}
+
+.radius_s {
+    border-radius: 3px;
+}
+
+/*Progress Bars*/
+
+.progress {
+    border: 0;
+    background-image: none !important;
+    filter: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.form-wizard .steps > li.active > a.step .number {
+    background-color: #45B6AF
+}
+
+.progress > .progress-bar-success {
+    background-color: #45B6AF
+}
+
+/*label*/
+
+.label,
+label {
+    font-weight: 400;
+    /*margin-bottom:15px;*/
+}
+
+/*表单中的组合*/
+
+.input-group-btn-vertical.fa {
+    font-size: 12px;
+}
+
+.spinner {
+    width: 60px;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.spinner input {
+    text-align: right;
+}
+
+.input-group-btn-vertical {
+    position: relative;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.input-group-btn-vertical > .btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 6px;
+    margin-left: -1px;
+    position: relative;
+    border-radius: 0;
+}
+
+.input-group-btn-vertical > .btn {
+    min-width: 20px;
+}
+
+.input-group-btn-vertical > .btn:first-child {
+    border-top-right-radius: 4px;
+}
+
+.input-group-btn-vertical > .btn:last-child {
+    margin-top: -2px;
+    border-bottom-right-radius: 4px;
+}
+
+.input-group-btn-vertical i {
+    position: absolute;
+    top: -2px;
+    left: 5px;
+}
+
+.input-group .form-control {
+    height: 26px !important;
+}
+
+/*separator & title*/
+
+.separator-line {
+    height: 1px;
+    width: 100%;
+    background: #ddd;
+    overflow: hidden;
+    margin-bottom: 15px;
+    margin-top: 6px;
+    opacity: 0.6;
+}
+
+.separator {
+    opacity: 0.7;
+}
+
+.separator:hover {
+    opacity: 1;
+}
+
+.titlefont {
+    font-size: 16px;
+	margin-top:15px;
+}
+
+/*link*/
+
+a {
+    color: #428bca;
+    text-decoration: none ;
+	cursor:pointer;
+}
+a:hover{
+    text-decoration: underline;
+}
+/*html滑块组件*/
+
+input[type="range"] {
+    margin-top: 2px;
+    background-color: #f0f3f9;
+    border: 1px solid #ccd6e8;
+    border-radius: 15px;
+    width: 400px;
+    -webkit-appearance: none;
+    height: 15px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    top: -5px;
+    height: 28px;
+    width: 15px;
+    transform: translateY(-4px);
+    background: none repeat scroll 0 0 #f0f3f9;
+    background-color: #9cc2cb;
+    border-radius: 20px;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+/*ztree*/
+
+.ztree * {
+    font-family: "microsoft yahei";
+    font-size: 12px;
+}
+
+.ztree {
+    padding: 15px 30px 0 5px;
+}
+
+.ztree li a.curSelectedNode {
+    height: 28px;
+}
+
+.ztree li span {
+    line-height: 16px;
+    margin-right: 2px;
+    margin-left: 6px
+}
+
+.ztree li span.button.chk {
+    width: 13px;
+    height: 13px;
+    margin-left: 10px;
+    cursor: auto
+}
+
+.ztree li span.button.add {
+    margin-left: 2px;
+    /* margin-right: -1px; */
+
+    margin-right: 4px;
+    background-position: -144px 0;
+    vertical-align: top;
+    *vertical-align: middle;
+    float: right;
+}
+
+.ztree li span.button.edit {
+    margin-right: 4px;
+    background-position: -110px -48px;
+    vertical-align: top;
+    *vertical-align: middle;
+    float: right;
+}
+
+.ztree li span.button.remove {
+    margin-right: 4px;
+    background-position: -110px -64px;
+    vertical-align: top;
+    *vertical-align: middle;
+    float: right;
+}
+
+.ztree-select .ztree li a {
+    border: 1px solid #fff !important;
+}
+
+/*table*/
+
+table,
+.dataTables_length,
+.dataTables_info,
+.dataTables_paginate {
+    font-size: 12px;
+}
+
+table .heading {
+    font-size: 14px;
+    background: #fff !important;
+}
+
+table.dataTable tbody th,
+table.dataTable tbody td {
+    padding: 8px 10px 4px 10px !important;
+}
+
+table tr:nth-of-type(odd) {
+    background: #f9f9f9;
+}
+
+table tr:nth-of-type(even) {
+    background: #fff;
+}
+
+table td:hover {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #d0d0d0;
+    border-top: 1px solid #d0d0d0;
+}
+
+table tr td label {
+    cursor: pointer;
+}
+
+.table-btn span {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.table-bordered>thead>tr>th, .table-bordered>thead>tr>td{
+border-bottom-width:1px;
+}
+/*select-box with icon*/
+
+.iconselect-box .col-xs-1 {
+    width: 15px;
+    padding: 110px 0 0 0;
+}
+
+.iconPosition > div {
+    margin: 20px 0px 0px 0px;
+}
+
+/*-------------C3.css-------------*/
+.c3 path, .c3 line {
+    stroke: #008acd;
+}
+
+.c3-line {
+    stroke-width: 3px;
+}
+
+.c3-tooltip {
+    width: auto;
+}
+
+.c3-tooltip td {
+    color: #000;
+}
+
+.c3-axis.c3-axis-y {
+    stroke-width: 1px;
+}
+
+.c3-axis.c3-axis-x {
+    stroke-width: 1px;
+}
+
+/*checkbox & radio*/
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    background: #fff url(../image/checkbox-radio/checkbox-init.png);
+    height: 18px;
+    vertical-align: middle;
+    width: 18px;
+	margin-bottom:5px;
+	margin-right:5px;
+}
+
+input[type="checkbox"]:checked {
+    -webkit-appearance: none;
+    background: #fff url(../image/checkbox-radio/checkbox-checked.png);
+    height: 18px;
+    vertical-align: middle;
+    width: 18px;
+}
+
+input[type="checkbox"]:focus,
+input[type="checkbox"]:hover {
+    outline: none;
+}
+
+input[type="checkbox"][disabled] {
+    -webkit-appearance: none;
+    background: #fff url(../image/checkbox-radio/checkbox-disabled.png);
+    height: 18px;
+    vertical-align: middle;
+    width: 18px;
+	margin-bottom:5px;
+	margin-right:5px;
+}
+
+input[type="checkbox"][disabled]:checked {
+    -webkit-appearance: none;
+    background: #fff url(../image/checkbox-radio/checkbox-checked-disabled.png);
+    height: 18px;
+    vertical-align: middle;
+    width: 18px;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    background: #fff url(../image/checkbox-radio/radio-init.png);
+    height: 18px;
+    vertical-align: middle;
+    width: 18px;
+	margin-bottom:5px;
+	margin-right:5px;
+}
+
+input[type="radio"]:checked {
+    -webkit-appearance: none;
+    background: #fff url(../image/checkbox-radio/radio-checked.png);
+    height: 18px;
+    vertical-align: middle;
+    width: 18px;
+}
+
+input[type="radio"]:focus,
+input[type="radio"]:hover {
+    outline: none;
+}
+
+input[type="radio"][disabled] {
+    -webkit-appearance: none;
+    background: #fff url(../image/checkbox-radio/radio-disabled.png);
+    height: 18px;
+    vertical-align: middle;
+    width: 18px;
+	margin-bottom:5px;
+	margin-right:5px;
+}
+
+input[type="radio"][disabled]:checked {
+    -webkit-appearance: none;
+    background: #fff url(../image/checkbox-radio/radio-checked-disabled.png);
+    height: 18px;
+    vertical-align: middle;
+    width: 18px;
+}

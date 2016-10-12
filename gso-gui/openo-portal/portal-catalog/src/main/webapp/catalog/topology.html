@@ -1,0 +1,122 @@
+<!--
+
+    Copyright 2016 ZTE Corporation.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<div class="container-fluid">
+	<div id="networks" style="float:left;display:inline-block">		
+		<div class="networksContainer">	
+			<div class="network" ms-repeat-network="topologyTab.networkTopoDatas">
+				<div class="name" tooltip="" ms-attr-title="network.name" ms-if="network.name"
+					 ms-click="topologyTab.$showTopo(network.id, network.name)">
+					 <div ms-if="topologyTab.isShowNum" ms-text="network.num" class="badge">0</div>
+					 <span>{{network.name}}</span>
+				</div>
+				<div class="subnet" ms-repeat-subnet="network.subnets">				
+				 	<div class="line">
+				 		<div class="vlan" ms-attr-id="subnet.id" ms-css-background-color="topologyTab.$getColor($index+$outer.$index)" ms-attr-title="subnet.name" ms-click="topologyTab.$showTopo(subnet.id, subnet.name)">
+				 			<div ms-if="topologyTab.isShowNum" ms-text="subnet.num" class="badge">0</div>
+				 			<p>{{subnet.name}}</p>
+				 			<p class="cidr" ms-text="topologyTab.$getCidr(subnet.properties)"></p>
+				 		</div>
+				 	</div>
+			 	</div><!--end repeat network.subnets-->
+		 	</div><!--end repeat topologyTab.networkTopoDatas-->
+		</div>
+	</div>
+	<div id="topo" style="float:left;display:inline-block">
+	 	<div class="row-fluid" data-name="topo_zone">		
+			<div class="bpContainer" ms-each-host="topologyTab.boxTopoDatas">	
+				<div>
+			   	<div class="box" ms-attr-id="host.id">
+				   	<div class="piProgress" size="55">       			
+		       			<div class="circle">
+			            	<i class="gs-node-icon fa fa-desktop" ></i> 	
+			            	<div ms-if="topologyTab.isShowNum" ms-text="host.num" class="badge">1</div>
+		       	 		</div> 
+		       	 		<div class="smallCircle" ms-repeat-cp="host.cp" ms-attr-id="cp.id" ms-title="cp.name" 
+		       	 			 ms-click="topologyTab.$showTopo(cp.id,cp.name)" ms-css-top="topologyTab.$getCpTop($index,host.id)">
+			            	<i class="gs-cp-icon fa fa-credit-card" ></i>
+		       	 		</div>       	 		
+		    		</div>
+		    		<div class="head"  ms-hover="boxHover" tooltip  ms-attr-title="host.name" ms-text="host.name" ms-click="topologyTab.$showTopo(host.id, host.name)">   			
+		    		</div>
+		    		<div class="holder">
+		    			<div class="nest" ms-if="host.vnfdid" ms-click="topologyTab.$showVnfTopo(host.vnfdid)"
+		    				 ms-attr-title="topologyTab.vnfTip"><!-- only display nested ns template  -->
+		    				<div class="plus">
+		    					<i class="fa fa-plus" style="color: #3aaeda;"></i>
+		    				</div>
+		    			</div>
+		    		 	<div ms-each-box="host.children" ><!-- ngRepeat: node in map track by node.name --> 
+		    		 		<div>  		 
+			                <div class="box" ms-attr-id="box.id">			                	
+			    			  	<div class="piProgress" size="55">                     
+				        			<div class="circle">
+				           				<i class="gs-node-icon fa fa-cogs"></i>
+				           				<div ms-if="topologyTab.isShowNum" ms-text="box.num" class="badge">1</div>
+				        			</div>
+				        			<div class="smallCircle" ms-repeat-cp="box.cp" ms-attr-id="cp.id" ms-title="cp.name" ms-click="topologyTab.$showTopo(cp.id,cp.name)" ms-css-top="topologyTab.$getCpTop($index,box.id)">
+						            	<i class="gs-cp-icon fa fa-credit-card" ></i>
+					       	 		</div> 
+			                   	</div>  
+			   				   	<div class="head"  ms-hover="boxHover" 
+			   				         tooltip="" ms-click="topologyTab.$showTopo(box.id, box.name)" ms-attr-title="box.name" ms-text="box.name"></div> 
+			    				<div class="holder" >
+			      			  		<div ms-each-app="box.children">
+					        			<!-- ngRepeat: node in map track by node.name -->
+					        			<div>
+				       			 		<div  class="app" ms-attr-id="app.id"  ms-click="topologyTab.$showTopo(app.id, app.name)" ms-hover="appHover">
+				    						<div class="piProgress" size="55">        					
+				      						  	<div class="circle" >
+				            						<i class="gs-node-icon fa fa-cog" ></i>
+				            						<div ms-if="topologyTab.isShowNum" ms-text="app.num" class="badge">1</div>          
+				        					  	</div>
+				    						</div>
+				    						<p tooltip="" ms-attr-id="app.id" ms-attr-title="app.name" ms-text="app.name"></p>
+										</div>		   
+										</div>
+										<!-- end ngRepeat: node in map track by node.name -->
+									</div>
+			    				</div><!-- end ngIf: node.isApp == false -->
+							</div><!-- end ngRepeat: node in map track by node.name -->
+						</div>
+						</div>
+		    		</div>	
+			 	</div>
+			 	</div>	 
+			</div>
+	  	</div>
+  	</div>
+  	<div>
+		<div class="coordinates">
+		 	<svg id="svg_vl" width="100%" height="100%" fill="silver">
+		 		<g transform="translate(0, 0)" >
+		 		</g>
+		 	</svg>
+		</div>
+		<div class="coordinates" style="z-index:3;">
+		 	<svg id="svg_vdu" width="100%" height="100%" fill="silver">
+		 		<g transform="translate(0, 0)" >
+		 		</g>
+		 		<defs>
+		 		<marker id="arrowhead" viewBox="0 0 20 20" refX="16" refY="10" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="12" orient="auto" fill="#7A7A7A">
+		 		<path d="M 0 0 L 20 10 L 0 20 z"></path>
+		 		</marker>
+		 		</defs>
+			 </svg>
+		</div>
+	</div>
+</div>

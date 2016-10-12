@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="portal-lifecyclemgr:war">
+    <output-path>$PROJECT_DIR$/openo-portal/portal-lifecyclemgr/target</output-path>
+    <root id="archive" name="portal-lifecyclemgr-1.0.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="portal-lifecyclemgr:war exploded" />
+    </root>
+  </artifact>
+</component>

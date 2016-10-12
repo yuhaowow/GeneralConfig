@@ -1,0 +1,240 @@
+div.dataTables_length label {
+	float: left;
+	text-align: left; 
+}
+
+div.dataTables_length label .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+div.dataTables_length select {
+	width: 75px;
+}
+
+div.dataTables_filter label {
+	float: right;
+}
+
+div.dataTables_info {
+	position: relative;
+	top:15px;
+}
+
+div.dataTables_paginate {
+	float: right;
+	margin: 0;
+}
+
+table.table {
+	clear: both;
+	margin-bottom: 6px !important;
+	max-width: none !important;
+}
+
+table.table thead .sorting,
+table.table thead .sorting_asc,
+table.table thead .sorting_desc,
+table.table thead .sorting_asc_disabled,
+table.table thead .sorting_desc_disabled {
+	cursor: pointer;
+	*cursor: hand;
+}
+
+table.table thead .sorting { background: url('images/sort_both.png') no-repeat center right; }
+table.table thead .sorting_asc { background: url('images/sort_asc.png') no-repeat center right; }
+table.table thead .sorting_desc { background: url('images/sort_desc.png') no-repeat center right; }
+
+table.table thead .sorting_asc_disabled { background: url('images/sort_asc_disabled.png') no-repeat center right; }
+table.table thead .sorting_desc_disabled { background: url('images/sort_desc_disabled.png') no-repeat center right; }
+
+table.dataTable th:active {
+	outline: none;
+}
+
+table.dataTable tbody {
+	font-size:13px;
+}
+
+/* Scrolling */
+div.dataTables_scroll {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+div.dataTables_scrollHead table {
+	margin-bottom: 0 !important;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+div.dataTables_scrollHead table thead tr:last-child th:first-child,
+div.dataTables_scrollHead table thead tr:last-child td:first-child {
+	border-bottom-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+
+div.dataTables_scrollBody table {
+	border-top: none;
+	margin-bottom: 0 !important;
+}
+
+div.dataTables_scrollBody tbody tr:first-child th,
+div.dataTables_scrollBody tbody tr:first-child td {
+	border-top: none;	
+}
+
+/*
+div.dataTables_scrollBody tbody tr td {
+	padding-left: 10px !important;
+	padding-right: 10px !important; 
+}
+div.dataTables_scrollHeadInner table thead tr th,
+div.dataTables_scrollBody table thead tr th{
+	padding-left: 10px !important;
+	padding-right: 18px !important; 
+	text-align: center !important;
+}*/
+
+div.dataTables_scrollFoot table {
+	border-top: none;
+}
+
+/*
+ * TableTools styles
+ */
+
+table.DTTT_selectable tbody tr {
+	cursor: pointer;
+	*cursor: hand;
+}
+
+div.DTTT .btn {
+	color: #333 !important;
+	font-size: 12px;
+}
+
+div.DTTT .btn:hover {
+	text-decoration: none !important;
+}
+
+
+ul.DTTT_dropdown.dropdown-menu a {
+	color: #333 !important; /* needed only when demo_page.css is included */
+}
+
+ul.DTTT_dropdown.dropdown-menu li:hover a {
+	background-color: #0088cc;
+	color: white !important;
+}
+
+/* TableTools information display */
+div.DTTT_print_info.modal {
+	height: 150px;
+	margin-top: -75px;
+	text-align: center;
+}
+
+div.DTTT_print_info h6 {
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 28px;
+	margin: 1em;
+}
+
+div.DTTT_print_info p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+
+
+/*
+ * FixedColumns styles
+ */
+div.DTFC_LeftHeadWrapper table,
+div.DTFC_LeftFootWrapper table,
+table.DTFC_Cloned tr.even {
+	background-color: white;
+}
+
+div.DTFC_LeftHeadWrapper table {
+	margin-bottom: 0 !important;
+	border-top-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+
+div.DTFC_LeftHeadWrapper table thead tr:last-child th:first-child,
+div.DTFC_LeftHeadWrapper table thead tr:last-child td:first-child {
+	border-bottom-left-radius: 0 !important;
+	border-bottom-right-radius: 0 !important;
+}
+
+div.DTFC_LeftBodyWrapper table {
+	border-top: none;
+	margin-bottom: 0 !important;
+}
+
+div.DTFC_LeftBodyWrapper tbody tr:first-child th,
+div.DTFC_LeftBodyWrapper tbody tr:first-child td {
+	border-top: none;
+}
+
+div.DTFC_LeftFootWrapper table {
+	border-top: none;
+}
+
+/*浮动的确认反确认样式 */
+td.buttonRounded {
+  background-color: #e5e5e5;  
+  color: #333333;
+  border: 0px solid #b15a59;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 12px;
+  /*padding: 0 3px;*/
+  padding-left:5px !important;
+  padding-right:5px !important;
+  height:30px !important;
+}
+
+td.buttonRoundedDisabled {
+  opacity: .65;  
+  height:30px !important;
+}
+
+div.buttonConfirm{	
+	position: absolute; left: 0px; top: 0px; width: 120px; height: 30px; z-index: 201224; overflow: visible;
+	font-size: 13px;
+}
+div.buttonUnConfirm{	
+	position: absolute; left: 120px; top: 0px; width: 100px; height: 30px; z-index: 201242; overflow: visible;
+	font-size: 13px;
+}
+div.buttonDelete{	
+	position: absolute; left: 250px; top: 0px; width: 60px; height: 30px; z-index: 201260; overflow: visible;
+	font-size: 13px;
+}
+
+button.btn-confirm {
+  width:90px;  
+}
+
+/***
+Extended pagination
+***/
+.paging_bootstrap_extended {
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  font-size: 13px;
+}
+
+.modal-body {
+	font-size: 13px;
+}

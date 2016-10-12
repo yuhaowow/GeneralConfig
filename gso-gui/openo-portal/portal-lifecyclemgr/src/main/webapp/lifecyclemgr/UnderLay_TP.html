@@ -1,0 +1,236 @@
+
+<!-- /* Copyright 2016, Huawei Technologies Co., Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/VMMain.css" rel="stylesheet" />
+    <link href="css/bootstrap-table.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/brs.js"></script>
+    <script type="text/javascript" src="js/underlay.js"></script>
+    <script type="text/javascript" src="js/bootstrap-table.min.js"></script>
+    <style>
+    .fixed-table-container tbody td .th-inner,
+    .fixed-table-container thead th .th-inner {
+        line-height: 4px;
+    }
+    .fixed-table-pagination .pagination-info {
+        display: none !important;
+    }
+    .table tbody tr:hover td,
+    .table tbody tr.odd:hover td {
+        background-color: #e6fbe0 !important;
+    }
+    .delete-btn {
+        background: url(delete.png) no-repeat !important;
+        width: 16px;
+        height: 16px;
+        border: none;
+    }
+    table tr.openoTable_row_selected td {
+        background: #e8f8fe!important;
+        border-bottom: 1px solid #e8e8e8!important;
+    }
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 0px;
+    }
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var jsondata = loadUnderlayData();
+        $('#tbl_overlay').bootstrapTable({
+            //Assigning data to table
+            data: jsondata
+        });
+        $('#underlayTpDataTable').bootstrapTable({
+            //Assigning data to table
+            data: {}
+        });
+        $('.table tbody tr').click(function() {
+                 
+                $(this).addClass('openoTable_row_selected').siblings().removeClass('openoTable_row_selected');
+          });
+
+            $('#sai').on('sort.bs.table', function () {
+   
+
+            }).on('click-row.bs.table', function () {
+       
+         
+         $('.table tbody tr').click(function() {
+                    
+                $(this).addClass('openoTable_row_selected').siblings().removeClass('openoTable_row_selected');
+          });
+        
+         });
+    });
+
+    function operateFormatter(value, row, index) {
+        return [
+            '<img class="siteDeleteImg" src="images/delete.png" href="javascript:void(0)" style="cursor: pointer" name="title" title="Delete" />'
+        ].join('');
+    }
+    window.operateEvents = {
+        'click .siteDeleteImg': function(e, value, row, index) {
+            // TO DO ajex call for delete
+            console.log(value, row, index);
+        }
+    };
+    /* function nameFormatter(value, row) {
+		jsonForTP = row.json.data;
+		var name=JSON.stringify(row.json.data);
+	  	var temp = "<a class='underlayNameLink' onclick='getMethod(this)' name='"+ name + "' data-events='operateEventsU'>" + value + "</a>";
+        return temp;
+    }*/
+    function getMethod(obj) {
+        //Update the lower table here
+        $('#underlayTpDataTable').bootstrapTable(
+            //Assigning data to table
+            "append", JSON.parse(obj.name)
+        );
+    }
+    </script>
+
+</head>
+
+<body id="open_base_vpn_cotentBody" class="cotentBody ng-scope">
+    <div class="container-fluid ms-controller">
+        <h3>TP Details</h3>
+ <!--        <div class="row-fluid" data-name="table_zone">
+            <div id=''>
+                <div>
+                    <div class="top">
+                        <table class="table table-striped" id="tbl_overlay" data-pagination="true" data-page-size="5" data-pagination-first-text="First" data-pagination-pre-text="Previous" data-pagination-next-text="Next" data-pagination-last-text="Last">
+                            <thead id="sunderlayTable_thead" class="openo-table-thead" style="background:#ECECEC">
+                                <tr class="active">
+
+                                  <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign" data-field="underlayType" data-sortable="true">
+                                        <div class="openo-table-th-border"></div>
+                                        <div class="DataTables_sort_wrapper openo-ellipsis ">
+                                            <span id="underlayType_sorticon" class="openo-table-th-sorticon overflow_elip  leftHeaderAlign  openo-table-disable-element ">TP Name
+                    </span>
+                                        </div>
+                                    </th>
+                                    <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign" data-field="underlayTenantName" data-sortable="true">
+                                        <div class="openo-table-th-border"></div>
+                                        <div class="DataTables_sort_wrapper openo-ellipsis ">
+                                            <span id="underlayTenantName_sorticon" class="openo-table-th-sorticon overflow_elip  leftHeaderAlign  openo-table-disable-element ">PE Name
+                            </span>
+                                        </div>
+                                    </th>
+                                    <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign" data-field="underlayType" data-sortable="true">
+                                        <div class="openo-table-th-border"></div>
+                                        <div class="DataTables_sort_wrapper openo-ellipsis ">
+                                            <span id="underlayType_sorticon" class="openo-table-th-sorticon overflow_elip  leftHeaderAlign  openo-table-disable-element ">VLAN ID
+                    </span>
+                                        </div>
+                                    </th>
+                                   <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign" data-field="underlayType" data-sortable="true">
+                                        <div class="openo-table-th-border"></div>
+                                        <div class="DataTables_sort_wrapper openo-ellipsis ">
+                                            <span id="underlayType_sorticon" class="openo-table-th-sorticon overflow_elip  leftHeaderAlign  openo-table-disable-element ">Site CIDR
+                    </span>
+                                        </div>
+                                    </th>
+                                  <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign" data-field="underlayType" data-sortable="true">
+                                        <div class="openo-table-th-border"></div>
+                                        <div class="DataTables_sort_wrapper openo-ellipsis ">
+                                            <span id="underlayType_sorticon" class="openo-table-th-sorticon overflow_elip  leftHeaderAlign  openo-table-disable-element ">IP
+                    </span>
+                                        </div>
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>a_data </td>
+                                    <td>data </td>
+                                    <td>Sample1 </td>
+                                  <td>Sample </td>
+                                    <td>Sample1 </td>
+                                </tr>
+
+                              <tr>
+                                    <td>b_data </td>
+                                    <td>new sample </td>
+                                    <td>modified </td>
+                                  <td>Sample </td>
+                                    <td>Sample1 </td>
+                                </tr>
+
+                               <tr>
+                                  <td>alarm </td>
+                                    <td>deleted </td>
+                                    <td>Sample </td>
+                                  <td>Sample </td>
+                                    <td>Sample1 </td>
+                                </tr>
+
+                               <tr>
+                                    <td>datanew </td>
+                                    <td>Sample </td>
+                                    <td>Sample1 </td>
+                                  <td>Sample </td>
+                                    <td>Sample1 </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+   <div class="row-fluid" data-name="table_zone">
+                <div id='ict_virtualApplication_table_div'>
+                    <div>
+                        <div class="top">
+                            <table class="table-striped table " id="sai" data-pagination="true"  
+       data-pagination-first-text="First" data-pagination-pre-text="Previous" data-pagination-next-text="Next" data-pagination-last-text="Last">
+                                <thead style="background:#ECECEC">
+                                    <tr>
+                                        <th data-field="tname" data-sortable="true">TP Name</th>
+                                        <th data-field="pname" data-sortable="true">PE Name</th>
+                                        <th data-field="vlan" data-sortable="true">VLAN ID</th>
+                                        <th data-field="site" data-sortable="true">Site CIDR</th>
+                                        <th data-field="ip" data-sortable="true">IP</th>
+                                    </tr>
+                                </thead>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+
+    </div>
+
+</body>
+
+</html>

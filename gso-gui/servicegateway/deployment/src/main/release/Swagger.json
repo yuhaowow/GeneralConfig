@@ -1,0 +1,304 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0",
+        "contact": {
+            "name": "Xiangli Jia",
+            "email": "jiaxiangli@huawei.com"
+        },
+        "title": "ServiceGateway Northbound Interface",
+        "description": "Northbound Interface of ServiceGateway to be used by LifecycleMgr GUI. only service instantiation and termination.\nAll operations are synchronous.",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "schemes": [
+        "http"
+    ],
+    "basePath": "/openoapi/servicegateway/v1",
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/services": {
+            "post": {
+                "summary": "Send the create request to the corresponding module.",
+                "description": "it will send create request to the corresponding module.",
+                "operationId": "guiCreationPost",
+                "consumes": [
+                    "application/json;charset=UTF-8"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "guiRequest",
+                        "description": "the request used to create a service instance with the specified uri.",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/CreationRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "create service instance success.",
+                        "schema": {
+                            "$ref": "#/definitions/CreationResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "create service instance failure as parameters invalid.",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    },
+                    "401": {
+                        "description": "unauthorized.",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    },
+                    "404": {
+                        "description": "create service instance failure as can't reach server.",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    },
+                    "500": {
+                        "description": "create service instance failure as internal error.",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/services/{serviceId}/terminate": {
+            "post": {
+                "summary": "Send the delete request to the corresponding module",
+                "description": "it will send a terminate request to the corresponding module.",
+                "operationId": "guiTerminationPost",
+                "consumes": [
+                    "application/json;charset=UTF-8"
+                ],
+                "produces": [
+                    "application/json;charset=UTF-8"
+                ],
+                "parameters": [
+                    {
+                        "name": "serviceId",
+                        "in": "path",
+                        "description": "ID of the service instance to be terminated",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "guiTerminationRequest",
+                        "description": "the request used to terminate a service instance",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/TerminationRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "service instance is under-terminating. Job id is returned.",
+                        "schema": {
+                            "$ref": "#/definitions/LongOperationResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "terminate service instance failure as parameters invalid.",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    },
+                    "401": {
+                        "description": "unauthorized.",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    },
+                    "404": {
+                        "description": "terminate service instance failure as can't reach server.",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    },
+                    "500": {
+                        "description": "terminate service instance failure as internal error.",
+                        "schema": {
+                            "$ref": "#/definitions/Error"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "CreationRequest": {
+            "description": "Service Instance Creation Request",
+            "type": "object",
+            "required": [
+                "gatewayUri"
+            ],
+            "properties": {
+                "nsdId": {
+                    "type": "string",
+                    "description": "ID of the template in catalog used to create the SDN-O/NFV-O service instance"
+                },
+                "gatewayUri": {
+                    "type": "string",
+                    "description": "uri of the corresponding service restful API to be created for GSO/SDN-O/NFV-O"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "description of the GSO/SDN-O/NFV-O service instance to be created"
+                },
+                "parentid": {
+                    "type": "string",
+                    "description": "ID of the GSO service instance to be created"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "name of the GSO service instance to be created"
+                },
+                "serviceDefId": {
+                    "type": "string",
+                    "description": "ID of the GSO service instance to be created"
+                },
+                "templateId": {
+                    "type": "string",
+                    "description": "ID of the GSO service instance to be created"
+                },
+                "templateName": {
+                    "type": "string",
+                    "description": "ID of the GSO service instance to be created"
+                },
+                "nsName": {
+                    "type": "string",
+                    "description": "ID of the GSO service instance to be created"
+                },
+                "nsInstanceId": {
+                    "type": "string",
+                    "description": "ID of the GSO service instance to be created"
+                },
+                "additionalParamForNs": {
+                    "description": "parameters used to instantiate this SDN-O/NFV-O service instance",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TemplateParameter"
+                    }
+                },
+                "parameters": {
+                    "description": "parameters used to instantiate this GSO service instance",
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/TemplateParameter"
+                    }
+                }
+            }
+        },
+        "CreationResponse": {
+            "description": "Service Instance Creation Response",
+            "type": "object",
+            "required": [
+                "serviceId"
+            ],
+            "properties": {
+                "serviceId": {
+                    "type": "string",
+                    "description": "ID of the service instance that is created."
+                }
+            }
+        },
+        "TemplateParameter": {
+            "description": "parameter used to instantiate its service instance. it's fundamentally a name-value pair.",
+            "type": "object",
+            "required": [
+                "name",
+                "value"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "name of the parameter"
+                },
+                "value": {
+                    "type": "string",
+                    "description": "value of the parameter"
+                }
+            }
+        },
+        "LongOperationResponse": {
+            "description": "Response for operation that takes a long time, i.e., a job id.",
+            "type": "object",
+            "required": [
+                "jobId"
+            ],
+            "properties": {
+                "jobId": {
+                    "type": "string",
+                    "description": "ID of the job that is executing some long operation"
+                }
+            }
+        },
+        "TerminationRequest": {
+            "description": "Service Instance Termination Request.",
+            "type": "object",
+            "required": [
+                "operation",
+                "gatewayUri"
+            ],
+            "properties": {
+                "operation": {
+                    "type": "string",
+                    "description": "type of the GSO/SDN-O/NFV-O service instance to be terminated"
+                },
+                "gatewayUri": {
+                    "type": "string",
+                    "description": "uri of the GSO/SDN-O/NFV-O service instance to be terminated"
+                },
+                "nsInstanceId": {
+                    "type": "string",
+                    "description": "id of the SDN-O/NFV-O service instance to be terminated"
+                },
+                "terminationType": {
+                    "type": "string",
+                    "description": "type of SDN-O/NFV-O termination. graceful or not, etc."
+                },
+                "gracefulTerminationTimeout": {
+                    "type": "string",
+                    "description": "timeout value for a graceful timeout,just only SDN-O."
+                }
+            }
+        },
+        "Error": {
+            "type": "object",
+            "required": [
+                "errorCode"
+            ],
+            "properties": {
+                "errorCode": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "statusDescription": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

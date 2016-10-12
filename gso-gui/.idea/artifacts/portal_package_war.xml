@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="portal-package:war">
+    <output-path>$PROJECT_DIR$/openo-portal/portal-package/target</output-path>
+    <root id="archive" name="openo-portal.war">
+      <element id="artifact" artifact-name="portal-package:war exploded" />
+    </root>
+  </artifact>
+</component>

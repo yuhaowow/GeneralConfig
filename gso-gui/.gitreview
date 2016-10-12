@@ -1,0 +1,4 @@
+[gerrit]
+host=gerrit.open-o.org
+port=29418
+project=gso-gui.git

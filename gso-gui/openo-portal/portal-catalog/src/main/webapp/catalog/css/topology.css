@@ -1,0 +1,393 @@
+/**
+ * Copyright 2016 ZTE Corporation.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.container-fluid {
+  background-color: #fff;
+  padding: 0;
+}
+
+
+div[data-name="topo_zone"]  {
+  background-color: #fff;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+p[tooltip], div[tooltip], td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.bpContainer {
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: 40px;
+}
+
+
+.box {
+  position: relative;
+  display: inline-block;
+  min-width: 260px;
+  min-height: 170px;
+  border-width: 2px;
+  border-color: #136e9d;
+  border-style: solid;
+  background-color: #fff;
+  vertical-align: top;
+  padding: 2px;
+  border-radius: 6px;
+  margin: 0 60px 40px 0;
+}
+
+
+.box .piProgress, .line .piProgress {
+  position: absolute;
+  top: -12px;
+  left: -27px;
+  z-index: 1;
+}
+/* .piProgress {
+  position: relative;
+  display: inline-block;
+} */
+.box .piProgress .circle, .line .piProgress .circle {
+  background: #136e9d;
+  border: 2px solid #d3dfe2;
+  width: 43px; 
+  height: 43px; 
+  top: 5.5px; 
+  left: 5.5px;
+  border-radius: 21px; 
+  font-size: 14px;
+}
+.box .piProgress .smallCircle {
+  background: #136e9d;
+  border: 2px solid #d3dfe2;
+  width: 30px; 
+  height: 30px;
+  left: 11px;
+  border-radius: 21px; 
+  font-size: 12px;
+  cursor: pointer;
+}
+.piProgress .circle, .piProgress .smallCircle {
+  position: absolute;
+  display: box;
+  box-pack: center;
+  box-align: center;
+  background-color: #46b8da;
+  color: #fff;
+  font-size: 100%;
+  z-index: 3;
+}
+
+.bpContainer i.gs-node-icon {
+  position: absolute;
+  top: 10px;
+  left: 9px;
+  font-size: 23px;
+}
+
+.bpContainer i.gs-cp-icon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 15px;
+}
+
+.bpContainer .box .head, .bpContainer .line .head {
+  display: block;
+  background-color: #136e9d;
+  color: #fff;
+  padding: 2px 10px 3px 25px;
+  border-radius: 3px;
+  font-size: 20px;
+  height: 35px;
+}
+
+.bpContainer .box .holder {
+  display: block;
+  padding: 5px 25px;
+  margin-top: 1px;
+  background-color: #fff;
+}
+
+.bpContainer .box .nest {
+  min-height:130px;
+  cursor:pointer;
+}
+
+.bpContainer .box .nest .plus {
+  position: absolute;
+  bottom:0;
+  right:5px;
+}
+
+.bpContainer .box .boxHover~div {
+ background-color:#eaf1f7;
+}
+
+.bpContainer .boxHover{ 
+  cursor:pointer;
+}
+
+.bpContainer .box .box .appHover{ 
+  cursor:pointer;
+}
+
+
+.bpContainer .box .box .appHover p {
+ background-color:#eaf1f7;
+}
+
+.bpContainer .box .box {
+  border-color: #3aaeda;
+  min-width: 170px;
+  margin: 15px;
+}
+
+.bpContainer .box .box .head {
+  background-color: #3aaeda;
+}
+
+.bpContainer .box .box .piProgress .circle {
+  background-color: #3aaeda;
+}
+
+.bpContainer .box .box .holder {
+  text-align: center;
+  background-color: #fff;
+  min-height: 126px;
+}
+
+.bpContainer .box .box .boxHover~div {
+ background-color:#eaf1f7;
+}
+
+.bpContainer .app {
+  position: relative;
+  display: inline-block;
+  width: 47px;
+  height: 47px;
+  text-align: center;
+  border-radius: 3px;
+  margin: 10px 0;
+}
+
+.bpContainer .app .piProgress {
+  top: 0;
+  left: -6px;
+}
+
+.bpContainer .box .box .piProgress .circle{
+  background-color: #3aaeda;
+}
+
+.bpContainer .app p {
+  position: relative;
+  top: 50px;
+  margin: 0;
+  color: #555869;
+  text-align: center;
+  font-size: 15px;
+}
+
+
+ .coordinates {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.bpContainer .box .piProgress .circle>.badge, .bpContainer .line .piProgress .circle>.badge {
+  position:absolute;
+  display:inline-block;
+  z-index:1;
+  top:-8px;
+  left:20px;
+  min-width:20px;
+  border-radius:10px;
+  padding:3px!important;
+  vertical-align:baseline;
+  white-space:nowrap;
+  text-align:center;
+  background-color:#2f3334;
+  text-decoration:none;
+  font-size:14px;
+  color:#fff;
+  line-height:15px;
+  font-style:normal;
+  font-weight:400;
+  opacity:1
+}
+
+.header {
+  border-top:2px solid #4b6b8b;
+  background-color:#e8edf2;
+  height:40px;
+  padding:5px 20px
+}
+
+.header .title {
+  display:inline-block;
+  font-size:18px;
+  color:#29AAEE;
+  line-height:28px
+}
+
+.containList {
+  overflow-y:scroll;
+}
+
+div.separator-icon {
+  text-align: center;
+  line-height: 0
+}
+
+.networksContainer{
+  white-space:nowrap;
+  margin:40px 0 0 20px;
+  height:100%
+}
+
+.networksContainer .network{
+  position: relative;
+  display:inline-block;
+  text-align:center;
+  min-width:70px;
+  margin:0 10px 0 0
+}
+
+.networksContainer .subnet{
+  display:inline-block;
+  text-align:center;
+  min-width:70px;
+  margin:0 10px 0 0
+}
+
+.networksContainer .subnet .line{
+  position:relative;
+  display:inline-block;
+  vertical-align:top
+}
+
+.networksContainer .name {
+  display:block;
+  width:100%;
+  background-color:#797B86;
+  color:#fff;
+  padding:2px 6px;
+  border-radius:5px;
+  text-align:center;
+  margin:0 0 10px;
+  overflow:hidden;
+  cursor: pointer;
+  text-overflow:ellipsis
+}
+
+.networksContainer .network .name>.badge {
+  position:absolute;
+  display:inline-block;
+  z-index:1;
+  top:-9px;
+  right:-9px;
+  min-width:20px;
+  border-radius:10px;
+  padding:3px!important;
+  vertical-align:baseline;
+  white-space:nowrap;
+  text-align:center;
+  background-color:#2f3334;
+  text-decoration:none;
+  font-size:14px;
+  color:#fff;
+  line-height:15px;
+  font-style:normal;
+  font-weight:400;
+  opacity:1
+}
+
+.networksContainer .subnet .line .vlan{
+  position:relative;
+  display:inline-block;
+  width:21px;
+  height:500px;
+  background-color:#149bdf;
+  color:#fff;
+  border-radius:5px;
+  vertical-align:top;
+  margin:0 10px 0 0;
+  cursor:pointer
+}
+
+.networksContainer .subnet .vlan .badge {
+  position:absolute;
+  display:inline-block;
+  z-index:1;
+  top:-8px;
+  left:10px;
+  min-width:20px;
+  border-radius:10px;
+  padding:3px!important;
+  vertical-align:baseline;
+  white-space:nowrap;
+  text-align:center;
+  background-color:#2f3334;
+  text-decoration:none;
+  font-size:14px;
+  color:#fff;
+  line-height:15px;
+  font-style:normal;
+  font-weight:400;
+  opacity:1
+}
+
+.networksContainer .subnet .line .vlan:last-child{
+  margin:0
+}
+
+.networksContainer .subnet .line .vlan>p{
+  position:absolute;
+  display:block;
+  transform:rotate(90deg);
+  -ms-transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  white-space:nowrap;
+  color:#fff;
+  top:5px;
+  right:0;
+  left:1px
+}
+
+.networksContainer .subnet .line .vlan>p.cidr{
+  width:200px;
+  top:auto;
+  left:-90px;
+  bottom:85px;
+  color:#fff;
+  text-align:right
+}
+
+.topoZone {
+  display: inline-block;
+  float: left;
+}

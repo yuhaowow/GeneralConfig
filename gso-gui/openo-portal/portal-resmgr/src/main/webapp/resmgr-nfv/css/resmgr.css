@@ -1,0 +1,72 @@
+fieldset {
+    width: 680px;
+}
+
+legend {
+    margin-left: 8px;
+}
+
+.item {
+    height: 56px;
+    line-height: 36px;
+    margin: 10px;
+}
+
+.item .item-label {
+    float: left;
+    width: 80px;
+    text-align: right;
+}
+
+.item-text {
+    float: left;
+    width: 244px;
+    height: 16px;
+    padding: 9px 25px 9px 5px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.item-select {
+    float: left;
+    height: 34px;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 6px 0px;
+}
+
+.item-submit {
+    margin-left: 88px;
+}
+
+input.error {
+    border: 1px solid #E6594E;
+}
+
+input.highlight {
+    border: 1px solid #7abd54;
+}
+
+label.error, label.tip {
+    float: left;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 5px;
+    padding-left: 20px;
+    color: red;
+    background: url('error.png') no-repeat left center;
+}
+
+label.tip {
+    color: #aaa;
+    background: url('tip.png') no-repeat left center;
+}
+
+label.valid {
+    background: url('valid.png') no-repeat left center;
+    width: 32px;
+}

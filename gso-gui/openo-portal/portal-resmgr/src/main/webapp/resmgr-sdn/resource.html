@@ -1,0 +1,140 @@
+<!--
+
+    Copyright 2016, Huawei Technologies Co., Ltd.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+            http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/RMain.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<script type="text/javascript">
+    $(function () {
+        $('.openo_accordion_ui-icon-expand,.header').click(function () {
+            $('#accordionmenuid_ul_0_0_brAppTopMenuID_UL').slideToggle(500);
+            $('.openo_accordion_ui-icon-expand').toggleClass('current')
+        });
+        $('.openoAccordian_showHideArrow_hide').click(function () {
+            // $('#open_base_openo').css('margin-left','-200px');
+            // $('#open_base_openo').css('display','none');
+            // $('.bar').css('display','block');
+            if ($('#accordionmenuid').width() >= 200) {
+                $('#accordionmenuid').width('18px');
+                $('.openo_accordion_ui-icon-expand,.header,#accordionmenuid_ul_0_0_brAppTopMenuID_UL li a').css('display', 'none');
+                $('#accordionmenuid_arrow').attr('classname', 'openoAccordian_showHideArrow_show');
+                $('#iframeContainer').css('width', '1284px');
+            } else if ($('#accordionmenuid').width() == 18) {
+                $('#accordionmenuid').width('220px');
+                $('.openo_accordion_ui-icon-expand,.header,#accordionmenuid_ul_0_0_brAppTopMenuID_UL li a').css('display', 'block');
+                $('#accordionmenuid_arrow').attr('classname', 'openoAccordian_showHideArrow_hide');
+                $('#iframeContainer').css('width', '1063px');
+            }
+
+        });
+        $('.bar span').click(function () {
+            $('#open_base_openo').css('display', 'block');
+            $('.bar').css('display', 'none');
+            $('#iframeContainer').css('width', '1063px');
+        });
+        $('#accordionmenuid_ul_0_0_brAppTopMenuID_UL li').click(function () {
+            $(this).addClass('openo_accordion_selected').siblings().removeClass('openo_accordion_selected');
+        });
+        $('#accordionmenuid_ul_0_0_brAppTopMenuID_UL_1_0_brAppSiteMenuID').click(function () {
+            $('#accordionContent').attr('src', 'site.html');
+        });
+        $('#accordionmenuid_ul_0_0_brAppTopMenuID_UL_1_1_brAppMeMenuID').click(function () {
+            $('#accordionContent').attr('src', 'ne.html');
+        });
+        $('#accordionmenuid_ul_0_0_brAppTopMenuID_UL_1_2_brAppTpMenuID').click(function () {
+            $('#accordionContent').attr('src', 'port.html');
+        });
+        $('#accordionmenuid_ul_0_0_brAppTopMenuID_UL_1_3_brAppTlMenuID').click(function () {
+            $('#accordionContent').attr('src', 'link.html');
+        });
+
+    })
+</script>
+<body>
+<div id="febDiv" style="overflow: hidden;">
+    <div id="open_base_feb">
+        <!--use for store menu come from feb service, maybe just a temple plan-->
+        <div id="app">
+            <div id="iemp_layout_container" ng-controller="resourceCtrl" class="iemp_layout_container ng-scope">
+
+                <table id="open_base_table" class="three-cols-layout">
+                    <tbody id="open_base_tbody">
+                    <tr id="open_base_tr">
+                        <td class="bar">
+                            <span></span>
+                        </td>
+                        <td id="open_base_openo" class="three-cols-column three-cols-left">
+                            <div id="accordionmenuid" allow-resize="true" dataset="dataArr" height="resHeight"
+                                 listeners="callBacklisteners" resize-callback="resizehandler"
+                                 current-select="currentselect" click="clickHandler"
+                                 class="ng-isolate-scope accordion_parent openo_accordion_main_menu"
+                                 style="height: 870px;">
+                                <div class="openo-accordion-resizable-handle" style="cursor: auto;"></div>
+                                <ul id="accordionmenuid_ul" class="openoAccordian_accordionmenu">
+                                    <li id="accordionmenuid_ul_0_0_brAppTopMenuID" nodeid="brAppTopMenuID">
+                                        <span class="openo_accordion_ui-icon-expand"
+                                              style="padding-left: 20px; height: 60px;cursor: pointer;"></span>
+                                        <span class="openoAccordian_showHideArrow_hide" id="accordionmenuid_arrow"
+                                              style="cursor: pointer;"></span>
+                                        <a title="brApp" class="header opened"
+                                           style="padding-left: 10px; cursor: pointer;">Resource</a>
+                                        <ul id="accordionmenuid_ul_0_0_brAppTopMenuID_UL">
+                                            <li id="accordionmenuid_ul_0_0_brAppTopMenuID_UL_1_0_brAppSiteMenuID"
+                                                nodeid="brAppSiteMenuID" class="" style="display: list-item;">
+                                                <a title="Site" class="" style="padding-left: 62px;">Site</a>
+                                            </li>
+                                            <li id="accordionmenuid_ul_0_0_brAppTopMenuID_UL_1_1_brAppMeMenuID"
+                                                nodeid="brAppMeMenuID" style="display: list-item;">
+                                                <a title="NE" style="padding-left: 62px;">NE</a>
+                                            </li>
+                                            <li id="accordionmenuid_ul_0_0_brAppTopMenuID_UL_1_2_brAppTpMenuID"
+                                                nodeid="brAppTpMenuID" style="display: list-item;">
+                                                <a title="Port" style="padding-left: 62px;">Port</a>
+                                            </li>
+                                            <li id="accordionmenuid_ul_0_0_brAppTopMenuID_UL_1_3_brAppTlMenuID"
+                                                nodeid="brAppTlMenuID" style="display: list-item;">
+                                                <a title="Link" style="padding-left: 62px;">Link</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td id="open_base_iframe" class="three-cols-column three-cols-center" style="padding: 0px;">
+
+                            <div id="iframeContainer" class="frame-class" style="height: 870px;">
+                                <iframe id="accordionContent" src="" height="870px"></iframe>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

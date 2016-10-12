@@ -1,0 +1,167 @@
+/**
+ * Copyright 2016, CMCC Technologies Co., Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+a {
+    text-decoration: none !important;
+}
+
+.box{
+height:95px ;
+color:#333;
+text-align:right;
+padding-bottom:20px;
+font-size:14px;
+text-align:center;
+}
+
+.row  a{
+font-weight:normal;
+font-size:14px;
+
+}
+
+.alarmTitle{
+padding-left:20px;
+margin-top: 10px;
+}
+@media (min-width: 758px) and (max-width: 997px){
+	.alarmTitle{
+		display:none;
+	}
+	.alarmTypePadding{
+		padding-left: 25%;
+	}
+}
+@media (max-width: 757px){
+	.alarmTitle{
+		display:none;
+	}
+	.alarmTypePadding{
+		padding-left: 20%;
+	}
+}
+
+.titlefont{
+ font-size:16px;
+}
+.label{
+  font-weight: 400;
+}
+
+.row1{
+ margin-right: 0px !important;
+}
+
+.queryLink{
+	font-size: 14px;
+	margin-top: 10px;
+	color:#5b9bd1;
+}
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3% !important;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  font-size: 20px;
+  color: #C7C7C7;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+.carousel-control:hover{
+ color: #969494;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
+  margin-left:0;
+  font-size:25px;
+  margin-top:-12px;
+}
+.carousel-control .icon-next, .carousel-control .glyphicon-chevron-right{
+  right:35px;
+}
+
+.carousel-inner{
+	overflow: visible;
+}
+
+.item {
+    overflow: visible !important;
+    display: block!important;
+  margin-bottom: 0px !important;
+}
+
+.carousel-control.left,.carousel-control.right{
+  background-image:none;
+}
+.upArrowArea{
+ background:#fff;
+ margin-top:-18px;
+ margin-bottom: 15px;
+}
+.boxOperation {		   
+	color:#1178ee;
+	background-repeat: no-repeat;	
+	background-position-y: 100%;
+	height:30px;
+	line-height:30px;	
+	font-size: 14px;
+	font-weight:bold;
+	margin-top:5px;
+	height:35px;
+	padding-left:15px;
+    padding-right:15px;	
+}
+.moreButton:first-child .boxOperation {
+    margin-left: 45px; 
+}
+.moreButton:last-child .boxOperation {
+    margin-right: 45px; 
+}
+.moreButton:first-child .boxOperationOnePage{
+	margin-left: 0px !important;
+}
+
+.moreOpen {
+	height: 40px;	
+}
+.moreClose {
+	height: 0px;
+	display:none !important;	
+}
+.moreButton{		
+    float: left;
+	position: relative;
+	min-height: 1px;	
+	}
+.boxOperation:hover{
+	color:#1069d0;
+}
+.moreButtonSelected{
+	background-color: #fff !important;
+	color:#333;
+	border-top:3px #f3565d solid;
+}
+ul{
+	list-style-type:none;
+}
+li{
+	list-style-type:none;
+}
+.dropdown-menu {
+	z-index: 9991 !important;;
+}

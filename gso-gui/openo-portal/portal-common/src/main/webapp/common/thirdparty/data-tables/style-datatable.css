@@ -1,0 +1,154 @@
+/* remove rounds from all elements */
+
+div, 
+input, 
+select, 
+textarea, 
+span, 
+img, 
+table, 
+td, 
+th, 
+p, 
+a, 
+button, 
+ul,
+code,
+pre, 
+li {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+
+.input-mini {
+  width: 25px !important;
+  height:15px !important;
+  padding-top: 2px !important;
+  margin: 0 2px !important;
+}
+
+.input-xsmall {
+  width: 80px !important;
+  height:25px !important;
+  padding-top: 2%;
+}
+
+.input-small {
+  width: 120px !important;
+}
+
+.input-medium {
+  width: 240px !important;
+}
+
+.input-large {
+  width: 320px !important;
+}
+
+.input-xlarge {
+  width: 480px !important;
+}
+
+.input-inline {
+  display: inline-block;
+  width: auto;  
+  vertical-align: middle;
+}
+
+.form-control {  
+  font-size: 14px;
+  font-weight: normal;
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.pagination-panel {
+  font-size: 13px !important;
+}
+
+.dataTables_length label {
+  font-weight: 400;
+  font-size: 13px !important;
+}
+
+.dataTables_info {
+  font-size: 13px !important;
+}
+
+.dataTable tbody {
+  font-size: 13px;
+}
+
+/***
+Bootstrap Tables
+***/
+
+.table thead > tr > th {
+  border-bottom: 0;
+}
+
+.table tbody tr.active td,
+.table tbody tr.active th {
+  background-color: #e9e9e9 !important;
+}
+
+.table tbody tr.active:hover td,
+.table tbody tr.active:hover th {
+  background-color: #e1e1e1 !important;
+}
+
+.table-striped tbody tr.active:nth-child(odd) td,
+.table-striped tbody tr.active:nth-child(odd) th {
+  background-color: #017ebc;
+}
+
+.table .heading > th {
+  background-color: #eee !important;
+}
+
+.detailTable {
+  border-collapse:collapse;border-spacing:0;border-left:1px solid #888;border-top:1px solid #888;
+}
+
+.detailTable td{border:1px solid #ddd !important;}
+
+/*
+.detailTitleStyle {
+	background-color: #428bca !important;
+}
+*/
+
+.labelDetailTable {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+/*
+.oddDetailTable td{
+	background-color: #fff !important;
+}
+*/
+.evenDetailTable td{
+	background-color: #f9f9f9 !important;
+}
+
+.detailCellStyle{
+	WORD-WRAP: break-word;
+}
+
+#buttonConfirm:hover {
+    cursor:pointer !important;
+}

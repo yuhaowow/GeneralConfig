@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2016 Huawei Technologies Co., Ltd.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.openo.gso.gui</groupId>
+        <artifactId>service-gateway-root</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>service-gateway-deployment</artifactId>
+    <name>ServiceGatewayRootDeployment</name>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.gmaven</groupId>
+                    <artifactId>groovy-maven-plugin</artifactId>
+                    <version>2.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.gmaven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>ServiceGateway package</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>execute</goal>
+                        </goals>
+                        <configuration>
+                            <source>
+                                System.out.println("******** Going to make release zip ********")
+
+                                deployFolder = "${project.build.directory}/deployoutput"
+                                deployUnzip = "${project.build.directory}/deployunzip"
+                                outfileName = "ServiceGateway-.${project.version}.zip"
+
+                                ant.delete(dir: "${deployFolder}")
+                                ant.mkdir(dir: "${deployFolder}")
+
+                                ant.delete(dir: "${deployUnzip}")
+                                ant.mkdir(dir: "${deployUnzip}")
+
+                                ant.mkdir(dir: "${deployUnzip}/webapps/ROOT")
+                                ant.mkdir(dir: "${deployUnzip}/webapps/openoui#servicegateway#v1")
+
+                                ant.copy(todir: "${deployUnzip}") {
+                                fileset(dir: "${basedir}/src/main/release"){
+                                exclude(name: "**/.gitignore")
+                                }
+                                }
+
+                                ant.copy(todir: "${deployUnzip}/webapps/ROOT") {
+                                fileset(dir: "${project.build.directory}/../../service/target/ROOT")
+                                }
+
+                                ant.zip(destfile: "${deployFolder}/${outfileName}") {
+                                fileset(dir: "${deployUnzip}")
+                                }
+                                System.out.println("******** completed. ************")
+                            </source>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-artifacts</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>attach-artifact</goal>
+                        </goals>
+                        <configuration>
+                            <artifacts>
+                                <artifact>
+                                    <file>${project.build.directory}/deployoutput/ServiceGateway-.${project.version}.zip</file>
+                                    <type>zip</type>
+                                </artifact>
+                            </artifacts>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

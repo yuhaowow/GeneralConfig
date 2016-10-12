@@ -1,0 +1,220 @@
+/**
+ * Copyright 2016, CMCC Technologies Co., Ltd.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/***
+light_ifrm  theme
+***/
+td>a>span[class^="ict-"], td>a>span[class*=" ict-"]{
+color:#7083ba;
+font-size: 16px;
+}
+td>div>span[class^="ict-"], td>div>span[class*=" ict-"]{
+color:#7083ba;
+font-size: 16px;
+}
+td>div>span>span[class^="ict-"], td>div>span>span[class*=" ict-"]{
+color:#7083ba;
+font-size: 16px;
+}
+td>span>span[class^="ict-"], td>span>span[class*=" ict-"]{
+color:#7083ba;
+font-size: 16px;
+}
+/* button style*/
+.buttonRounded,
+.buttonRoundedOver,
+.buttonRoundedFocused,
+.buttonRoundedFocusedOver,
+.buttonRoundedDown,
+.buttonRoundedFocusedDown,
+.buttonRoundedSelected,
+.buttonRoundedSelectedFocused,
+.buttonRoundedSelectedDown,
+.buttonRoundedSelectedFocusedDown,
+.buttonRoundedSelectedOver,
+.buttonRoundedSelectedFocusedOver,
+.buttonRoundedDisabled,
+.buttonRoundedSelectedDisabled {
+  background-color: #47a5cc;
+  color: #fff;
+  border: 0px solid #b15a59;
+  border-radius: 0px;
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 12px;
+  /*padding: 0 3px;*/
+  padding-left:7px !important;
+  padding-right:7px !important;
+  height:30px !important;
+}
+.buttonRoundedDisabled, .buttonRoundedSelectedDisabled{
+  background-color: #f0f0f0;
+  color: #dadada;
+  opacity: 1;
+}
+.buttonRoundedOver,
+.buttonRoundedFocusedOver,
+.buttonRoundedSelectedFocused,
+.buttonRoundedSelectedFocusedOver,
+.buttonRoundedDown,
+.buttonRoundedFocusedDown {
+  background-color: #3a8fb3;
+  height:30px !important;
+}
+
+.menuButton,
+.menuButtonOver,
+.menuButtonDown,
+.menuButtonDisabled,
+.menuButtonFocused,
+.menuButtonFocusedDown,
+.menuButtonFocusedOver,
+.menuButtonSelected,
+.menuButtonSelectedDown,
+.menuButtonSelectedOver,
+.menuButtonSelectedDisabled {
+  background-color: #47a5cc;
+  border: 0px solid #ababab;
+  color: #fff;
+  font-family: Arial, Verdana, sans-serif;
+  font-size: 12px;
+  padding-left: 7px !important;
+  padding-right: 7px !important;
+  height:30px !important;
+}
+.menuButtonOver {
+  background-color: #3a8fb3;
+ }
+.menuButtonDisabled{
+  background-color: #f0f0f0;
+  color: #dadada;
+  opacity: 1;
+}
+
+ .buttonTitle,
+.buttonTitleOver,
+.buttonTitleDown,
+.buttonTitleSelected,
+.buttonTitleFocused,
+.buttonTitleSelectedFocused,
+.buttonTitleSelectedOver,
+.buttonTitleFocusedOver,
+.buttonTitleSelectedFocusedOver,
+.buttonTitleSelectedDown,
+.buttonTitleFocusedDown,
+.buttonTitleSelectedFocusedDown,
+.buttonTitleDisabled,
+.buttonTitleSelectedDisabled {
+  color: #fff ;
+  }
+  .buttonTitleDisabled{
+  background-color: #f0f0f0;
+  color: #dadada;
+  opacity: 1;
+}
+   /* windowBody dialogBody Style */
+ .windowBody,
+.dialogBody {
+  background-color: white;
+  border: 1px solid #2b8db6;
+  border-top: 0;
+}
+.windowHeader,
+.dialogHeader {
+  background-color: #2b8db6;
+  padding: 0;
+}
+/* sectionHeader Style */
+.sectionHeaderopened {
+  background-color: #2b8db6;
+  }
+  .sectionHeaderclosed {
+  background-color: #3899c2;
+  }
+
+#dt_example h1{
+color:#2b8db6;
+font-weight:600 !important;
+}
+/*cell style*/
+.tallCellOver,
+.tallCellOverDark {
+  background-color: #c4d7e2;
+  }
+.imgHeaderButtonOver,
+.imgHeaderButtonDown,
+.headerButtonOver,
+.headerButtonDown,
+.sorterButtonOver,
+.sorterButtonDown {
+  background-color: #c4d7e2;
+  }
+  /*cell style*/
+.tallCellOver,
+.tallCellOverDark {
+  background-color: #d9e3e8;
+  border-bottom: 1px solid #d9e3e8;
+  border-top: 1px  solid #d9e3e8;
+  }
+.tallCellSelected,
+.tallCellSelectedDark {
+  background: #c4d7e2;
+  border-bottom: 1px solid #c4d7e2;
+  border-top: 1px  solid #c4d7e2;
+  }
+.tallCellSelectedOver,
+.tallCellSelectedOverDark {
+  background: #c4d7e2;
+  border-bottom: 1px solid #c4d7e2;
+  border-top: 1px  solid #c4d7e2;
+  }
+.imgHeaderButtonOver,
+.imgHeaderButtonDown,
+.headerButtonOver,
+.headerButtonDown,
+.sorterButtonOver,
+.sorterButtonDown {
+  background-color: #c4d7e2;
+  }
+.cellSelected,
+.cellSelectedDark,
+.specialColSelected,
+.recordSummaryCellSelected,
+.recordSummaryCellSelectedDark {
+  background: #c4d7e2 !important;
+ border-bottom: 1px solid #c4d7e2;
+  border-top: 1px solid #c4d7e2;
+  }
+.cellSelectedOver,
+.cellSelectedOverDark,
+.specialColSelectedOver,
+.recordSummaryCellSelectedOver,
+.recordSummaryCellSelectedOverDark {
+  background: #c4d7e2 !important;
+   border-bottom: 1px solid #c4d7e2;
+  border-top: 1px solid #c4d7e2;
+}
+.cellOver,
+.cellOverDark,
+.specialColOver,
+.recordSummaryCellOver,
+.recordSummaryCellOverDark {
+  background: #d9e3e8 !important;
+  border-bottom: 1px solid #d9e3e8;
+  border-top: 1px solid #d9e3e8;
+  }
+.treeCellOver,
+.treeCellOverDark {
+  background-color: #d9e3e8; 
+}      

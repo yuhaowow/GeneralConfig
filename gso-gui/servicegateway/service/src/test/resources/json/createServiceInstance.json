@@ -1,0 +1,12 @@
+{
+    "name": "gso_service",
+	"description": "siteToDc",
+	"serviceDefId": "78ede6f3-66cc-46ab-b748-38a6c010d272",
+	"templateId": "38a6c01-66cc-46ab-b748-38a6c010d272",
+	"templateName": "GsoTemplate",
+	"gatewayUri":"/openoapi/lifecyclymgr/v1/services",
+	"parameters": {
+		"POP.vFW-moc": "xxx",
+		"POP.vCPE-moc": "xxx"
+	}
+}
