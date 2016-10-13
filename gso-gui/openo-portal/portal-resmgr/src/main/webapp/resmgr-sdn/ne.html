@@ -29,6 +29,7 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/brs.js"></script>
         <script type="text/javascript" src="js/bootstrap-table.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap-table-filter-control.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 var jsondata = [];
@@ -106,11 +107,11 @@
                 <div class="top">
                     <table id="ne" data-row-style="rowStyle" data-pagination="true" data-page-size="5"
                            data-pagination-first-text="First" data-pagination-pre-text="Previous"
-                           data-pagination-next-text="Next" data-pagination-last-text="Last">
+                           data-pagination-next-text="Next" data-pagination-last-text="Last" data-filter-control="true">
                         <thead class="openo-table-thead" style="background:#ECECEC;">
                         <tr class="active">
                             <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                data-field="name" data-sortable="true">
+                                data-field="name" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
 											<span class="openo-table-th-sorticon overflow_elip openoTable_sortable leftHeaderAlign  openo-table-disable-element ">Name
@@ -118,7 +119,7 @@
                                 </div>
                             </th>
                             <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                data-field="version" data-sortable="true">
+                                data-field="version" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="ne_isVersion_sorticon"
@@ -127,7 +128,7 @@
                                 </div>
                             </th>
                             <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                data-field="productName" data-sortable="true">
+                                data-field="productName" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="neproductName_sorticon"
@@ -136,7 +137,7 @@
                                 </div>
                             </th>
                             <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                data-field="controller" data-sortable="true">
+                                data-field="controller" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                             <span id="ne_controller_sorticon"
@@ -145,7 +146,7 @@
                                 </div>
                             </th>
                             <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                data-field="ipAddress" data-sortable="true">
+                                data-field="ipAddress" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="ne_ipAddress_sorticon"
@@ -154,16 +155,7 @@
                                 </div>
                             </th>
                             <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                data-field="nativeId" data-sortable="true">
-                                <div class="openo-table-th-border"></div>
-                                <div class="DataTables_sort_wrapper openo-ellipsis ">
-							                <span id="controller_nativeId_sorticon"
-                                                  class="openo-table-th-sorticon overflow_elip  leftHeaderAlign  openo-table-disable-element ">Native Id
-                                            </span>
-                                </div>
-                            </th>
-                            <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                data-field="neRole" data-sortable="true">
+                                data-field="neRole" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="ne_neRole_sorticon"
@@ -172,7 +164,7 @@
                                 </div>
                             </th>
                             <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                data-field="adminState">
+                                data-field="adminState" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="ne_adminState_sorticon"
@@ -181,7 +173,7 @@
                                 </div>
                             </th>
                             <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                data-field="operState" data-sortable="true">
+                                data-field="operState" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="ne_operState_sorticon"
@@ -343,15 +335,6 @@
                                             <div class="col-sm-7">
                                                 <input type="text" id="ipAddress" name="ipAddress" class="form-control"
                                                        placeholder="255.255.255.255"/>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-3 control-label">
-                                                <span>Native Id</span>&nbsp;&nbsp;&nbsp;
-                                            </label>
-                                            <div class="col-sm-7">
-                                                <input type="text" id="nativeId" name="nativeId" class="form-control"
-                                                       placeholder="Native id of controller"/>
                                             </div>
                                         </div>
                                         <!-- TODO : check for valid neRole

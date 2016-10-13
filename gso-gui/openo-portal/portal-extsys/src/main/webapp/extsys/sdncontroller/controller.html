@@ -29,6 +29,7 @@
         <script type="text/javascript" src="js/controller.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/bootstrap-table.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap-table-filter-control.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
 
@@ -82,12 +83,12 @@
                 <div class="top">
                     <table id="controller" data-pagination="true" data-page-size="10"
                            data-pagination-first-text="First" data-pagination-pre-text="Previous"
-                           data-pagination-next-text="Next" data-pagination-last-text="Last">
+                           data-pagination-next-text="Next" data-pagination-last-text="Last" data-filter-control="true">
                         <thead id="controller" class="openo-table-thead">
                         <tr class="active">
                             <th
                                     class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                    data-field="name" data-sortable="true">
+                                    data-field="name" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                             <span id="ctrler_name_sorticon"
@@ -97,7 +98,7 @@
                             </th>
                             <th
                                     class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                    data-field="protocol" data-sortable="true">
+                                    data-field="protocol" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                             <span id="ctrler_protocol_sorticon"
@@ -107,7 +108,7 @@
                             </th>
                             <th
                                     class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                    data-field="productname" data-sortable="true">
+                                    data-field="productname" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                             <span id="ctrler_productname_sorticon"
@@ -117,7 +118,7 @@
                             </th>
                             <th
                                     class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                    data-field="type" data-sortable="true">
+                                    data-field="type" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                             <span id="ctrler_type_sorticon"
@@ -127,7 +128,7 @@
                             </th>
                             <th
                                     class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                    data-field="vendor" data-sortable="true">
+                                    data-field="vendor" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                             <span id="ctrler_vendor_sorticon"
@@ -138,7 +139,7 @@
 
                             <th
                                     class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                    data-field="version" data-sortable="true">
+                                    data-field="version" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                             <span id="ctrler_version_sorticon"
@@ -148,7 +149,7 @@
                             </th>
                             <th
                                     class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                    data-field="description" data-sortable="true">
+                                    data-field="description" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                             <span id="ctrler_description_sorticon"
@@ -158,7 +159,7 @@
                             </th>
                             <th
                                     class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                    data-field="createtime" data-sortable="true">
+                                    data-field="createtime" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                             <span id="ctrler_createtime_sorticon"
@@ -168,7 +169,7 @@
                             </th>
                             <th
                                     class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                    data-field="operation" data-sortable="true">
+                                    data-field="operation" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                             <span id="ctrler_operation_sorticon"

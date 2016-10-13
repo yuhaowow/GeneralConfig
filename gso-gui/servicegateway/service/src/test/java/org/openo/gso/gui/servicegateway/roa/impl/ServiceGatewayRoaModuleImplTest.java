@@ -122,6 +122,8 @@ public class ServiceGatewayRoaModuleImplTest {
      */
     @Test
     public void testDeleteService() throws ServiceException {
+        mockGetRequestBody(FILE_PATH + "createServiceInstance.json");        
+        mockPost(responseSuccess);
         serviceRoa.deleteService("1", httpRequest);
     }
 

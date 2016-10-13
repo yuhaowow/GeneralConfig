@@ -16,65 +16,41 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title id="com_zte_ums_ict_framework_ui_page_title" name_i18n="com_zte_ums_ict_framework_ui_i18n"></title>
+		<title id="openo_main_page_title" name_i18n="openo_main_page_i18n"></title>
 		<meta content="text/html; charset=utf-8" http-equiv="content-type">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="description" content="ICT Main Page"/>
+		<meta name="description" content="OPEN-O Main Page"/>
 		<meta name="keywords" content="javascript, dynamic, grid, layout, jquery plugin, fit zone"/>
-		<link href="./common/css/style-ict-bootstrap.css" rel="stylesheet" type="text/css"/>
-		<link href="./common/thirdparty/fakeLoader/fakeLoader.css" rel="stylesheet" type="text/css" />
-		<link href="./common/thirdparty/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-		<script type="text/javascript" src="./common/thirdparty/jquery/jquery-1.10.2.min.js"></script>
-		<script type="text/javascript" src="./common/js/core/const.js"></script>
-		<script type="text/javascript" src="./common/js/core/hk.min.js"></script>
-		<script type="text/javascript" src="./common/thirdparty/fakeLoader/fakeLoader.min.js"></script>
-		<script type="text/javascript" src="./common/js/tools.js"></script>
-		<script type="text/javascript" src="./common/thirdparty/jquery.i18n/jquery.i18n.properties-1.0.9.js"></script>
-		<script type="text/javascript" src="./common/thirdparty/jquery-cokie/jquery.cokie.min.js"></script>
-		<script type="text/javascript" src="./common/js/international/loadi18n.js"></script>
-		<script type="text/javascript" src="./common/js/mainpage/ict.main.page.js"></script>
-		<script type="text/javascript" src="./common/js/core/pym.min.js"></script>
-		<script type="text/javascript" src="./common/js/core/openoFrameWork.min.js"></script>
-		<style type="text/css">
-			html, body {
-				margin: 0;
-				padding: 0;
-			}
-			.layout {
-				padding-top:0px;
-			}
-			body {
-				font-family: microsoft yahei !important;
-				background: #484747;
-			}
-			.main-page-wrapper {
-				margin-left: 100px;
-				margin-right: 100px;
-			}
-			.brick .row {
-				margin-right: 5px;
-				margin-left: 5px;
-				margin-top: 10px;
-			}
-			.column{
-				padding-left: 5px;
-				padding-right: 5px;
-			}
-			a:hover{
-				color:white;
-			}
-		</style>
+		<link href="css/style-ict-bootstrap.css" rel="stylesheet" type="text/css"/>
+		<link href="thirdparty/fakeLoader/fakeLoader.css" rel="stylesheet" type="text/css" />
+		<link href="thirdparty/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/main_page.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="thirdparty/jquery/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/core/const.js"></script>
+		<script type="text/javascript" src="js/core/hk.min.js"></script>
+		<script type="text/javascript" src="thirdparty/fakeLoader/fakeLoader.min.js"></script>
+		<script type="text/javascript" src="js/tools.js"></script>
+		<script type="text/javascript" src="thirdparty/jquery.i18n/jquery.i18n.properties-1.0.9.js"></script>
+		<script type="text/javascript" src="thirdparty/jquery-cokie/jquery.cokie.min.js"></script>
+		<script type="text/javascript" src="js/international/loadi18n.js"></script>
+		<script type="text/javascript" src="js/mainpage/load_mainPage.js"></script>
+		<script type="text/javascript" src="js/core/pym.min.js"></script>
+		<script type="text/javascript" src="js/core/openoFrameWork.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				initMainPage();
+				$("#pageLoading").setToHide();
+			});
+		</script>
 	</head>
 	<body>
 		<div id="pageLoading" class="fakeloader"></div>
 		<script type="text/javascript">
-			$("#pageLoading").fakeLoader({text:"",bgColor:"#1178ee",opacity:'1',spinner:"spinner2",zIndex:99999999});
+			$("#pageLoading").fakeLoader({text:"", bgColor:"#1178ee", opacity:'1', spinner:"spinner2", zIndex:99999999});
 		</script>
 		<div class='header'>
 			<div class="clearfix">
-				<div class="float-left">
-					<h2><a id="headerName" href="#">Net Numen</a></h2>
-				</div>
+				<div class="float-left"><img src="image/integration/openo_logo_white.png"/></div>
 			</div>
 		</div>
 		<div class="layout" style="overflow:hidden;">
@@ -87,11 +63,5 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			jQuery(document).ready(function() {
-				initMainPage();
-				$("#pageLoading").setToHide();
-			});
-		</script>
 	</body>
 </html>

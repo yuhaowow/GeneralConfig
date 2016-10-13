@@ -226,7 +226,11 @@
 							</thead>
 							<tbody ms-each-rest="resource.vimSelectItems">
 								<tr>
-									<td ms-text="rest.name"></td>
+									<td>
+										<div class="tdCenter">
+											{{rest.name}}
+										</div>
+									</td>
 									<td>
 										<div class="checkbox">
 											<input type="radio" name="testEnvRadios" ms-attr-id="testEnvRadios{{$index}}"

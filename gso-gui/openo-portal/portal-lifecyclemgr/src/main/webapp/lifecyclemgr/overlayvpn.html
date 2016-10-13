@@ -30,6 +30,7 @@
         <script type="text/javascript" src="js/brs.js"></script>
         <script type="text/javascript" src="js/underlay.js"></script>
         <script type="text/javascript" src="js/bootstrap-table.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap-table-filter-control.min.js"></script>
         <style type="text/css">
         </style>
         <script type="text/javascript">
@@ -252,30 +253,30 @@
             </div>
         </div> -->
 
-         <div class="row-fluid" data-name="table_zone">
-                <div id='ict_virtualApplication_table_div'>
-                    <div>
-                        <div class="top">
-                            <table class="table-striped table " id="sai" data-pagination="true"  
-       data-pagination-first-text="First" data-pagination-pre-text="Previous" data-pagination-next-text="Next" data-pagination-last-text="Last">
-                                <thead style="background:#ECECEC">
-                                    <tr>
-                                        <th data-field="name" data-sortable="true">Name</th>
-                                        <th data-field="desc" data-sortable="true">Description</th>
-                                        <th data-field="thinCpe" data-sortable="true">Thin CPE</th>
-                                        <th data-field="port" data-sortable="true">Port:Vlan ID</th>
-                                        <th data-field="dcName" data-sortable="true">DC Name</th>
-                                        <th data-field="vpc" data-sortable="true">VPC</th>
-                                        <th data-field="vpcCidr" data-sortable="true">VPC CIDR</th>
-                                        <th data-field="action" data-sortable="">Action</th>
-                                    </tr>
-                                </thead>
-
-                            </table>
-                        </div>
-                    </div>
+    <div class="row-fluid" data-name="table_zone">
+        <div id='ict_virtualApplication_table_div'>
+            <div>
+                <div class="top">
+                    <table class="table-striped table " id="sai" data-pagination="true" data-pagination-first-text="First"
+                           data-pagination-pre-text="Previous" data-pagination-next-text="Next" data-pagination-last-text="Last"
+                           data-filter-control="true">
+                        <thead style="background:#ECECEC">
+                        <tr>
+                            <th data-field="name" data-sortable="true" data-filter-control="input">Name</th>
+                            <th data-field="desc" data-sortable="true" data-filter-control="input">Description</th>
+                            <th data-field="thinCpe" data-sortable="true" data-filter-control="input">Thin CPE</th>
+                            <th data-field="port" data-sortable="true" data-filter-control="input">Port:Vlan ID</th>
+                            <th data-field="dcName" data-sortable="true" data-filter-control="input">DC Name</th>
+                            <th data-field="vpc" data-sortable="true" data-filter-control="input">VPC</th>
+                            <th data-field="vpcCidr" data-sortable="true" data-filter-control="input">VPC CIDR</th>
+                            <th data-field="action" data-sortable="">Action</th>
+                        </tr>
+                        </thead>
+                    </table>
                 </div>
             </div>
+        </div>
+    </div>
 
 
 </body>

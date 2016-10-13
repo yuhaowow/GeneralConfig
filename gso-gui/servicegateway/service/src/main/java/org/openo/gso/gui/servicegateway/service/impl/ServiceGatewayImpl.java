@@ -64,7 +64,7 @@ public class ServiceGatewayImpl implements IServiceGateway {
     	if(StringUtils.isEmpty(reqContent))
     	{
     		LOGGER.error("ServiceGatewayImpl createService reqContent is null.");
-    		return null;
+    		throw new ServiceException("ServiceGatewayImpl createService reqContent is null.");    		
     	}
     	
     	// Parse request
@@ -128,6 +128,11 @@ public class ServiceGatewayImpl implements IServiceGateway {
      */
     @Override
     public void deleteService(String serviceId, HttpServletRequest httpRequest) throws ServiceException {
+    	if(httpRequest == null)
+    	{    		
+    		LOGGER.error("ServiceGatewayImpl.deleteService httpRequest is null");
+    		throw new ServiceException("ServiceGatewayImpl.deleteService httpRequest is null");
+    	}
         // Parse request
         String reqContent = RestUtils.getRequestBody(httpRequest);
         Map<String, Object> requestBody = JsonUtil.unMarshal(reqContent, Map.class);
@@ -148,7 +153,6 @@ public class ServiceGatewayImpl implements IServiceGateway {
         service.remove(Constant.SERVICE_OPERATION);
 
         // call the restful
-        String id = null;
         try {
             RestfulResponse restfulRsp = null;
             if(Constant.SERVICE_DELETE_OPERATION.equalsIgnoreCase(operation)) {

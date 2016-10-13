@@ -99,7 +99,7 @@ pmUtil.getExistPackageByName = function(name) {
     }
     var result = $.ajax({
         type : "GET",
-        url : vm.$restUrl.queryPackageInfoUrl + "?csarName=" + name,
+        url : vm.$restUrl.queryPackageInfoUrl + "?name=" + name,
         async: false
     });        
     var data = result.responseJSON;

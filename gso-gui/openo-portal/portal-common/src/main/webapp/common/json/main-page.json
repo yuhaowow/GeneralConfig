@@ -1,62 +1,44 @@
-﻿/*
- * Copyright 2016, CMCC Technologies Co., Ltd.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *         http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-{
-	"propertiesFileNamePrefix":"web-framework-integration-i18n",
-	"productName":"Net Numen ICT",
-	"productImage":"image/integration/openo_logo_white.png",
+﻿{
+	"propertiesFileNamePrefix":"web-framework-mainPage-i18n",
+	"productName":"OPEN-O System",
 	"modules":[
 		{
-			"cover":"com_zte_ums_ict_framework_main_page_dashboard",
+			"cover":"org_openo_orchestrator_framework_main_page_service",
 			"background":"skyBlue-mainpage",
 			"toolsImage":"toolsImageBrokenLine",
 			"url":"",
-		    "linkId":"ngict-dashboard-index",
+			"linkId":"openo-nsoc-template",
 			"contentTip":""
 		},
 		{
-			"cover":"com_zte_ums_ict_framework_main_page_monitor",
+			"cover":"org_openo_orchestrator_framework_main_page_cloud",
 			"background":"golden-mainpage",
 			"toolsImage":"toolsImageHierachy",
 			"url":"",
-			"linkId":"ngict-itm-monintor",
+			"linkId":"openo-roc-vim",
 			"contentTip":""
 		},
 		{
 			"cover":"",
 			"background":"manLieONCloud-image",
 			"toolsImage":"",
-			"url":"http://vnjs.net/www/project/freewall/",
+			"url":"",
 			"contentTip":""
 		},
 		{
-			"cover":"com_zte_ums_ict_framework_main_page_alarm",
+			"cover":"org_openo_orchestrator_framework_main_page_orchestrator",
 			"background":"orange-mainpage",
 			"toolsImage":"toolsImageGear",
 			"url":"",
-			"linkId":"ngict-fm-summary",
-			
+			"linkId":"openo-nsoc-vApp",
 			"contentTip":""
 		},
 		{
-			"cover":"com_zte_ums_ict_framework_main_page_performance",
+			"cover":"org_openo_orchestrator_framework_main_page_monitor",
 			"background":"pinkishRed-mainpage",
 			"toolsImage":"toolsImagePresent",
 			"url":"",
-			"linkId":"ngict-pm-meatask",
-			
+			"linkId":"openo-umc-monitor-setting",
 			"contentTip":""
 		},
 		{
@@ -67,12 +49,11 @@
 			"contentTip":""
 		},
 		{
-			"cover":"com_zte_ums_ict_framework_main_page_security",
+			"cover":"org_openo_orchestrator_framework_main_page_resource",
 			"background":"grassGreen-mainpage",
 			"toolsImage":"toolsImageFile",
 			"url":"",
-			"linkId":"ngict-sm",
-			
+			"linkId":"openo-roc-rs-view-overview",
 			"contentTip":""
 		},
 		{
@@ -90,28 +71,27 @@
 			"contentTip":""
 		},
 		{
-			"cover":"com_zte_ums_ict_framework_main_page_log",
+			"cover":"org_openo_orchestrator_framework_main_page_design",
 			"background":"orange-mainpage",
 			"toolsImage":"toolsImageGear",
 			"url":"",
-			"linkId":"ngict-log",
-			
+			"linkId":"openo-nsoc-model-design",
 			"contentTip":""
 		},
 		{
-			"cover":"com_zte_ums_ict_framework_main_page_system",
+			"cover":"org_openo_orchestrator_framework_main_page_alarm",
 			"background":"skyBlue-mainpage",
 			"toolsImage":"toolsImageBriefcase",
 			"url":"",
-			"linkId":"ngict-system",
-			
+			"linkId":"openo-umc-monitor-alarm-currentAlarm",
 			"contentTip":""
 		},
 		{
-			"cover":"",
-			"background":"magicThought-image",
-			"toolsImage":"",
+			"cover":"org_openo_orchestrator_framework_main_page_performance",
+			"background":"pinkishRed-mainpage",
+			"toolsImage":"toolsImagePresent",
 			"url":"",
+			"linkId":"openo-umc-monitor-pm-historyQuery",
 			"contentTip":""
 		}
 	]

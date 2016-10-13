@@ -13,108 +13,176 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
+<script type="text/javascript" src="js/constants/menu_link.js"></script>
 <li>
-    <a href="javascript:;" id="col-openo-service-design" hparentid="openo-service">
-        <i class="fa fa-folder-open-o">
-        </i>
-        <span id="org_openo_menu_service_design" name_i18n="com_zte_ums_ict_framework_ui_i18n_sideMenu"
-        class="title">
-        </span>
-        <span class="selected">
-        </span>
-        <span class="arrow">
-        </span>
-    </a>
-    <ul class="sub-menu">
-        <li>
-            <a class="iframe" id="openo-service-model-design" hparentid="col-openo-service-design"
-            order="10.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto"
-            href="/winery/servicetemplates.html">
-                <i class="fa fa-folder-open-o">
-                </i>
-                <span id="org_openo_menu_service_design_model_design" name_i18n="com_zte_ums_ict_framework_ui_i18n_sideMenu">
-                </span>
-            </a>
-        </li>
-    </ul>
+	<a href="javascript:;" id="col-openo-umc-monitor-service" hparentid="openo-nsoc">
+		<i class="fa fa-comments"></i>
+		<span id="openo_menu_service" name_i18n="openo_frame_left_menu_i18n" class="title"></span>
+		<span class="selected"></span>
+		<span class="arrow"></span>
+	</a>
+	<ul class="sub-menu">
+		<li>
+			<a href="../lifecyclemgr/gsolcmmain.html" class="iframe" id="openo-umc-monitor-service-overview" parentid="openo-nsoc" hparentid="col-openo-umc-monitor-service" order="10.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="fa fa-comments"></i>
+				<span id="openo_menu_service_service_management" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+	</ul>
 </li>
 <li>
-    <a href="javascript:;" id="col-openo-service-catalog" hparentid="openo-service">
-        <i class="fa fa-folder-open-o">
-        </i>
-        <span id="org_openo_menu_service_catalog" name_i18n="com_zte_ums_ict_framework_ui_i18n_sideMenu"
-        class="title">
-        </span>
-        <span class="selected">
-        </span>
-        <span class="arrow">
-        </span>
-    </a>
-    <ul class="sub-menu">
-        <li>
-            <a class="iframe" id="openo-nsoc-vnfd" hparentid="col-openo-service-catalog"
-            order="10.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto"
-            href="/openoui/catalog/csarPackage.html">
-                <i class="fa fa-folder-open-o">
-                </i>
-                <span id="org_openo_menu_service_catalog_package" name_i18n="com_zte_ums_ict_framework_ui_i18n_sideMenu">
-                </span>
-            </a>
-        </li>
-        <li>
-            <a class="iframe" id="openo-nsoc-template" hparentid="col-openo-service-catalog"
-            order="20.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto"
-            href="/openoui/catalog/template.html">
-                <i class="fa fa-list-alt">
-                </i>
-                <span id="org_openo_menu_service_catalog_service_template" name_i18n="com_zte_ums_ict_framework_ui_i18n_sideMenu">
-                </span>
-            </a>
-        </li>
-    </ul>
+	<a href="javascript:;" id="col-openo-roc-manageview" hparentid="openo-roc">
+		<i class="fa fa-cube"></i>
+		<span id="openo_menu_resource_mgr" name_i18n="openo_frame_left_menu_i18n" class="title"></span>
+		<span class="selected"></span>
+		<span class="arrow"></span>
+	</a>
+	<ul class="sub-menu">
+		<li>
+			<a href="../resmgr-sdn/resource.html" class="iframe" id="openo-roc-vim" parentid="openo-roc" hparentid="col-openo-roc-manageview" order="10.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="fa fa-cube"></i>
+				<span id="openo_menu_resource_mgr_sdno" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+		<li>
+			<a href="../resmgr-nfv/resource.html" class="iframe" id="openo-roc-vnfm" parentid="openo-roc" hparentid="col-openo-roc-manageview" order="20.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="ict-VNFM"></i>
+				<span id="openo_menu_resource_mgr_nfvo" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+	</ul>
 </li>
 <li>
-    <a href="javascript:;" id="col-openo-external-system-register" hparentid="openo-resource">
-        <i class="fa fa-cube">
-        </i>
-        <span id="org_openo_menu_external_system_register" name_i18n="com_zte_ums_ict_framework_ui_i18n_sideMenu"
-        class="title">
-        </span>
-        <span class="selected">
-        </span>
-        <span class="arrow">
-        </span>
-    </a>
-    <ul class="sub-menu">
-        <li>
-            <a class="iframe" id="openo-esr-vim" hparentid="col-openo-resource-manageview"
-            order="10.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto"
-            href="/openoui/extsys/vim/vimView.html">
-                <i class="fa fa-cube">
-                </i>
-                <span id="org_openo_menu_vim_register" name_i18n="com_zte_ums_ict_framework_ui_i18n_sideMenu">
-                </span>
-            </a>
-        </li>
-        <li>
-            <a class="iframe" id="openo-esr-vnfm" hparentid="col-openo-resource-manageview"
-            order="20.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto"
-            href="/openoui/extsys/vnfm/vnfmView.html">
-                <i class="ict-VNFM">
-                </i>
-                <span id="org_openo_menu_vnfm_register" name_i18n="com_zte_ums_ict_framework_ui_i18n_sideMenu">
-                </span>
-            </a>
-        </li>
-        <li>
-            <a class="iframe" id="openo-esr-sdnc" hparentid="col-openo-resource-manageview"
-            order="30.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto"
-            href="/openoui/extsys/sdncontroller/controller.html">
-                <i class="ict-VNFM">
-                </i>
-                <span id="org_openo_menu_sdn_controller_register" name_i18n="com_zte_ums_ict_framework_ui_i18n_sideMenu">
-                </span>
-            </a>
-        </li>
-    </ul>
+	<a href="javascript:;" id="col-openo-umc-setting" hparentid="openo-umc">
+		<i class="fa fa-puzzle-piece"></i>
+		<span id="openo_menu_user" name_i18n="openo_frame_left_menu_i18n" class="title"></span>
+		<span class="selected"></span>
+		<span class="arrow"></span>
+	</a>
+	<ul class="sub-menu">
+		<li>
+			<a href="../user/user.html" class="iframe" id="openo-umc-monitor-setting" parentid="openo-umc" hparentid="col-openo-umc-setting" order="10.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="fa fa-puzzle-piece"></i>
+				<span id="openo_menu_user_user_management" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+	</ul>
 </li>
+<li>
+	<a href="javascript:;" id="col-openo-nsoc-orchestrator" hparentid="openo-nsoc">
+		<i class="fa fa-folder-open-o"></i>
+		<span id="openo_menu_orchestrator" name_i18n="openo_frame_left_menu_i18n" class="title"></span>
+		<span class="selected"></span>
+		<span class="arrow"></span>
+	</a>
+	<ul class="sub-menu">
+		<li>
+			<a href="/winery/servicetemplates.html" class="iframe" id="openo-nsoc-model-design" parentid="openo-nsoc" hparentid="col-openo-nsoc-orchestrator" order="10.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="fa fa-folder-open-o"></i>
+				<span id="openo_menu_orchestrator_model_design" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+		<li>
+			<a href="/openoui/catalog/csarPackage.html" class="iframe" id="openo-nsoc-vnfd" parentid="openo-nsoc" hparentid="col-openo-nsoc-orchestrator" order="30.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="fa fa-folder-open-o"></i>
+				<span id="openo_menu_orchestrator_package" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+		<li>
+			<a href="/openoui/catalog/template.html" class="iframe" id="openo-nsoc-template" parentid="openo-nsoc" hparentid="col-openo-nsoc-orchestrator" order="40.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="fa fa-list-alt"></i>
+				<span id="openo_menu_orchestrator_service_template" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+		<li>
+			<a href="/iui/nsoc/hostMirror.html" class="iframe" id="openo-nsoc-hostimage" parentid="openo-nsoc" hparentid="col-openo-nsoc-orchestrator" order="50.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="fa fa-list-alt"></i>
+				<span id="openo_menu_orchestrator_host_image" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+		<li>
+			<a href="/iui/nsoc/virtualApplication.html" class="iframe" id="openo-nsoc-vApp" parentid="openo-nsoc" hparentid="col-openo-nsoc-orchestrator" order="60.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="ict-VNF"></i>
+				<span id="openo_menu_orchestrator_lifecycle" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+	</ul>
+</li>
+<li>
+	<a href="javascript:;" id="col-openo-roc-manageview" hparentid="openo-roc">
+		<i class="fa fa-cube"></i>
+		<span id="openo_menu_manage_view" name_i18n="openo_frame_left_menu_i18n" class="title"></span>
+		<span class="selected"></span>
+		<span class="arrow"></span>
+	</a>
+	<ul class="sub-menu">
+		<li>
+			<a href="/openoui/extsys/vim/vimView.html" class="iframe" id="openo-roc-vim" parentid="openo-roc" hparentid="col-openo-roc-manageview" order="10.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="fa fa-cube"></i>
+				<span id="openo_menu_manage_view_vim_manage" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+		<li>
+			<a href="/openoui/extsys/vnfm/vnfmView.html" class="iframe" id="openo-roc-vnfm" parentid="openo-roc" hparentid="col-openo-roc-manageview" order="20.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="fa fa-cube"></i>
+				<span id="openo_menu_manage_view_vnfm" name_i18n="openo_frame_left_menu_i18n"></span>
+
+			</a>
+		</li>
+	</ul>
+</li>
+<li>
+	<a href="javascript:;" id="col-openo-umc-topo" hparentid="openo-umc">
+		<i class="fa fa-puzzle-piece"></i>
+		<span id="openo_menu_topology" name_i18n="openo_frame_left_menu_i18n" class="title"></span>
+		<span class="selected"></span>
+		<span class="arrow"></span>
+	</a>
+	<ul class="sub-menu">
+		<li>
+			<a href="/iui/umctopo/physicalTopology.html" class="iframe" id="openo-umc-physical-topo" parentid="openo-umc" hparentid="col-openo-umc-topo" order="10.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="fa fa-puzzle-piece"></i>
+				<span id="openo_menu_topology_physical_topology" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+		<li>
+			<a href="/iui/umctopo/serviceTopology.html" class="iframe" id="openo-umc-service-topo" parentid="openo-umc" hparentid="col-openo-umc-topo" order="10.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="fa fa-puzzle-piece"></i>
+				<span id="openo_menu_topology_service_topology" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+	</ul>
+</li>
+<li>
+	<a href="javascript:;" id="col-openo-umc-fm" hparentid="openo-umc">
+		<i class="fa fa-comments"></i>
+		<span id="openo_menu_alarm" name_i18n="openo_frame_left_menu_i18n" class="title"></span>
+		<span class="selected"></span>
+		<span class="arrow"></span>
+	</a>
+	<ul class="sub-menu">
+		<li>
+			<a href="/iui/umcfm/html/fm_currentAlarm_view.html" class="iframe" id="openo-umc-monitor-alarm-currentAlarm" parentid="openo-umc" hparentid="col-openo-umc-fm" order="10.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="fa fa-comments"></i>
+				<span id="openo_menu_alarm_alarm_query" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+	</ul>
+</li>
+<li>
+	<a href="javascript:;" id="col-openo-umc-pm" hparentid="openo-umc">
+		<i class="fa fa-coffee"></i>
+		<span id="openo_menu_performance" name_i18n="openo_frame_left_menu_i18n" class="title"></span>
+		<span class="selected"></span>
+		<span class="arrow"></span>
+	</a>
+	<ul class="sub-menu">
+		<li>
+			<a href="/iui/umcpm/html/meatask/meataskQueryView.html" class="iframe" id="openo-umc-monitor-pm-historyQuery" parentid="openo-umc" hparentid="col-openo-umc-pm" order="10.0" horgroup="10.0" cachenum="" shiftjs="" iframeautoscroll="auto">
+				<i class="fa fa-coffee"></i>
+				<span id="openo_menu_performance_performance_query" name_i18n="openo_frame_left_menu_i18n"></span>
+			</a>
+		</li>
+	</ul>
+</li>
+<script>loadi18n_WebFramework('web-framework-menu-i18n', 'i18n/', 'openo_frame_left_menu_i18n');</script>

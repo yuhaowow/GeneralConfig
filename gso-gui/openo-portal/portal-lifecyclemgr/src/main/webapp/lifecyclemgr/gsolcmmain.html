@@ -28,9 +28,9 @@
     <script type="text/javascript" src="js/rest.js"></script>
     <script type="text/javascript" src="js/bootstrap-table.min.js"></script>
     <script type="text/javascript" src="js/gsolcm.js"></script>
-        <script type="text/javascript" src="js/jquery-ui-1.12.1.min.js">
-        </script>
-        <link href="css/jquery-ui-1.12.1.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-ui-1.12.1.min.js"></script>
+    <link href="css/jquery-ui-1.12.1.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/bootstrap-table-filter-control.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             /*	   $('.modal-content').resizable({
@@ -154,7 +154,7 @@
             return true;
         }
     </script>
-        <style>
+    <style>
         .nav-tabs {
             border-bottom-style: none;
         }
@@ -240,13 +240,13 @@
                 <div class="top">
                     <table class="table table-striped" id="sai" data-pagination="true" data-page-size="5"
                            data-pagination-first-text="First" data-pagination-pre-text="Previous"
-                           data-pagination-next-text="Next" data-pagination-last-text="Last">
+                           data-pagination-next-text="Next" data-pagination-last-text="Last" data-filter-control="true">
                         <thead id="soverlayTable_thead" class="openo-table-thead" style="background:#ECECEC">
                         <tr class="active" style="background:#D9D6D5">
 
                             <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
                                 data-formatter="operateFormatterServiceName" data-field="serviceName"
-                                data-sortable="true">
+                                data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                                 <span id="overlayDesc_sorticon"
@@ -256,7 +256,7 @@
                             </th>
 
                             <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                data-field="templateName" data-sortable="true">
+                                data-field="templateName" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                                 <span id="overlayThincCPE_sorticon"
@@ -272,7 +272,7 @@
                                 </div>
                             </th -->
                             <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                data-field="createTime" data-sortable="true">
+                                data-field="createTime" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                                 <span id="overlayVPC_sorticon"
@@ -281,7 +281,7 @@
                                 </div>
                             </th>
                             <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                                data-field="creator" data-sortable="true">
+                                data-field="creator" data-sortable="true" data-filter-control="input">
                                 <div class="openo-table-th-border"></div>
                                 <div class="DataTables_sort_wrapper openo-ellipsis ">
                                                 <span id="overlayVPCCIDR_sorticon"
@@ -522,7 +522,7 @@
                                     aria-hidden="true" id="createNS">
                                 <span id="nfv-virtualApplication-iui-text-cancelBtn">OK</span>
                             </button>
-                            <button type="button" style="width:80px;" class="btn button-previous SDBtn">
+                            <button type="button" style="width:80px;" class="btn button-previous SDBtn" data-dismiss="modal">
                                 <span id="nfv-virtualApplication-iui-text-previousBtn">Cancel</span>
                             </button>
 

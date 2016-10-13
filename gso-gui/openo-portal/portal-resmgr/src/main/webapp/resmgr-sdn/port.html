@@ -29,6 +29,7 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/brs.js"></script>
         <script type="text/javascript" src="js/bootstrap-table.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap-table-filter-control.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
 
@@ -106,11 +107,11 @@
             <div class="top">
                 <table id="port" data-pagination="true" data-page-size="5" data-pagination-first-text="First"
                        data-pagination-pre-text="Previous" data-pagination-next-text="Next"
-                       data-pagination-last-text="Last">
+                       data-pagination-last-text="Last" data-filter-control="true">
                     <thead id="portTable_thead" class="openo-table-thead" style="background:#ECECEC;">
                     <tr class="active">
                         <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                            data-field="name" data-sortable="true">
+                            data-field="name" data-sortable="true" data-filter-control="input">
                             <div class="openo-table-th-border"></div>
                             <div class="DataTables_sort_wrapper openo-ellipsis ">
 											<span id="portName_sorticon"
@@ -119,7 +120,7 @@
                             </div>
                         </th>
                         <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                            data-field="meID" data-sortable="true">
+                            data-field="meID" data-sortable="true" data-filter-control="input">
                             <div class="openo-table-th-border"></div>
                             <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="portmeID_sorticon"
@@ -128,7 +129,7 @@
                             </div>
                         </th>
                         <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                            data-field="logicalType" data-sortable="true">
+                            data-field="logicalType" data-sortable="true" data-filter-control="input">
                             <div class="openo-table-th-border"></div>
                             <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="portLogicalType_sorticon"
@@ -137,7 +138,7 @@
                             </div>
                         </th>
                         <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                            data-field="layerRate" data-sortable="true">
+                            data-field="layerRate" data-sortable="true" data-filter-control="input">
                             <div class="openo-table-th-border"></div>
                             <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="portLayerRate_sorticon"
@@ -146,7 +147,7 @@
                             </div>
                         </th>
                         <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                            data-field="isEdgePoint" data-sortable="true">
+                            data-field="isEdgePoint" data-sortable="true" data-filter-control="input">
                             <div class="openo-table-th-border"></div>
                             <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="portIsEdgePoint_sorticon"
@@ -155,7 +156,7 @@
                             </div>
                         </th>
                         <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                            data-field="portIndex" data-sortable="true">
+                            data-field="portIndex" data-sortable="true" data-filter-control="input">
                             <div class="openo-table-th-border"></div>
                             <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="portIndex_sorticon"
@@ -164,7 +165,7 @@
                             </div>
                         </th>
                         <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                            data-field="ipAddress" data-sortable="true">
+                            data-field="ipAddress" data-sortable="true" data-filter-control="input">
                             <div class="openo-table-th-border"></div>
                             <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="portIpAddress_sorticon"
@@ -173,7 +174,7 @@
                             </div>
                         </th>
                         <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                            data-field="adminState" data-sortable="true">
+                            data-field="adminState" data-sortable="true" data-filter-control="input">
                             <div class="openo-table-th-border"></div>
                             <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="portAdminState_sorticon"
@@ -182,7 +183,7 @@
                             </div>
                         </th>
                         <th class="openo-table-state-default openo-table-th openo-table-disable-element  leftHeaderAlign"
-                            data-field="operState" data-sortable="true">
+                            data-field="operState" data-sortable="true" data-filter-control="input">
                             <div class="openo-table-th-border"></div>
                             <div class="DataTables_sort_wrapper openo-ellipsis ">
 							                <span id="portOperState_sorticon"

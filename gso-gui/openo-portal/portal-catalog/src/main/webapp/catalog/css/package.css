@@ -459,3 +459,12 @@ span.status:hover {
 	table-layout: fixed;
 	word-wrap:break-word;
 }
+
+.tdCenter
+{
+	display: block;
+	min-height: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align:center;
+}

@@ -19,8 +19,8 @@ String.prototype.trim = function() {
 
 function loginSubmitHandler(form) {
 	var params = {};
-	params["username"] = $("#inputUserName").val().trim();
-	var sourcePass = $("#inputPassword").val();
+	params["username"] = $("#openo_input_userName").val().trim();
+	var sourcePass = $("#openo_input_password").val();
 	var pass = sourcePass;
 	if (FrameConst.isEncypt === "true") {
 		pass = ict_framework_func1(pass);
@@ -28,27 +28,28 @@ function loginSubmitHandler(form) {
 	params["password"] = pass;
 	params["isEncypted"] = FrameConst.isEncypt;
 	saveUserInfo(params);
+	location.href = FrameConst.DEFAULT_LOGINSKIP_PAGE;
 
-	$.ajax({
-		url : FrameConst.REST_LOGIN,
-		type : 'POST',
-		data : JSON.stringify(params),
-		dataType : 'json',
-		contentType : 'application/json; charset=utf-8',
-		success : function(data, status, xhr) {
-			if (data.result == 0) {
-				var epass = CryptoJS.MD5(params.username+sourcePass);
-				store("icttka", epass.toLocaleString());
-			}
-			processLoginResult(data,params);
-		},
-		Error : function(xhr, error, exception) {
-			if (console) {
-				console.log("login fail:" + error);
-				console.log(exception);
-			}
-		}
-	});
+//	$.ajax({
+//		url : FrameConst.REST_LOGIN,
+//		type : 'POST',
+//		data : JSON.stringify(params),
+//		dataType : 'json',
+//		contentType : 'application/json; charset=utf-8',
+//		success : function(data, status, xhr) {
+//			if (data.result == 0) {
+//				var epass = CryptoJS.MD5(params.username+sourcePass);
+//				store("icttka", epass.toLocaleString());
+//			}
+//			processLoginResult(data, params);
+//		},
+//		Error : function(xhr, error, exception) {
+//			if (console) {
+//				console.log("login fail:" + error);
+//				console.log(exception);
+//			}
+//		}
+//	});
 };
 
 var Login = function () {
@@ -70,10 +71,10 @@ var Login = function () {
 			},
 			messages: {
 				username: {
-					required: $.i18n.prop('com_zte_ums_ict_login_inputname').replace(/\"/g,'') 
+					required: $.i18n.prop('openo_input_userName').replace(/\"/g,'') 
 				},
 				password: {
-					required: $.i18n.prop('com_zte_ums_ict_login_inputpwd').replace(/\"/g,'')
+					required: $.i18n.prop('openo_input_password').replace(/\"/g,'')
 				}
 			},
 			invalidHandler: function (event, validator) {
@@ -182,22 +183,22 @@ var Login = function () {
 $(document).ready(function() {
 	if (store("remember") == "true") {
 		$("input[name='remember']").attr("checked", "checked");
-		$("#inputUserName").val(store("inputUserName"));
-		$("#inputPassword").val(store("inputPassword"));
+		$("#openo_input_userName").val(store("openo_input_userName"));
+		$("#openo_input_password").val(store("openo_input_password"));
 	}
 });
 
 function saveUserInfo(params) {
 	var rmbcheck = $("input[name='remember']");
 	if (rmbcheck.attr("checked") == true || rmbcheck.is(':checked')) {
-		var userName = $("#inputUserName").val();
-		var passWord = $("#inputPassword").val();
+		var userName = $("#openo_input_userName").val();
+		var passWord = $("#openo_input_password").val();
 		store("remember", "true");
-		store("inputUserName", params.username);
-		store("inputPassword", passWord);
+		store("openo_input_userName", params.username);
+		store("openo_input_password", passWord);
 	} else {
 		store.remove("remember");
-		store.remove("inputUserName");
-		store.remove("inputPassword");
+		store.remove("openo_input_userName");
+		store.remove("openo_input_password");
 	}
 }

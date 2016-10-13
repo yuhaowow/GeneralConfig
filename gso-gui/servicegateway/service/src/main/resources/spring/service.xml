@@ -31,10 +31,10 @@
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 
     <!-- jar rest server registration -->
-    <jaxrs:server id="sampleServer" address="/">    
+    <jaxrs:server id="sampleServer" address="/">
         <!-- registering beans -->
         <jaxrs:serviceBeans>
-            <ref bean="serviceGatewayRoaModuleImpl"></ref>            
+            <ref bean="serviceGatewayRoaModuleImpl"></ref>
         </jaxrs:serviceBeans>
         <!-- registering providers -->
         <jaxrs:providers>

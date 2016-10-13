@@ -267,7 +267,7 @@ var vm = avalon.define({
                 $("#filesubmit").attr("disabled", false);
 
                 $("#filesubmit").remove();
-                $('<button id="filesubmit" class="btn btn-default" type="button"/>').text("上传")
+                $('<button id="filesubmit" class="btn btn-default" type="button"/>').text($.i18n.prop("nfv-package-iui-drop-zone-uploadBtn"))
                     .appendTo($(".input-group-btn")[0])
                     .click(function () {
                         var fileName = data.files[0].name;

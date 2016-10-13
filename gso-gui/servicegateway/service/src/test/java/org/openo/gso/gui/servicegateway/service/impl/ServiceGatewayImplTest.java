@@ -65,7 +65,7 @@ public class ServiceGatewayImplTest {
      * @since GSO 0.5
      */
     @Test(expected = ServiceException.class)
-    public void testDeleteServiceFail() throws ServiceException {
+    public void testDeleteServiceFail() throws ServiceException {    	
         serviceManager.deleteService(null, httpRequest);
     }
 

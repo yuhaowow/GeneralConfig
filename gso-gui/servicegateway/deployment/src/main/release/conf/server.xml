@@ -29,8 +29,8 @@
             name="UserDatabase" pathname="conf/tomcat-users.xml" type="org.apache.catalina.UserDatabase" />
     </GlobalNamingResources>
     <Service name="Catalina">
-        <Connector connectionTimeout="20000" port="8503" protocol="HTTP/1.1" redirectPort="8443" />
-        <Connector port="8305" protocol="AJP/1.3" redirectPort="8443" />
+        <Connector connectionTimeout="20000" port="8305" protocol="HTTP/1.1" redirectPort="8443" />
+        <!--Connector port="8305" protocol="AJP/1.3" redirectPort="8443" /-->
         <Engine defaultHost="localhost" name="Catalina">
             <Realm className="org.apache.catalina.realm.LockOutRealm">
                 <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase" />

@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/gso-gui.iml" filepath="$PROJECT_DIR$/gso-gui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/openo-portal/openo-portal.iml" filepath="$PROJECT_DIR$/openo-portal/openo-portal.iml" />
-      <module fileurl="file://$PROJECT_DIR$/openo-portal/portal-auth/portal-auth.iml" filepath="$PROJECT_DIR$/openo-portal/portal-auth/portal-auth.iml" />
-      <module fileurl="file://$PROJECT_DIR$/openo-portal/portal-catalog/portal-catalog.iml" filepath="$PROJECT_DIR$/openo-portal/portal-catalog/portal-catalog.iml" />
-      <module fileurl="file://$PROJECT_DIR$/openo-portal/portal-common/portal-common.iml" filepath="$PROJECT_DIR$/openo-portal/portal-common/portal-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/openo-portal/portal-extsys/portal-extsys.iml" filepath="$PROJECT_DIR$/openo-portal/portal-extsys/portal-extsys.iml" />
-      <module fileurl="file://$PROJECT_DIR$/openo-portal/portal-lifecyclemgr/portal-lifecyclemgr.iml" filepath="$PROJECT_DIR$/openo-portal/portal-lifecyclemgr/portal-lifecyclemgr.iml" />
-      <module fileurl="file://$PROJECT_DIR$/openo-portal/portal-package/portal-package.iml" filepath="$PROJECT_DIR$/openo-portal/portal-package/portal-package.iml" />
-      <module fileurl="file://$PROJECT_DIR$/openo-portal/portal-resmgr/portal-resmgr.iml" filepath="$PROJECT_DIR$/openo-portal/portal-resmgr/portal-resmgr.iml" />
-      <module fileurl="file://$PROJECT_DIR$/servicegateway/deployment/service-gateway-deployment.iml" filepath="$PROJECT_DIR$/servicegateway/deployment/service-gateway-deployment.iml" />
-      <module fileurl="file://$PROJECT_DIR$/servicegateway/service-gateway-root.iml" filepath="$PROJECT_DIR$/servicegateway/service-gateway-root.iml" />
-      <module fileurl="file://$PROJECT_DIR$/servicegateway/service/service-gateway-service.iml" filepath="$PROJECT_DIR$/servicegateway/service/service-gateway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/gso-gui.iml" filepath="$PROJECT_DIR$/.idea/gso-gui.iml" />
     </modules>
   </component>
 </project>

@@ -67,6 +67,10 @@ ul,li{
 	border: 1px solid #4AC9FF
 }
 
+.table-striped>tbody>tr:nth-child(odd)>td,.table-striped>tbody>tr:nth-child(odd)>th {
+    background-color:#f5f5f5
+}
+
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
   color: #009ae7;
   background-color: #fff;

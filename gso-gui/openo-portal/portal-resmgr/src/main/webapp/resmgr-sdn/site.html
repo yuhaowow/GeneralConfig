@@ -29,6 +29,7 @@
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/brs.js"></script>
         <script type="text/javascript" src="js/bootstrap-table.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap-table-filter-control.min.js"></script>
 
         <style type="text/css">
         </style>
@@ -122,14 +123,14 @@
                     <table id="site"
                            data-pagination="true" data-page-size="5" data-pagination-first-text="First"
                            data-pagination-pre-text="Previous" data-pagination-next-text="Next"
-                           data-pagination-last-text="Last">
+                           data-pagination-last-text="Last" data-filter-control="true">
                         <thead style="background:#ECECEC;">
                         <tr class="active">
-                            <th data-field="name" data-sortable="true">Name</th>
-                            <th data-field="type" data-sortable="true">Type</th>
-                            <th data-field="tenantID" data-sortable="true">Tenant Name</th>
-                            <th data-field="tenantSiteIDs" data-sortable="true">Tenant Site</th>
-                            <th data-field="location" data-sortable="true">Location</th>
+                            <th data-field="name" data-sortable="true" data-filter-control="input">Name</th>
+                            <th data-field="type" data-sortable="true" data-filter-control="input">Type</th>
+                            <th data-field="tenantID" data-sortable="true" data-filter-control="input">Tenant Name</th>
+                            <th data-field="tenantSiteIDs" data-sortable="true" data-filter-control="input">Tenant Site</th>
+                            <th data-field="location" data-sortable="true" data-filter-control="input">Location</th>
 
                             <th align="center" data-formatter="operateFormatter" data-events="operateEvents">Action</th>
                         </tr>

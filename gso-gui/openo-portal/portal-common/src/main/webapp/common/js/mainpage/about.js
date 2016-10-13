@@ -75,7 +75,7 @@ function internationalization(){
     //加载国际化
     jQuery.i18n.properties({
         language:lang,
-        name:'web-framework-integration-i18n',
+        name:'web-framework-mainPage-i18n',
         path:'i18n/', // 资源文件路径
         mode:'map', // 用 Map 的方式使用资源文件中的值
         callback: function() {// 加载成功后设置显示内容

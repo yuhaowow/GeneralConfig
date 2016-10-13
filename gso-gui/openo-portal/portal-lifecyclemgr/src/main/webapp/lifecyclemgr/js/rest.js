@@ -115,13 +115,11 @@ $(function () {
 
 /*******************************************Get Service**********************************************/
 function loadGetServiceData(){
-    return JSON.parse('[{"serviceId":"1111","serviceName":"siteToDC","description":"siteToDC","createTime":"xxxxxx","creator":"XXXX","serviceType":"GSO","templateName":"xxxxxx","inputParameters":{"POP-1-0-0.vFW-moc":"xxx","POP-1-0-0.vCPE-moc":"xxx"}},{"serviceId":"2222","serviceName":"siteToDC","description":"siteToDC","createTime":"xxxxxx","creator":"XXXX","serviceType":"GSO","templateName":"xxxxxx","inputParameters":{"POP-1-0-0.vFW-moc":"xxx1","POP-1-0-0.vCPE-moc":"xxx1"}}]');
 
-    // TODO authenticate the url.
-    var requestUrl = url + "/openoapi/sdnobrs/v1/topological-links";
+    var requestUrl = url + "/openoapi/inventory/v1/services";
     $
         .ajax({
-            type : "GET",
+            type : "POST",
             url : requestUrl,
             contentType : "application/json",
             success : function(jsonobj) {
@@ -136,10 +134,8 @@ function loadGetServiceData(){
 
 /*********************************************Get Service Details********************************************/
 function loadServiceDetails(serviceId){
-    return JSON.parse('[{"id":"12345", "name":"sdno"}, {"id":"23456", "name":"gso"},{"id":"12345", "name":"nfvo"}]');
-    //return JSON.parse('{"sdno":[{"id":"12345", "name":"SDNO"}], "nfvo":[{"id":"12345", "name":"SDNO"}]}');
-    //return JSON.parse('"nfvo":[{"id":"12345", "name":"SDNO"}]}');
-    // TODO authenticate the url.
+   
+   // TODO re-confirm the latest url.
     var requestUrl = url + "/openoapi/lifecyclemgr/v1/services/toposequence/" + serviceId;
     $
         .ajax({
