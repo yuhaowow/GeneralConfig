@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="portal-auth:war">
-    <output-path>$PROJECT_DIR$/openo-portal/portal-auth/target</output-path>
-    <root id="archive" name="portal-auth-1.0.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="portal-auth:war exploded" />
-    </root>
-  </artifact>
-</component>

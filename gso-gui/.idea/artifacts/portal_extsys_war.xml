@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="portal-extsys:war">
-    <output-path>$PROJECT_DIR$/openo-portal/portal-extsys/target</output-path>
-    <root id="archive" name="portal-extsys-1.0.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="portal-extsys:war exploded" />
-    </root>
-  </artifact>
-</component>
