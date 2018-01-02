@@ -19,7 +19,6 @@ dirSubDir = []
 def updateSub(subdir):
     repdir = os.path.join(os.path.abspath('.'), subdir)
 
-    print('start creat repo from dir %s' %repdir)
     try:
         repo = git.Repo(repdir)
         if repo.is_dirty():
@@ -28,6 +27,7 @@ def updateSub(subdir):
         remote = repo.remote()
         print("start pulling update from remote server for: %s" %subdir)
         remote.pull()
+        print("Done pulling!")
     except NoSuchPathError as e:
         pass
     except InvalidGitRepositoryError as e:
@@ -39,6 +39,9 @@ def updateSub(subdir):
 
 for subdir in subDirs:
     updateSub(subdir)
-
+print('\r\n')
+print('\r\n')
+print('\r\n')
+print('these repos have uncommitted changes:')
 for dirtyDir in dirSubDir:
     print('dir %s has uncommited change, please check' % dirtyDir)
