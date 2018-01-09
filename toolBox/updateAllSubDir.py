@@ -1,6 +1,7 @@
-import os
 import git
 from git import *
+import threading
+import os
 
 def isGitDir(dir):
     repdir = os.path.join(os.path.abspath('.'), dir)
@@ -8,26 +9,17 @@ def isGitDir(dir):
     if not os.path.exists(repgitdir):
         return False
     return True
-
-currDir = os.path.abspath('.')
-subDirs = [x for x in os.listdir('.') if isGitDir(x)]
-print("ready to update git repo:")
-for dir in subDirs:
-    print(dir+ '\r\n')
-dirSubDir = []
-
 def updateSub(subdir):
     repdir = os.path.join(os.path.abspath('.'), subdir)
-
     try:
         repo = git.Repo(repdir)
         if repo.is_dirty():
             dirSubDir.append(subdir)
             return
         remote = repo.remote()
-        print("start pulling update from remote server for: %s" %subdir)
+        print("start pulling from remote for: %s\r\n" %subdir)
         remote.pull()
-        print("Done pulling!")
+        print("Done pulling for %s\r\n" %subdir)
     except NoSuchPathError as e:
         pass
     except InvalidGitRepositoryError as e:
@@ -35,13 +27,22 @@ def updateSub(subdir):
     finally:
         pass
 
-
-
+currDir = os.path.abspath('.')
+subDirs = [x for x in os.listdir('.') if isGitDir(x)]
+print("ready to update git repo:")
+for dir in subDirs:
+    print(dir+ '\r\n')
+dirSubDir = []
+poole = []
 for subdir in subDirs:
-    updateSub(subdir)
+    t = threading.Thread(target=updateSub,args=(subdir,))
+    t.start()
+    poole.append(t)
+for t in poole:
+    t.join(30)
+
 print('\r\n')
-print('\r\n')
-print('\r\n')
-print('these repos have uncommitted changes:')
-for dirtyDir in dirSubDir:
-    print('dir %s has uncommited change, please check' % dirtyDir)
+if len(dirSubDir)!= 0:
+    print('these repos have uncommitted changes:')
+    for dirtyDir in dirSubDir:
+        print('dir %s has uncommited change, please check' % dirtyDir)
